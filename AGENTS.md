@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a static personal/professional website for Florian Fackler IT Consulting. It is a single-page HTML file (`index.html`) with inline CSS and vanilla JavaScript. There is no build system, framework, or package manager.
+This is a static website for Properflow GmbH, a Swiss AI automation company specializing in Real Estate. It is a single-page HTML file (`index.html`) with inline CSS and vanilla JavaScript. No build system, framework, or package manager.
 
 ## Build / Lint / Test Commands
 
@@ -12,15 +12,16 @@ There is no build step. The site is served as plain HTML.
   - `python3 -m http.server 8000`
   - `npx serve .` (requires Node.js)
 - **HTML validation**: `npx html-validate index.html`
-- **CSS validation**: No CSS linter is configured. Validate manually via W3C CSS Validator.
+- **CSS validation**: No CSS linter configured. Validate manually via W3C CSS Validator.
 - **Link checking**: `npx hyperlink index.html`
-- **Tests**: No test framework is configured. There are no tests for this project.
+- **Tests**: No test framework configured. No tests exist for this project.
 
 ## Project Structure
 
 ```
 /
 ├── index.html    # The entire site: HTML, inline CSS, inline JS
+├── README.md     # Business documentation (pricing, hardware tiers)
 └── AGENTS.md     # This file
 ```
 
@@ -28,7 +29,7 @@ There is no build step. The site is served as plain HTML.
 
 ### General
 
-- This is a single-file static site. All CSS and JS are inline within `index.html`.
+- Single-file static site. All CSS and JS are inline within `index.html`.
 - Use UTF-8 encoding.
 - Use 2-space indentation for HTML, CSS, and JavaScript.
 - Keep the file self-contained — no external CSS or JS files unless absolutely necessary.
@@ -41,6 +42,7 @@ There is no build step. The site is served as plain HTML.
 - Self-close void elements (`<meta />`, `<br />`).
 - Include `lang="en"` on the `<html>` element.
 - Use HTML entities for special characters in content (e.g., `&amp;` for `&`).
+- Add `aria-label` to interactive elements for accessibility.
 
 ### CSS
 
@@ -48,7 +50,7 @@ There is no build step. The site is served as plain HTML.
 - Use CSS custom properties (variables) defined in `:root` for colors, spacing, and theming.
 - Naming convention: `kebab-case` for classes (e.g., `.service-card`, `.usp-grid`).
 - Use `var(--variable-name)` for all theme-aware colors and values.
-- Dark mode is implemented via `[data-theme="dark"]` selector and `prefers-color-scheme` media query.
+- Dark mode implemented via `[data-theme="dark"]` selector and `prefers-color-scheme` media query.
 - Use flexbox and CSS Grid for layouts.
 - Mobile-first responsive design: use `@media (max-width: 768px)` breakpoints.
 - Transitions on interactive elements: `transition: all 0.3s ease`.
@@ -65,6 +67,7 @@ There is no build step. The site is served as plain HTML.
 - IIFE pattern for encapsulated code to avoid polluting global scope.
 - Use template literals for string interpolation.
 - Prefer `===` over `==`.
+- Handle `localStorage` access with try-catch (can fail in private/incognito mode).
 
 ### Theme System
 
@@ -72,6 +75,7 @@ There is no build step. The site is served as plain HTML.
 - Falls back to OS preference via `prefers-color-scheme` media query.
 - Three states: explicit `"dark"`, explicit `"light"`, or auto (OS preference).
 - Toggle button sits in the header between the logo and nav, centered on desktop.
+- Theme changes trigger via `data-theme` attribute on `<html>` element.
 
 ### Design Conventions
 
@@ -80,7 +84,42 @@ There is no build step. The site is served as plain HTML.
 - Max content width: `--max-width: 1100px`.
 - Sections have `padding: 60px 0`.
 - Cards use subtle borders with hover effects (border color change + `translateY(-5px)`).
-- Tech stack uses pill-style `.tech-tag` elements with `.tech-grid` flex container.
+
+### Accessibility & Performance
+
+- All interactive elements have keyboard navigation support.
+- Use semantic HTML for screen reader compatibility.
+- Color contrast meets WCAG AA standards.
+- Optimize images (webp format, proper sizing).
+- Minimize repaints/reflows by batching DOM updates.
+
+### Error Handling (JavaScript)
+
+- Wrap `localStorage` operations in try-catch blocks (fails in private/incognito).
+- Check for null/undefined before accessing DOM elements.
+- Use defensive programming for optional features (theme toggle, etc.).
+- Provide graceful degradation if features fail to initialize.
+
+### Browser Compatibility
+
+- Target modern browsers (last 2 versions of Chrome, Firefox, Safari, Edge).
+- Use CSS features with good support (flexbox, grid, custom properties).
+- Test responsive behavior on mobile viewport (375px-768px) and desktop (768px+).
+- Provide fallback for unsupported features where critical.
+
+### Security
+
+- No external scripts or CDNs unless explicitly requested.
+- All SVG assets embedded inline to avoid external requests.
+- No inline event handlers in HTML (`onclick`, etc.).
+- Validate any user input if forms are added in future.
+
+### Git Workflow
+
+- Use conventional commit messages: `feat:`, `fix:`, `docs:`, `refactor:`, `style:`, `test:`, `chore:`.
+- Keep commits focused and atomic (one logical change per commit).
+- Write commit messages in present tense ("Add feature" not "Added feature").
+- Create descriptive branch names: `feature/feature-name` or `fix/issue-name`.
 
 ## Page Structure
 
@@ -91,7 +130,7 @@ The page is a single-page sales site for IT consulting services with these secti
 3. **USP / Competitive Advantage** — 4-column responsive grid: DSG-Compliant AI, Zero data leakage, Why this matters, Market stats.
 4. **Industries** — 4 service-style cards: Trade & E-Commerce, Professional Services, Industry & Manufacturing, Healthcare & Education.
 5. **Services** — 4 service cards in responsive grid: AI Strategy & Integration, IT Architecture, E-Commerce, CTO-as-a-Service.
-6. **Technology Stack** — Centered pill-tag grid listing languages, cloud platforms, databases, and e-commerce systems.
+6. **Pricing** — 3 pricing tiers (Setup, Monthly Retainer, Per Project) with card layout.
 7. **Contact** — Email CTA, geographic reach selling point (ZH/BE/BS/LU within 1 hour).
 8. **Footer** — Copyright (year via JS), tagline, Swiss flag SVG.
 
