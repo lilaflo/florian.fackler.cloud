@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Florian Fackler | IT &amp; AI Consulting</title>
+    <meta
+      name="description"
+      content="Swiss IT Consulting, Self-hosted AI, and Software Architecture services."
+    />
+    <style>
+      /* --- Basic Reset & Variables --- */
+      :root {
+        --white: #fff;
+        --black: #000;
+
+        --bg-color: var(--white);
+        --bg-alt: #f9f9f9;
+        --bg-dark: #222;
+
+        --text-color: #1a1a1a;
+        --text-muted: #555;
+        --accent: #be1902;
+        --accent-hover: #9a1402;
+        --border: #ddd;
+        --tag-bg: #eee;
+        --tag-border: #ccc;
+        --max-width: 1100px;
+        --header-bg: var(--white);
+        --border-radius: 5px;
+      }
+
+      /* Dark Mode Overrides */
+      [data-theme="dark"] {
+        --bg-color: #121212;
+        --bg-alt: #1e1e1e;
+        --bg-dark: #000000;
+
+        --text-color: #e0e0e0;
+        --text-muted: #aaaaaa;
+        --border: #333333;
+        --tag-bg: #2a2a2a;
+        --tag-border: #444444;
+        --white: #e0e0e0;
+        --black: #ffffff;
+        --header-bg: #1a1a1a;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg-color: #121212;
+          --bg-alt: #1e1e1e;
+          --bg-dark: #000000;
+          --text-color: #e0e0e0;
+          --text-muted: #aaaaaa;
+          --border: #333333;
+          --tag-bg: #2a2a2a;
+          --tag-border: #444444;
+          --white: #e0e0e0;
+          --black: #ffffff;
+          --header-bg: #1a1a1a;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      } /* --- Layout Containers --- */
+      .container {
+        width: 90%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+      }
+      section {
+        padding: 60px 0;
+        backdrop-filter: blur(10px);
+        background: color-mix(in srgb, var(--bg-color) 80%, transparent);
+      } /* --- Typography --- */
+      h1,
+      h2,
+      h3 {
+        color: var(--black);
+        margin-top: 0;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 2rem;
+        border-bottom: 3px solid var(--accent);
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+      }
+      h3 {
+        font-size: 1.3rem;
+        color: var(--accent);
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 15px;
+        color: var(--text-muted);
+      }
+      ul {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        color: var(--text-muted);
+      }
+      li {
+        margin-bottom: 5px;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      } /* --- Header --- */
+      header {
+        background-color: var(--header-bg);
+        border-bottom: 1px solid var(--border);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+      }
+      .header-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 20px;
+      }
+      nav a {
+        color: var(--black);
+        font-weight: normal;
+      }
+      nav a:hover {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      /* Theme Toggle */
+      .theme-toggle {
+        background: none;
+        border: 1px solid var(--border);
+        color: var(--text-color);
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        width: 40px;
+        height: 40px;
+      }
+      .theme-toggle:hover {
+        background-color: var(--bg-alt);
+        border-color: var(--accent);
+      }
+      .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+      .sun-icon {
+        display: none;
+      }
+      [data-theme="dark"] .moon-icon {
+        display: none;
+      }
+      [data-theme="dark"] .sun-icon {
+        display: block;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) .moon-icon {
+          display: none;
+        }
+        :root:not([data-theme="light"]) .sun-icon {
+          display: block;
+        }
+      }
+
+      /* --- Hero Section --- */
+      .hero {
+        background-color: var(--bg-alt);
+        transition: background-color 0.3s ease;
+      }
+      .btn {
+        display: inline-block;
+        background-color: var(--accent);
+        color: #ffffff !important; /* Always white on accent bg */
+        padding: 12px 25px;
+        border-radius: var(--border-radius);
+      }
+      .btn:hover {
+        background-color: var(--accent-hover);
+        text-decoration: none;
+        color: #ffffff !important;
+      } /* --- USP Section --- */
+      .usp-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 40px;
+        align-items: start;
+      }
+      /* --- Services --- */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .service-card {
+        border: 1px solid var(--border);
+        padding: 25px;
+        border-radius: var(--border-radius);
+        background: var(--bg-color);
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-5px);
+      }
+      .tech-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .tech-tag {
+        background: var(--tag-bg);
+        border: 1px solid var(--tag-border);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: var(--text-color);
+        transition: all 0.3s ease;
+      }
+      .tech-tag:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      } /* --- Footer --- */
+      footer {
+        background-color: var(--header-bg);
+        border-top: 1px solid var(--border);
+        padding: 40px 0;
+        margin-top: 40px;
+        transition: background-color 0.3s ease;
+      }
+      .footer-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .trust-element {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+      } /* --- Mobile Responsiveness --- */
+      @media (max-width: 768px) {
+        .header-flex {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 10px;
+          text-align: center;
+        }
+        .header-flex .theme-toggle {
+          align-self: center;
+        }
+        .header-flex nav {
+          grid-column: 1 / -1;
+        }
+        nav ul {
+          gap: 15px;
+          justify-content: center;
+        }
+        .usp-grid {
+          gap: 20px;
+        }
+        .footer-flex {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      .accent {
+        color: var(--accent);
+      }
+      .bold {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-flex">
+        <div class="logo">
+          Florian Fackler <span class="accent bold">.IT</span>
+        </div>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle dark mode"
+        >
+          <svg class="moon-icon" viewBox="0 0 20 20">
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+          <svg class="sun-icon" viewBox="0 0 20 20">
+            <path
+              fill-rule="evenodd"
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <nav>
+          <ul>
+              <li><a href="#industries">Industries</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>IT Consulting &amp; Privacy-Compliant AI</h1>
+        <p>
+          Specialized in Self-Hosted LLMs and Data Protection (DSG) for Swiss
+          companies. 25+ years of experience in Software Architecture.
+        </p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </section>
+    <!-- USP / Unique Selling Proposition -->
+    <section>
+      <div class="container">
+        <h2>Your Competitive Advantage</h2>
+        <div class="usp-grid">
+          <div>
+            <h3>DSG-Compliant AI</h3>
+            <p>
+              Many Swiss companies cannot use cloud-based AI services due to
+              strict data protection laws. I implement AI systems that run 100%
+              on your own infrastructure.
+            </p>
+            <p><strong>Zero data leakage. Full control.</strong></p>
+          </div>
+          <div>
+            <h3>Why this matters</h3>
+            <ul>
+              <li>Data stays within your company/Switzerland.</li>
+              <li>Self-hosted LLMs tailored to your business.</li>
+              <li>Secure document analysis (RAG).</li>
+              <li>Full compliance with FADP/DSG.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>The market is moving fast</h3>
+            <ul>
+              <li>34% of Swiss SMEs already use AI actively, 37% more are testing it.</li>
+              <li>85% of companies use ChatGPT &mdash; but only a third have data-protection rules for it.</li>
+              <li>62% of online retailers cite IT skill shortage as a top challenge.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Industries -->
+    <section id="industries" style="background-color: var(--bg-alt)">
+      <div class="container">
+        <h2>Industries</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Trade &amp; E-Commerce</h3>
+            <p>
+              ~15,000 Swiss online shops generating CHF 14.9 billion in revenue.
+              AI-powered product catalogs, process automation, and PIM integration.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Professional Services</h3>
+            <p>
+              Trusts, insurance, and consulting firms benefit from DSG-compliant AI
+              assistants and automated document analysis.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Industry &amp; Manufacturing</h3>
+            <p>
+              Product data management, process automation, and digital workflows
+              to counter rising operational costs.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Healthcare &amp; Education</h3>
+            <p>
+              Data-sensitive sectors that require self-hosted AI solutions with
+              zero data leakage and full regulatory compliance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>AI Strategy &amp; Integration</h3>
+            <ul>
+              <li>Self-Hosted LLM Implementation</li>
+              <li>AI Chatbots (Semantic Search)</li>
+              <li>Automated Content Creation</li>
+              <li>Data Analysis &amp; Reporting</li>
+              <li>Process Automation</li>
+              <li>AI Workshops for SMEs</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h3>IT Architecture</h3>
+            <ul>
+              <li>Software Architecture Design</li>
+              <li>Cloud Strategy (AWS, Terraform)</li>
+              <li>Digital Transformation</li>
+              <li>Workflow Automation</li>
+              <li>Low-Code / No-Code</li>
+              <li>Team Training &amp; Workshops</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h3>E-Commerce</h3>
+            <ul>
+              <li>Shopware, Shopify, WooCommerce</li>
+              <li>PIM Integration (Akeneo, PIMCore)</li>
+              <li>Payment Integration (TWINT, Stripe)</li>
+              <li>Shop Migration</li>
+              <li>AI Product Catalogs</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h3>CTO-as-a-Service</h3>
+            <p>
+              For startups without internal IT leadership. I offer interim CTO
+              services to build teams, define technology strategy, and introduce
+              DevOps.
+            </p>
+            <p><strong>Certified Scrum Master &amp; Product Owner</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tech Stack -->
+    <section style="background-color: var(--bg-alt)">
+      <div class="container" style="text-align: center">
+        <h2>Technology Stack</h2>
+        <p>Languages, platforms, and tools I work with daily.</p>
+        <div class="tech-grid">
+          <span class="tech-tag">JavaScript / TypeScript</span>
+          <span class="tech-tag">PHP</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">Terraform</span>
+          <span class="tech-tag">Cloudflare</span>
+          <span class="tech-tag">Google Cloud</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">Shopware</span>
+          <span class="tech-tag">Shopify</span>
+          <span class="tech-tag">WooCommerce</span>
+          <span class="tech-tag">Akeneo</span>
+          <span class="tech-tag">PIMCore</span>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container" style="text-align: center">
+        <h2>Contact</h2>
+        <p>
+          Based in Switzerland. Zurich, Bern, Basel, and Lucerne are all within
+          one hour by train &mdash; personal on-site consultations without the
+          overhead.
+        </p>
+        <p>Let's discuss your AI and IT strategy.</p>
+        <br />
+        <a href="mailto:florian@fackler.cloud" class="btn">Send Email</a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-flex">
+        <div>
+          <p>
+            © <span id="year">2025</span> Florian Fackler. All rights reserved.
+          </p>
+          <p>IT Consulting • AI Integration • Software Architecture</p>
+        </div>
+        <div class="trust-element">
+          <span>Swiss Quality</span>
+          <!-- Inline SVG Swiss Flag (Standard HTML Image) -->
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="32" fill="var(--accent)"></rect>
+            <rect x="6" y="13" width="20" height="6" fill="#ffffff"></rect>
+            <rect x="13" y="6" width="6" height="20" fill="#ffffff"></rect>
+          </svg>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const htmlElement = document.documentElement;
+
+      function setTheme(theme) {
+        htmlElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+      }
+
+      const saved = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      setTheme(saved || (prefersDark ? "dark" : "light"));
+
+      document.getElementById("theme-toggle").addEventListener("click", () => {
+        const current = htmlElement.getAttribute("data-theme");
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (!localStorage.getItem("theme")) {
+            setTheme(e.matches ? "dark" : "light");
+          }
+        });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
