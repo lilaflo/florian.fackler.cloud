@@ -1,132 +1,245 @@
-# Private AI for Swiss SMEs
+# Properflow GmbH -- 12 Month Transition Plan
 
-## Positioning
+From "Florian Fackler, IT Consultant" to "Properflow GmbH, AI Automation for Swiss Real Estate."
 
-"Your data stays in your house." -- AI that runs on the customer's hardware, not in some US cloud. DSG/GDPR compliant by design, not by policy.
+Start: Q2 2026 (May). Target: Q2 2027 (first GmbH customers).
 
-## Core Stack
+---
 
-- **Ollama** -- local LLM runner (open-source, REST API)
-- **n8n** -- workflow automation (connects AI to business processes)
-- **Qdrant** -- vector database for document embeddings (RAG)
-- **Docker** -- everything containerized, portable, isolated
+## Month 1 -- Foundation (May 2026)
 
-All bundled in the [n8n Self-Hosted AI Starter Kit](https://github.com/n8n-io/self-hosted-ai-starter-kit).
+**Goal:** Set up the business infrastructure and define the offering.
 
-## Hardware Tiers
+- [ ] Register domain: properflow.ch
+- [ ] Register GmbH at Handelsregisteramt (Einzelunternehmen first if needed)
+- [ ] Open business bank account
+- [ ] Define core offering: 3 AI automation packages for real estate (see below)
+- [ ] Write 1-page offering sheet (PDF, not a website yet)
+- [ ] Set up properflow.ch as landing page (name, email, "coming soon")
+- [ ] Moritz: start n8n deep-dive (official certification if available)
 
-### Tier 1 -- Small Business (5-15 employees)
+**Deliverable:** Registered business + clear offering definition.
 
-- **Server:** 1x NVIDIA RTX 4090 (24GB), 64GB RAM, 2TB NVMe
-- **Models:** 8B-14B (Llama 3.1 8B, Qwen3 8B, Phi-4)
-- **Use cases:** Email drafting, FAQ bot, document classification, meeting notes
-- **Hardware cost:** ~CHF 3,000-4,000 one-time
-- **Hosted in Switzerland:** ~CHF 200-350/mo
-- **Best for:** Law firms, consultancies, small accounting offices
+---
 
-### Tier 2 -- Mid Business (15-50 employees)
+## Month 2 -- Technical Foundation (June 2026)
 
-- **Server:** 1x NVIDIA L40S (48GB) or 2x RTX 4090
-- **Models:** 32B-70B (Qwen3 32B, Llama 3.3 70B Q4)
-- **Use cases:** Knowledge base Q&A (RAG), contract analysis, report generation, customer support automation
-- **Hardware cost:** ~CHF 6,000-10,000
-- **Hosted in Switzerland:** ~CHF 400-700/mo
-- **Best for:** Mid-sized companies with document-heavy workflows
+**Goal:** Build the first production-ready demo stack.
 
-### Tier 3 -- On-Premise (any size, high security)
+- [ ] Set up privacy-focused stack: Ollama + n8n + Qdrant on a test server
+- [ ] Build demo workflow #1: rental contract document extraction (PDF -> structured data)
+- [ ] Test model quality on Swiss German real estate documents
+- [ ] Document hardware requirements per tier
+- [ ] Set up monitoring (Uptime Kuma, already running)
+- [ ] Moritz: build first n8n workflow end-to-end
 
-- **Server:** physically at customer site
-- **Models:** same as Tier 1 or 2
-- **Customer owns the hardware**
-- **We do:** setup + maintenance
-- **Best for:** Banks, pharma, insurers -- strict data residency requirements
+**Deliverable:** Working demo stack + 1 documented workflow that can be shown to prospects.
 
-### Swiss Hosting Options
+---
 
-- swissmade.host (Zurich data center)
-- iDatam (Zurich)
-- Valebyte (from CHF 121/mo)
+## Month 3 -- Real Estate Deep-Dive (July 2026)
 
-## Model Recommendations by Task
+**Goal:** Understand the market from the inside.
 
-| Task | Model | VRAM |
-|------|-------|------|
-| Email drafting | Qwen3 8B | 8GB |
-| FAQ / simple chatbot | Llama 3.1 8B | 8GB |
-| Document summarization | Qwen3 30B-A3B | 20GB |
-| Knowledge base Q&A (RAG) | Qwen3 32B | 24GB |
-| Contract analysis | Llama 3.3 70B Q4 | 40GB |
-| Code generation | DeepSeek-Coder-V2 Lite | 24GB |
-| Multilingual (DE/FR/IT) | Qwen3 30B or 32B | 24GB |
+- [ ] Interview 5-10 people in Swiss real estate (property managers, fiduciaries, agents)
+- [ ] Map their top 3 pain points around document handling and communication
+- [ ] Identify which real estate software they use (Wincare, Building Engine, HouseGold, etc.)
+- [ ] Research integration points (APIs, email parsing, PDF extraction)
+- [ ] Refine offering based on real feedback, not assumptions
+- [ ] Write case study template
 
-## Pricing Model
+**Deliverable:** Validated problem statement + refined offering based on actual customer pain.
 
-### Setup Fee: CHF 3,000-8,000 (one-time)
+---
 
-- Hardware procurement + installation
-- n8n + Ollama + Qdrant setup
-- First workflow template (e.g., document Q&A or email automation)
-- Model selection + prompt tuning
-- Staff training (2-3 hours)
+## Month 4 -- Build Workflow #2 + Marketing Site (August 2026)
 
-### Monthly Retainer: CHF 300-800/mo
+**Goal:** Second workflow ready + public-facing website.
 
-- Monitoring + uptime
-- Model updates
-- Prompt optimization
-- Minor workflow adjustments
-- Priority support
+- [ ] Build demo workflow #2: automated tenant inquiry response (email -> classify -> draft -> human review)
+- [ ] Launch properflow.ch with:
+  - Clear value prop (AI automation for Swiss real estate)
+  - 3 packages with transparent pricing
+  - Demo video or screenshots
+  - Contact form
+- [ ] Set up LinkedIn company page for Properflow
+- [ ] Write 3 LinkedIn posts about AI in Swiss real estate
+- [ ] Moritz: own and ship workflow #2
 
-### Per-Project: CHF 2,000-10,000 per new workflow/use case
+**Deliverable:** Live website + 2 demoable workflows + first public content.
 
-- New RAG knowledge base
-- Custom chatbot
-- Document processing pipeline
+---
 
-### Typical First Year
+## Month 5 -- Workflow #3 + First Outreach (September 2026)
 
-Setup CHF 5,000 + CHF 500/mo retainer = CHF 11,000/year.
+**Goal:** Complete the initial product suite + start selling.
 
-Hardware is either customer CAPEX or baked into a lease.
+- [ ] Build demo workflow #3: property listing description generation (data -> marketing text in DE/FR)
+- [ ] Create PDF one-pager / pitch deck (properflow_intro.pdf)
+- [ ] First outreach: contact 20 property management companies in ZH/BE/BS
+- [ ] Offer free 1-hour AI assessment call
+- [ ] Set up CRM (simple: Airtable or n8n-based)
+- [ ] Start email nurture sequence for leads
 
-## What We Don't Need
+**Deliverable:** 3 complete workflows + active outreach pipeline.
 
-- No ML training infrastructure
-- No "big data" pipelines
-- No GPU cluster
-- No ML engineers
+---
 
-We do inference and integration, not research. The models are already trained.
+## Month 6 -- First Customer (October 2026)
 
-## Value Proposition
+**Goal:** Close the first paying customer (or get very close).
 
-1. **Pick the right model** for the task
-2. **Set up the infra** (Docker, Ollama, n8n, Qdrant)
-3. **Build the workflows** that connect AI to actual business processes
-4. **Make it work in German**
+- [ ] Run 3-5 free assessment calls
+- [ ] Convert at least 1 to a paid pilot (CHF 2,000-3,000)
+- [ ] Deliver pilot: install stack, deploy 1-2 workflows, train staff
+- [ ] Document everything (installation guide, runbook, prompts)
+- [ ] Collect testimonial / feedback
+- [ ] Iterate on workflows based on real usage
 
-## Honest Limitations (communicate upfront)
+**Deliverable:** First paying pilot customer + real-world feedback.
 
-- Local models are good, not GPT-4 level. Set expectations.
-- Complex reasoning tasks will be noticeably weaker than frontier models.
-- Hallucinations still happen -- critical workflows need human-in-the-loop.
-- Multilingual German quality varies by model (Qwen3 handles DE reasonably well).
-- Hardware has physical limits -- you can't run 50 concurrent users on a single 4090.
+---
 
-## Privacy Architecture
+## Month 7 -- Stabilize + Package (November 2026)
 
-- Data never leaves the customer's network
-- No API calls to OpenAI, Google, or any third-party AI service
-- All inference runs locally on dedicated hardware
-- Swiss data residency by default
-- DSG/GDPR compliant by architecture, not just policy
+**Goal:** Turn the pilot experience into a repeatable product.
 
-## Alternatives Considered
+- [ ] Fix issues from pilot deployment
+- [ ] Create standardized installation playbook (Ansible, already in skill set)
+- [ ] Build onboarding checklist for new customers
+- [ ] Package 3 tiers clearly:
+  - Starter: 1 workflow, privacy-focused (local or Swiss-hosted), CHF 3,000 setup
+  - Professional: 3 workflows, hosted in CH, CHF 8,000 setup + CHF 500/mo
+  - Enterprise: custom, on-premise, CHF 15,000+ setup + retainer
+- [ ] Write SLA / service agreement template
+- [ ] Moritz: lead at least 1 customer call independently
 
-| Approach | Privacy | Cost | Complexity |
-|----------|---------|------|------------|
-| **Local inference (our approach)** | Maximum | Medium hardware | Low (Ollama) |
-| Decentralized GPU (Akash, io.net) | Good (distributed risk) | Low | Medium |
-| TEE-based (NEAR AI, 0G) | High (cryptographic) | High | High |
-| Federated learning | High | Medium | Very high |
-| Cloud AI (OpenAI, Google) | None | Low per-query | Zero |
+**Deliverable:** Repeatable product + standard contracts + Moritz can run calls.
+
+---
+
+## Month 8 -- Scale Outreach (December 2026)
+
+**Goal:** Build a steady pipeline of leads.
+
+- [ ] Publish 2-3 LinkedIn posts per week (AI + real estate content)
+- [ ] Attend 1-2 Swiss real estate / PropTech meetups or events
+- [ ] Reach out to 30 more property management companies
+- [ ] Target fiduciaries who handle real estate portfolios (adjacent market)
+- [ ] Consider a free webinar: "AI for Swiss Property Managers -- What's Real in 2027"
+- [ ] Start tracking conversion metrics (outreach -> call -> pilot -> customer)
+
+**Deliverable:** 5+ active leads in pipeline + growing LinkedIn presence.
+
+---
+
+## Month 9 -- Second + Third Customer (January 2027)
+
+**Goal:** Close 2-3 more customers.
+
+- [ ] Convert pipeline leads to paid pilots
+- [ ] Deploy standardized playbook for each new customer
+- [ ] Moritz leads at least 1 deployment independently
+- [ ] Cross-sell: customers who bought 1 workflow add a second
+- [ ] Collect 2-3 testimonials / case studies
+- [ ] Start monthly retainer billing for first customer
+
+**Deliverable:** 3-4 total customers + recurring revenue starting.
+
+---
+
+## Month 10 -- Productize + Automate (February 2027)
+
+**Goal:** Reduce delivery cost per customer.
+
+- [ ] Automate the setup process as much as possible (Ansible playbooks, Docker Compose templates)
+- [ ] Build self-service onboarding portal (n8n form -> auto-provision)
+- [ ] Create customer dashboard (n8n + Simple Dashboard or similar)
+- [ ] Document all workflows as reusable templates
+- [ ] Evaluate: can we offer a SaaS tier (shared hosted, lower price)?
+- [ ] Start tracking ROI metrics per customer (hours saved, etc.)
+
+**Deliverable:** Setup time per customer cut by 50%+ + reusable workflow templates.
+
+---
+
+## Month 11 -- Expand Market (March 2027)
+
+**Goal:** Move beyond ZH into broader Swiss-German market.
+
+- [ ] Expand outreach to LU, SG, TG, AG (1-hour radius by train)
+- [ ] Consider partnerships with fiduciaries / tax advisors (referral channel)
+- [ ] Publish first case study on website
+- [ ] Explore niche verticals within real estate:
+  - Holiday rentals (Airbnb/Booking.com automation)
+  - Real estate law firms (contract analysis)
+  - Construction project developers (document management)
+- [ ] Evaluate: is Austria (Vorarlberg, Tirol) a viable expansion?
+
+**Deliverable:** Geographic expansion + first case study published + referral pipeline.
+
+---
+
+## Month 12 -- GmbH Upgrade + Review (April 2027)
+
+**Goal:** Formalize as GmbH, review first year, plan Year 2.
+
+- [ ] If revenue > CHF 150k or trajectory clear: convert to GmbH
+- [ ] Annual review: what worked, what didn't, what to kill
+- [ ] Year 2 plan:
+  - Product roadmap (new workflows, SaaS tier)
+  - Hiring plan (first employee? Moritz full-time?)
+  - Revenue target
+  - Market expansion (CH -> AT -> DE)
+- [ ] Update website with case studies and testimonials
+- [ ] Decide on Meister Bill relationship (separate product? bundled?)
+
+**Deliverable:** GmbH registered (if warranted) + Year 2 roadmap + stable recurring revenue.
+
+---
+
+## The Three Core Workflows
+
+These are the bread and butter. Every customer gets at least one.
+
+### 1. Document Extraction Pipeline
+- Input: rental contracts, purchase agreements, maintenance reports (PDF/scan)
+- Processing: OCR -> structure extraction -> validation -> ERP/system entry
+- Value: 60-70% time reduction on document processing, fewer errors
+- Tools: n8n + Ollama (Qwen3 32B for DE) + Qdrant
+
+### 2. Tenant Communication Automation
+- Input: tenant emails (inquiries, complaints, maintenance requests)
+- Processing: classify intent -> draft response -> route to right person -> human approval
+- Value: 24/7 response capability, consistent quality, staff freed for complex cases
+- Tools: n8n + Ollama (Llama 3.1 8B for classification, Qwen3 32B for drafting)
+
+### 3. Property Listing Generator
+- Input: raw property data (rooms, m2, location, features, photos)
+- Processing: generate marketing descriptions in DE + FR, SEO-optimized for homegate.ch/immo.ch
+- Value: 10x faster listing creation, consistent brand voice, multilingual
+- Tools: n8n + Ollama (Qwen3 30B-A3B)
+
+---
+
+## Revenue Targets
+
+| Quarter | Customers | MRR Target | Cumulative |
+|---------|-----------|------------|------------|
+| Q2 2026 | 0 (build phase) | CHF 0 | CHF 0 |
+| Q3 2026 | 1 pilot | CHF 0 | CHF 3,000 setup |
+| Q4 2026 | 1-2 | CHF 500-1,000 | CHF 6,000 |
+| Q1 2027 | 3-4 | CHF 1,500-2,000 | CHF 15,000 |
+| Q2 2027 | 5-8 | CHF 3,000-5,000 | CHF 35,000+ |
+
+Conservative estimates. A single Enterprise deal (CHF 15k setup + CHF 1k/mo) changes the curve significantly.
+
+---
+
+## Risks
+
+- **Model quality on Swiss German / legal German:** Needs early testing. Qwen3 handles DE reasonably but Swiss German formal documents are a specific domain.
+- **Integration with existing Swiss real estate software:** APIs may be limited. PDF/email parsing is the fallback.
+- **Sales cycle:** Real estate is relationship-driven. Cold outreach may not work. Warm intros and referrals matter more.
+- **Moritz timeline:** He starts May/June 2026. First 3 months are training. Don't depend on him for delivery before Month 5.
+- **Competitor risk:** Large PropTech players (Homeday, ImmoScout) may add AI features. Differentiate on privacy + Swiss hosting + personal service.
