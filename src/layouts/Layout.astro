@@ -8,10 +8,187 @@ interface Props {
 }
 
 const { title, description, lang = 'de' } = Astro.props;
-const currentUrl = Astro.url.href;
 const baseUrl = 'https://properflow.ch';
-const ogLocale = lang === 'en' ? 'en_GB' : 'de_CH';
-const canonicalUrl = lang === 'en' ? `${baseUrl}/en` : baseUrl;
+const isDe = lang !== 'en';
+const ogLocale = isDe ? 'de_CH' : 'en_GB';
+const ogLocaleAlternate = isDe ? 'en_GB' : 'de_CH';
+const canonicalUrl = isDe ? baseUrl : `${baseUrl}/en`;
+// TODO: replace with a real 1200×630 PNG/JPG at public/og-image.png for social previews.
+const ogImage: string | null = null;
+const logoUrl = `${baseUrl}/assets/Properflow-Logo.svg`;
+
+// Localized strings for OG / Twitter / JSON-LD
+const copy = isDe
+  ? {
+      ogTitle: 'Florian Fackler | KI-Automatisierung für Schweizer KMU',
+      ogDescription:
+        'Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Ihre Daten bleiben in der Schweiz.',
+      orgDescription:
+        'Datenschutzkonforme KI-Automatisierung für Schweizer KMU.',
+      serviceDescription:
+        'KI-Automatisierung für Schweizer KMU. Datenschutzkonforme Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.',
+      webPageName: 'Florian Fackler | KI-Automatisierung für Schweizer KMU',
+      webPageDescription:
+        'Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.',
+      inLanguage: 'de-CH',
+      serviceTypes: [
+        'KI-Dokumentenverarbeitung',
+        'Workflow-Automatisierung',
+        'Datenschutzkonforme KI-Beratung',
+        'Geschäftsprozess-Automatisierung',
+      ],
+      offers: [
+        {
+          name: 'Setup',
+          description:
+            'Hardware, KI-Software-Einrichtung, erster automatisierter Workflow und Team-Schulung.',
+          price: '3000',
+          priceMax: '8000',
+        },
+        {
+          name: 'Monatlicher Support',
+          description:
+            'Laufender Betrieb, KI-Verbesserungen, Workflow-Anpassungen und priorisierter Support.',
+          price: '300',
+          priceMax: '800',
+        },
+        {
+          name: 'Projektbasis',
+          description:
+            'Individuelle Automatisierung für einen konkreten Geschäftsprozess – Dokumenten-KI, Chatbot, E-Mail-Bearbeitung.',
+          price: '2000',
+          priceMax: '10000',
+        },
+      ],
+    }
+  : {
+      ogTitle: 'Florian Fackler | AI Automation for Swiss SMEs',
+      ogDescription:
+        'Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, and intelligent assistants. Your data stays in Switzerland.',
+      orgDescription: 'Privacy-focused AI automation for Swiss SMEs.',
+      serviceDescription:
+        'AI automation for Swiss SMEs. Privacy-focused document processing, workflow automation, and intelligent assistants.',
+      webPageName: 'Florian Fackler | AI Automation for Swiss SMEs',
+      webPageDescription:
+        'Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants.',
+      inLanguage: 'en',
+      serviceTypes: [
+        'AI Document Processing',
+        'Workflow Automation',
+        'Privacy-Focused AI Consulting',
+        'Business Process Automation',
+      ],
+      offers: [
+        {
+          name: 'Setup',
+          description:
+            'Hardware, AI software setup, your first automated workflow, and team training.',
+          price: '3000',
+          priceMax: '8000',
+        },
+        {
+          name: 'Monthly Support',
+          description:
+            'Ongoing operation, AI improvements, workflow adjustments, and priority support.',
+          price: '300',
+          priceMax: '800',
+        },
+        {
+          name: 'Per Project',
+          description:
+            'Custom automation for a specific business process — document AI, chatbot, email handling.',
+          price: '2000',
+          priceMax: '10000',
+        },
+      ],
+    };
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${baseUrl}/#organization`,
+      name: 'Florian Fackler IT Services',
+      url: `${baseUrl}/`,
+      logo: logoUrl,
+      description: copy.orgDescription,
+      legalName: 'Florian Fackler IT Services',
+      foundingDate: '2026',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Bumelochstrasse 35',
+        addressLocality: 'Starrkirch-Wil',
+        postalCode: '4656',
+        addressRegion: 'SO',
+        addressCountry: 'CH',
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${baseUrl}/#website`,
+      url: `${baseUrl}/`,
+      name: 'Florian Fackler IT Services',
+      publisher: { '@id': `${baseUrl}/#organization` },
+      inLanguage: ['de-CH', 'en'],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: copy.webPageName,
+      description: copy.webPageDescription,
+      isPartOf: { '@id': `${baseUrl}/#website` },
+      about: { '@id': `${baseUrl}/#organization` },
+      inLanguage: copy.inLanguage,
+    },
+    {
+      '@type': 'ProfessionalService',
+      name: 'Florian Fackler IT Services',
+      url: `${baseUrl}/`,
+      description: copy.serviceDescription,
+      priceRange: 'CHF 300 - 10000',
+      areaServed: {
+        '@type': 'GeoCircle',
+        geoMidpoint: {
+          '@type': 'GeoCoordinates',
+          latitude: 47.3539,
+          longitude: 7.9081,
+        },
+        geoRadius: '80000',
+      },
+      serviceType: copy.serviceTypes,
+      knowsAbout: [
+        'Artificial Intelligence',
+        'Workflow Automation',
+        'Business Process Automation',
+        'Data Privacy',
+        'Document Processing',
+        'n8n',
+        'Ollama',
+        'Large Language Models',
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'AI Automation Packages',
+        itemListElement: copy.offers.map((offer) => ({
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: offer.name,
+            description: offer.description,
+          },
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            minPrice: offer.price,
+            maxPrice: offer.priceMax,
+            priceCurrency: 'CHF',
+          },
+        })),
+      },
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -22,29 +199,26 @@ const canonicalUrl = lang === 'en' ? `${baseUrl}/en` : baseUrl;
     <title>{title}</title>
     <meta name="description" content={description} />
     <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Florian Fackler | AI Automation for Swiss SMEs"
-    />
-    <meta
-      property="og:description"
-      content="Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants. Your data stays in Switzerland."
-    />
+    <meta property="og:title" content={copy.ogTitle} />
+    <meta property="og:description" content={copy.ogDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={ogLocale} />
-    <meta property="og:locale:alternate" content={lang === 'de' ? 'en_GB' : 'de_CH'} />
+    <meta property="og:locale:alternate" content={ogLocaleAlternate} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Florian Fackler" />
+    {ogImage && (
+      <>
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={copy.ogTitle} />
+      </>
+    )}
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Florian Fackler | AI Automation for Swiss SMEs"
-    />
-    <meta
-      name="twitter:description"
-      content="Privacy-focused AI automation for Swiss SMEs. Your data stays in Switzerland."
-    />
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={copy.ogTitle} />
+    <meta name="twitter:description" content={copy.ogDescription} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
     <!-- Geo -->
     <meta name="geo.region" content="CH-SO" />
     <meta name="geo.placename" content="Starrkirch-Wil" />
@@ -56,164 +230,13 @@ const canonicalUrl = lang === 'en' ? `${baseUrl}/en` : baseUrl;
     <!-- Alternate languages -->
     <link rel="alternate" hreflang="de" href={baseUrl} />
     <link rel="alternate" hreflang="en" href={`${baseUrl}/en`} />
+    <link rel="alternate" hreflang="x-default" href={baseUrl} />
     <!-- JSON-LD -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://properflow.ch/#organization",
-          "name": "Florian Fackler IT Services",
-          "url": "https://properflow.ch/",
-          "logo": "https://properflow.ch/logo.png",
-          "description": "Privacy-focused AI automation for Swiss SMEs.",
-          "legalName": "Florian Fackler IT Services",
-          "foundingDate": "2026",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Bumelochstrasse 35",
-            "addressLocality": "Starrkirch-Wil",
-            "postalCode": "4656",
-            "addressRegion": "SO",
-            "addressCountry": "CH"
-          },
-          "sameAs": []
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://properflow.ch/#website",
-          "url": "https://properflow.ch/",
-          "name": "Florian Fackler IT Services",
-          "publisher": { "@id": "https://properflow.ch/#organization" },
-          "inLanguage": ["de-CH", "en"]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://properflow.ch/#webpage",
-          "url": "https://properflow.ch/",
-          "name": "Florian Fackler | AI Automation for Swiss SMEs",
-          "description": "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants.",
-          "isPartOf": { "@id": "https://properflow.ch/#website" },
-          "about": { "@id": "https://properflow.ch/#organization" },
-          "inLanguage": "en"
-        },
-        {
-          "@type": "ProfessionalService",
-          "name": "Florian Fackler IT Services",
-          "url": "https://properflow.ch/",
-          "description": "AI automation for Swiss SMEs. Privacy-focused document processing, workflow automation, and intelligent assistants.",
-          "priceRange": "CHF 3000-15000",
-          "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-              "@type": "GeoCoordinates",
-              "latitude": 47.3539,
-              "longitude": 7.9081
-            },
-            "geoRadius": "80000"
-          },
-          "serviceType": [
-            "AI Document Processing",
-            "Workflow Automation",
-            "Privacy-Focused AI Consulting",
-            "Business Process Automation"
-          ],
-          "knowsAbout": [
-            "Artificial Intelligence",
-            "Workflow Automation",
-            "Business Process Automation",
-            "Data Privacy",
-            "Document Processing",
-            "n8n",
-            "Ollama",
-            "Large Language Models"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "AI Automation Packages",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Starter",
-                  "description": "1 AI workflow, privacy-focused deployment, setup and training included."
-                },
-                "price": "3000",
-                "priceCurrency": "CHF"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Professional",
-                  "description": "3 AI workflows, Swiss-hosted, with monthly monitoring and support."
-                },
-                "price": "8000",
-                "priceCurrency": "CHF"
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Enterprise",
-                  "description": "Custom AI automation, on-premise deployment, dedicated support."
-                },
-                "price": "15000",
-                "priceCurrency": "CHF",
-                "priceSpecification": {
-                  "@type": "UnitPriceSpecification",
-                  "price": "15000",
-                  "priceCurrency": "CHF",
-                  "priceType": "startingPrice"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How does Florian Fackler protect my company data?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All AI processing runs in privacy-focused environments. Your data stays in Switzerland — on your hardware or in a Swiss data center. No data is sent to OpenAI, Google, or any third-party AI service. DSG and GDPR compliant by architecture, not just policy."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What AI workflows does Florian Fackler offer?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Document Extraction Pipeline (contracts, reports, invoices), Intelligent Communication Automation (inquiry classification, response drafting, routing), and Custom Workflow Automation (tailored to your specific business processes)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How much does a Florian Fackler AI project cost?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Starter packages begin at CHF 3,000 one-time setup. Professional packages with 3 workflows and ongoing support start at CHF 8,000 setup plus CHF 500/month. Enterprise solutions with on-premise deployment start at CHF 15,000."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does Florian Fackler integrate with existing software?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We integrate with your existing systems via APIs, email parsing, and document processing. n8n connects to hundreds of tools and platforms out of the box."
-              }
-            }
-          ]
-        }
-      ]
-    })} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <slot />
-    
+
     <script is:inline>
       const htmlElement = document.documentElement;
 
