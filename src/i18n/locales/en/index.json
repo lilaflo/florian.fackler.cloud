@@ -1,0 +1,127 @@
+// en.json
+{
+  "title": "Florian Fackler | AI Automation for Swiss SMEs",
+  "description": "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, and intelligent assistants. Your data stays in Switzerland. By Florian Fackler IT Services, Starrkirch-Wil.",
+  "hero_headline": "Your AI. Your Data.",
+  "hero_tagline": "Smart AI solutions for Swiss companies &mdash; with your data protection built in, not bolted on. 25+ years of experience turning technology into a real advantage for your business.",
+  "usp_title": "Why Companies Work With Me",
+  "usp_1_title": "Your Data Stays in Switzerland",
+  "usp_1_text": "Your competitors copy sensitive data into ChatGPT every day. I build AI that runs on your own systems &mdash; nothing is sent to the internet, nothing leaves your company. \n\nNo data leaks. Fully compliant. Real results.",
+  "usp_2_title": "What you actually get",
+  "usp_2_list": [
+    "An AI assistant that knows your business and answers questions based on your own documents.",
+    "Automated tasks that save real hours every week &mdash; not just impressive demos.",
+    "Smart email handling that sorts, drafts replies, and routes messages for you."
+  ],
+  "usp_3_title": "Your competitors are already moving",
+  "usp_3_list": [
+    "71% of Swiss SMEs use or test AI right now.",
+    "85% use ChatGPT &mdash; but only a third have rules for handling data safely.",
+    "62% can't find the right people to help them keep up."
+  ],
+  "industries_title": "Built for Swiss Industries",
+  "industry_cards": [
+    {
+      "title": "Trade &amp; Online Shops",
+      "text": "15,000 Swiss online shops. CHF 14.9 billion in revenue. I help you manage product catalogs, connect your systems, and let AI write your product texts &mdash; while keeping customer data in Switzerland."
+    },
+    {
+      "title": "Professional Services",
+      "text": "Fiduciaries, insurers, and consultancies handle sensitive client data every day. AI assistants that analyze documents and draft reports &mdash; without sending anything to the cloud."
+    },
+    {
+      "title": "Industry &amp; Manufacturing",
+      "text": "Rising costs demand smarter processes. I automate routine work, connect your systems, and eliminate manual steps that drain your team's time."
+    },
+    {
+      "title": "Healthcare &amp; Education",
+      "text": "When protecting sensitive data is non-negotiable, on-premise AI is the responsible choice. Fully compliant, no data shared with third parties, real productivity gains."
+    }
+  ],
+  "services_title": "What I Deliver",
+  "service_cards": [
+    {
+      "title": "AI Solutions",
+      "text": "From first conversation to a working solution. I find where AI saves you real money, set everything up, and train your team to use it.",
+      "details": [
+        "AI assistant that answers questions based on your documents",
+        "Smart chatbots for your website or internal team",
+        "Automated content and product descriptions",
+        "Data analysis and reports",
+        "Automating repetitive tasks",
+        "Hands-on workshops for your team"
+      ]
+    },
+    {
+      "title": "Systems &amp; Strategy",
+      "text": "Systems that grow with your business. I plan and build the foundation that works today and supports you for years to come.",
+      "details": [
+        "Planning your IT systems",
+        "Connecting your tools and platforms",
+        "Digital transformation &mdash; step by step",
+        "Automating workflows across departments",
+        "Simple solutions where possible, complex ones where needed",
+        "Team training &amp; workshops"
+      ]
+    },
+    {
+      "title": "Online Shops",
+      "text": "New shop, migration, or optimization &mdash; with smart product catalogs and automated processes that cut manual work dramatically.",
+      "details": [
+        "Shopware, Shopify, WooCommerce",
+        "Connecting your product data",
+        "Payment solutions (TWINT, Stripe, Saferpay)",
+        "Switching to a new shop platform",
+        "AI-powered product descriptions"
+      ]
+    },
+    {
+      "title": "Interim IT Leadership",
+      "text": "Need someone to lead your IT but not ready for a full-time hire? I step in temporarily to organize your team, set priorities, and get things running smoothly.",
+      "details": [
+        "Certified Scrum Master &amp; Product Owner"
+      ]
+    }
+  ],
+  "pricing_title": "Transparent Pricing",
+  "pricing_cards": [
+    {
+      "title": "Setup",
+      "price": "CHF 3,000 \u2013 8,000",
+      "price_note": "One-time setup",
+      "details": [
+        "Hardware delivery and installation",
+        "AI software setup and configuration",
+        "Your first automated workflow",
+        "Fine-tuning the AI to your needs",
+        "Staff training (2\u20133 hours)"
+      ]
+    },
+    {
+      "title": "Monthly Support",
+      "price": "CHF 300 \u2013 800 / mo",
+      "price_note": "Ongoing support",
+      "details": [
+        "Making sure everything runs smoothly",
+        "AI improvements and updates",
+        "Adjusting workflows to your feedback",
+        "Small changes and fixes",
+        "Priority support"
+      ]
+    },
+    {
+      "title": "Per Project",
+      "price": "CHF 2,000 \u2013 10,000",
+      "price_note": "Per custom task",
+      "details": [
+        "AI that searches and answers from your documents",
+        "A custom chatbot for your team or customers",
+        "Automated document processing",
+        "Automated email handling",
+        "Custom automation for a specific process"
+      ]
+    }
+  ],
+  "contact_cta": "Let's Talk",
+  "contact_subtitle": "Zurich, Bern, Basel, Lucerne &mdash; all within an hour by train. Let's meet for a coffee and talk about what AI can actually do for your business.",
+}
