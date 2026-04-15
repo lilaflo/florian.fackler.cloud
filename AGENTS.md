@@ -15,24 +15,29 @@ This is a static website for Florian Fackler IT Services / Properflow GmbH, a Sw
 
 ```
 /
-├── public/             # Static assets (images, SVGs, etc.)
-│   └── assets/         # Images and other assets
+├── public/                   # Static assets (images, SVGs, etc.)
+│   └── assets/               # Images and other assets
 ├── src/
-│   ├── components/     # Reusable Astro components
+│   ├── components/           # Reusable Astro components
 │   │   ├── Header.astro
-│   │   ├── Footer.astro
+│   │   ├── Footer.astro      # Contains language switcher (EN | DE)
 │   │   └── ContactDialog.astro
-│   ├── layouts/        # Page layouts
-│   │   └── Layout.astro
-│   ├── pages/          # File-based routing
-│   │   └── index.astro # Homepage (becomes / route)
-│   └── styles/         # Global CSS
+│   ├── i18n/
+│   │   ├── locales/
+│   │   │   ├── de/index.json # German translation strings
+│   │   │   └── en/index.json # English translation strings
+│   │   └── utils.ts
+│   ├── layouts/              # Page layouts
+│   │   └── Layout.astro      # Handles lang, canonical, hreflang, OG locale
+│   ├── pages/                # File-based routing
+│   │   ├── index.astro       # German homepage (default locale, / route)
+│   │   └── en/index.astro    # English homepage (/en route)
+│   └── styles/               # Global CSS
 │       └── global.css
-├── astro.config.mjs    # Astro configuration
-├── package.json        # Dependencies and scripts
-├── index.html          # Legacy static HTML (superseded by src/)
-├── README.md           # Business documentation (pricing, transition plan)
-└── AGENTS.md           # This file
+├── astro.config.mjs          # Astro configuration (i18n defaultLocale: 'de')
+├── package.json              # Dependencies and scripts
+├── README.md                 # Business documentation (pricing, transition plan)
+└── AGENTS.md                 # This file
 ```
 
 ## Code Style Guidelines
@@ -52,8 +57,8 @@ This is a static website for Florian Fackler IT Services / Properflow GmbH, a Sw
 - Use semantic elements (`<header>`, `<nav>`, `<section>`, `<footer>`).
 - Use double quotes for HTML attributes.
 - Self-close void elements (`<meta />`, `<br />`).
-- Include `lang="en"` on the `<html>` element.
-- Use HTML entities for special characters in content (e.g., `&amp;` for `&`).
+- The `<html lang>` attribute is set dynamically by `Layout.astro` from the `lang` prop (defaults to `de`).
+- Use HTML entities for special characters in content (e.g., `&amp;` for `&`). This applies to both `.astro` templates and i18n JSON values rendered via `set:html`.
 - Add `aria-label` to interactive elements for accessibility.
 
 ### CSS
@@ -126,6 +131,18 @@ This is a static website for Florian Fackler IT Services / Properflow GmbH, a Sw
 - No inline event handlers in HTML (`onclick`, etc.).
 - Validate any user input if forms are added in future.
 
+### Internationalization (i18n)
+
+- Astro native i18n is configured in `astro.config.mjs` with `defaultLocale: 'de'` and `locales: ['en', 'de']`. `prefixDefaultLocale: false` means German is served at `/` and English at `/en`.
+- German is the default/primary locale — new copy should be written in German first, then translated to English.
+- Translation strings live in `src/i18n/locales/{de,en}/index.json`. The German page (`src/pages/index.astro`) reads strings directly from `de/index.json`; the English page (`src/pages/en/index.astro`) currently contains hardcoded English copy (not yet migrated to `en/index.json`).
+- When adding a new translatable string: add it to **both** locale JSON files and reference it from the corresponding page.
+- German copy should use Swiss conventions: `CHF 1'000` (apostrophe as thousands separator), `DSG-konform` (not `DSGVO`), formal `Sie`-form.
+- Use HTML entities in JSON values (`&amp;`, `&mdash;`) since they're rendered via `set:html`.
+- The language switcher lives in `Footer.astro` and links `/en` ↔ `/`. The active locale is underlined via the `.active` class.
+- `Layout.astro` sets `canonicalUrl`, `ogLocale`, and `hreflang` alternates based on the `lang` prop — keep these in sync when adding locales.
+- Component defaults (`Header`, `Footer`, `Layout`) fall back to `lang = 'de'` if the prop is omitted.
+
 ### Git Workflow
 
 - Use conventional commit messages: `feat:`, `fix:`, `docs:`, `refactor:`, `style:`, `test:`, `chore:`.
@@ -135,18 +152,19 @@ This is a static website for Florian Fackler IT Services / Properflow GmbH, a Sw
 
 ## Page Structure
 
-The page is a single-page sales site for IT consulting services with these sections:
+Both language variants share the same single-page sales site structure:
 
-1. **Header** — Logo + theme toggle (centered between logo and nav) + navigation. On mobile, logo and toggle share a row via CSS grid, nav wraps below.
+1. **Header** — Logo (links to `/` for DE, `/en` for EN) + theme toggle + navigation. On mobile, logo and toggle share a row via CSS grid, nav wraps below.
 2. **Hero** — Headline, tagline, CTA button.
-3. **USP / Competitive Advantage** — 4-column responsive grid: DSG-Compliant AI, Zero data leakage, Why this matters, Market stats.
-4. **Industries** — 4 service-style cards: Trade & E-Commerce, Professional Services, Industry & Manufacturing, Healthcare & Education.
-5. **Services** — 4 service cards in responsive grid: AI Strategy & Integration, IT Architecture, E-Commerce, CTO-as-a-Service.
-6. **Pricing** — 3 pricing tiers (Setup, Monthly Retainer, Per Project) with card layout.
-7. **Contact** — Email CTA, geographic reach selling point (ZH/BE/BS/LU within 1 hour).
-8. **Footer** — Copyright (year via JS), tagline, Swiss flag SVG.
+3. **USP / Competitive Advantage** — Responsive grid: data stays in Switzerland, what you actually get, competitor-movement stats.
+4. **Industries** — 4 cards: Trade & Online Shops, Professional Services, Industry & Manufacturing, Healthcare & Education.
+5. **Services** — 4 cards: AI Solutions, Systems & Strategy, Online Shops, Interim IT Leadership.
+6. **Pricing** — 3 pricing tiers (Setup, Monthly Support, Per Project) with card layout.
+7. **Contact** — CTA, geographic reach selling point (ZH/BE/BS/LU within 1 hour).
+8. **Footer** — Copyright (year via JS), services tagline, language switcher (EN | DE, active locale underlined), Swiss flag SVG.
 
 ## Important Notes
 
-- Footer year is dynamically set via JavaScript (`new Date().getFullYear()`).
+- Footer copyright year is dynamically computed via `new Date().getFullYear()` in `Footer.astro`.
 - Do not add external dependencies unless explicitly requested.
+- When changing business copy (services, pricing, industries), update **both** `src/i18n/locales/de/index.json` and the corresponding section in `src/pages/en/index.astro` — otherwise the languages drift apart.
