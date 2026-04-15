@@ -308,14 +308,14 @@ footer {
   font-weight: bold;
 }
 .lang-switch {
-  margin-top: 15px;
   font-size: 0.9rem;
 }
 .lang-switch a {
   color: var(--accent);
   text-decoration: none;
 }
-.lang-switch a:hover {
+.lang-switch a:hover,
+.lang-switch a.active {
   text-decoration: underline;
 }
 .lang-switch span {

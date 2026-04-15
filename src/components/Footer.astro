@@ -26,11 +26,11 @@ const t = translations[lang as keyof typeof translations] || translations.en;
     <div>
       <p set:html={t.copyright} />
       <p>{t.services}</p>
-      <div class="lang-switch">
-        <a href="/">EN</a>
-        <span>|</span>
-        <a href="/de">DE</a>
-      </div>
+    </div>
+    <div class="lang-switch">
+      <a href="/" class:list={[{ active: lang === 'en' }]}>EN</a>
+      <span>|</span>
+      <a href="/de" class:list={[{ active: lang === 'de' }]}>DE</a>
     </div>
     <div class="trust-element">
       <span>{t.swissQuality}</span>
