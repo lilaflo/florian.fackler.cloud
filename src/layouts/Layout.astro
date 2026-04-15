@@ -7,11 +7,11 @@ interface Props {
   lang?: string;
 }
 
-const { title, description, lang = 'en' } = Astro.props;
+const { title, description, lang = 'de' } = Astro.props;
 const currentUrl = Astro.url.href;
 const baseUrl = 'https://properflow.ch';
-const ogLocale = lang === 'de' ? 'de_CH' : 'en_GB';
-const canonicalUrl = lang === 'de' ? `${baseUrl}/de` : baseUrl;
+const ogLocale = lang === 'en' ? 'en_GB' : 'de_CH';
+const canonicalUrl = lang === 'en' ? `${baseUrl}/en` : baseUrl;
 ---
 
 <!doctype html>
@@ -54,8 +54,8 @@ const canonicalUrl = lang === 'de' ? `${baseUrl}/de` : baseUrl;
     <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
     <!-- Alternate languages -->
-    <link rel="alternate" hreflang="en" href={baseUrl} />
-    <link rel="alternate" hreflang="de" href={`${baseUrl}/de`} />
+    <link rel="alternate" hreflang="de" href={baseUrl} />
+    <link rel="alternate" hreflang="en" href={`${baseUrl}/en`} />
     <!-- JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",

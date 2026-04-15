@@ -3,7 +3,7 @@ interface Props {
   lang?: string;
 }
 
-const { lang = 'en' } = Astro.props;
+const { lang = 'de' } = Astro.props;
 
 const navItems = lang === 'de' 
   ? [
@@ -22,7 +22,7 @@ const navItems = lang === 'de'
 
 <header>
   <div class="container header-flex">
-    <a href={lang === 'de' ? '/de' : '/'} class="logo">
+    <a href={lang === 'en' ? '/en' : '/'} class="logo">
       <span class="name">Florian Fackler</span>
       <span class="accent bold">IT Services</span>
     </a>

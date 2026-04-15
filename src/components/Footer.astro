@@ -3,7 +3,7 @@ interface Props {
   lang?: string;
 }
 
-const { lang = 'en' } = Astro.props;
+const { lang = 'de' } = Astro.props;
 
 const translations = {
   en: {
@@ -28,9 +28,9 @@ const t = translations[lang as keyof typeof translations] || translations.en;
       <p>{t.services}</p>
     </div>
     <div class="lang-switch">
-      <a href="/" class:list={[{ active: lang === 'en' }]}>EN</a>
+      <a href="/en" class:list={[{ active: lang === 'en' }]}>EN</a>
       <span>|</span>
-      <a href="/de" class:list={[{ active: lang === 'de' }]}>DE</a>
+      <a href="/" class:list={[{ active: lang === 'de' }]}>DE</a>
     </div>
     <div class="trust-element">
       <span>{t.swissQuality}</span>

@@ -7,7 +7,7 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'de',
     locales: ['en', 'de'],
     routing: {
       prefixDefaultLocale: false,
