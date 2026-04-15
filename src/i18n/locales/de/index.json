@@ -1,85 +1,84 @@
 {
   "title": "Florian Fackler | KI-Automatisierung für Schweizer KMU",
-  "description": "Datenschutzorientierte KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Ihre Daten bleiben in der Schweiz. Von Florian Fackler IT Services, Starrkirch-Wil.",
+  "description": "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten – Ihre Daten bleiben in der Schweiz. Florian Fackler IT Services, Starrkirch-Wil.",
   "hero_headline": "Ihre KI. Ihre Daten.",
-  "hero_tagline": "Smarte KI-Lösungen für Schweizer Unternehmen — mit einem eingebauten Datenschutz. Über 25 Jahre Erfahrung in der Umwandlung von Technologie zu einem echten Geschäftsvorteil.",
-  "usp_title": "Warum Unternehmen mit mir zusammenarbeiten",
+  "hero_tagline": "Clevere KI-Lösungen für Schweizer Unternehmen – mit Datenschutz von Anfang an, nicht nachträglich aufgesetzt. Über 25 Jahre Erfahrung darin, Technologie in echten Geschäftsnutzen zu verwandeln.",
+  "usp_title": "Warum Unternehmen mit mir arbeiten",
   "usp_1_title": "Ihre Daten bleiben in der Schweiz",
-  "usp_1_text": "Ihre Wettbewerber kopieren täglich sensible Daten in ChatGPT. Ich entwickle KI, die auf Ihren eigenen Systemen läuft — nichts wird ins Internet gesendet, nichts verlässt Ihr Unternehmen. Keine Datenlecks. Vollkonform. Echte Ergebnisse.",
-  "usp_2_title": "Was Sie tatsächlich bekommen",
+  "usp_1_text": "Ihre Mitbewerber kopieren täglich sensible Daten in ChatGPT. Ich baue KI, die auf Ihren eigenen Systemen läuft – nichts geht ins Internet, nichts verlässt Ihr Unternehmen.\n\nKeine Datenlecks. Vollständig DSG-konform. Echte Resultate.",
+  "usp_2_title": "Was Sie konkret bekommen",
   "usp_2_list": [
-    "Ein KI-Assistent, der anhand Ihrer eigenen Dokumente Fragen beantwortet.",
-    "Automatisierte Aufgaben, die jede Woche echte Stunden sparen — nicht nur beeindruckende Demos.",
-    "Intelligente E-Mail-Verarbeitung, die Nachrichten sortiert, Entwürfe erstellt und weiterleitet.",
-    "Ein Partner, der zwischen Technologie und Business vermittelt."
+    "Einen KI-Assistenten, der Ihr Unternehmen kennt und Fragen anhand Ihrer eigenen Dokumente beantwortet.",
+    "Automatisierte Abläufe, die Woche für Woche echte Stunden sparen – keine reinen Showcase-Demos.",
+    "Intelligente E-Mail-Bearbeitung, die sortiert, Antworten vorbereitet und Nachrichten gezielt weiterleitet."
   ],
-  "usp_3_title": "Ihre Wettbewerber sind bereits in Bewegung",
+  "usp_3_title": "Ihre Mitbewerber sind längst dran",
   "usp_3_list": [
-    "71% der Schweizer KMU nutzen oder testen momentan KI.",
-    "85% nutzen ChatGPT — aber nur ein Drittel hat Regeln für den sicheren Umgang mit Daten.",
-    "62% finden keine geeigneten Fachkräfte, die sie bei dieser Entwicklung unterstützen können."
+    "71 % der Schweizer KMU setzen KI bereits ein oder testen sie.",
+    "85 % nutzen ChatGPT – aber nur ein Drittel hat klare Regeln für den sicheren Umgang mit Daten.",
+    "62 % finden keine passenden Fachkräfte, die sie dabei begleiten."
   ],
-  "industries_title": "Für Schweizer Branchen entwickelt",
+  "industries_title": "Gemacht für Schweizer Branchen",
   "industry_cards": [
     {
-      "title": "Handel & Online-Shops",
-      "text": "15.000 Schweizer Online-Shops. CHF 14.9 Milliarden Umsatz. Ich helfe Ihnen mit der Verwaltung von Produktkatalogen, der Anbindung Ihrer Systeme und der Texterstellung durch KI — bei gleichzeitiger Sicherstellung des Datenstandortes in der Schweiz."
+      "title": "Handel &amp; Online-Shops",
+      "text": "15'000 Schweizer Online-Shops. CHF 14.9 Milliarden Umsatz. Ich unterstütze Sie bei Produktkatalogen, der Anbindung Ihrer Systeme und lasse KI Ihre Produkttexte schreiben – während Ihre Kundendaten in der Schweiz bleiben."
     },
     {
       "title": "Dienstleistungen",
-      "text": "Treuhänder, Versicherungen und Beratungsunternehmen verarbeiten täglich sensible Kundendaten. KI-Assistenten, die Dokumente analysieren und Berichte entwerfen — ohne dass etwas in die Cloud gesendet wird."
+      "text": "Treuhänder, Versicherungen und Beratungen arbeiten täglich mit sensiblen Mandantendaten. KI-Assistenten analysieren Dokumente und erstellen Berichtsentwürfe – ganz ohne dass etwas in die Cloud wandert."
     },
     {
-      "title": "Industrie & Fertigung",
-      "text": "Steigende Kosten erfordern intelligentere Prozesse. Automatisieren Sie Routineaufgaben, binden Sie Ihre Systeme an und eliminieren Sie manuelle Schritte, die wertvolle Zeit kosten."
+      "title": "Industrie &amp; Fertigung",
+      "text": "Steigende Kosten verlangen nach schlaueren Prozessen. Ich automatisiere Routinearbeiten, verbinde Ihre Systeme und eliminiere manuelle Schritte, die Ihrem Team wertvolle Zeit rauben."
     },
     {
-      "title": "Gesundheit & Bildung",
-      "text": "Wenn der Schutz sensibler Daten nicht verhandelbar ist, ist On-Premise-KI die verantwortungsvolle Wahl. Vollkonform, keine Weitergabe an Dritte, echte Produktivitätssteigerungen."
+      "title": "Gesundheit &amp; Bildung",
+      "text": "Wo der Schutz sensibler Daten nicht verhandelbar ist, ist On-Premise-KI die verantwortungsvolle Wahl. DSG-konform, keine Weitergabe an Dritte, spürbare Produktivitätsgewinne."
     }
   ],
   "services_title": "Was ich liefere",
   "service_cards": [
     {
       "title": "KI-Lösungen",
-      "text": "Vom ersten Gespräch bis zur funktionierenden Lösung. Ich finde heraus, wo KI Ihnen echtes Geld spart, richte alles ein und schule Ihr Team.",
+      "text": "Vom ersten Gespräch bis zur laufenden Lösung. Ich finde heraus, wo KI Ihnen tatsächlich Geld spart, richte alles ein und schule Ihr Team im Umgang damit.",
       "details": [
         "KI-Assistent, der Fragen anhand Ihrer Dokumente beantwortet",
-        "Intelligente Chatbots für Ihre Website oder internes Team",
+        "Smarte Chatbots für Ihre Website oder Ihr internes Team",
         "Automatisierte Inhalte und Produktbeschreibungen",
-        "Datenanalyse und Berichte",
-        "Automatisierung repetitiver Aufgaben",
-        "Praktische Workshops für Ihr Team"
+        "Datenanalysen und Reports",
+        "Automatisierung wiederkehrender Aufgaben",
+        "Praxisnahe Workshops für Ihr Team"
       ]
     },
     {
-      "title": "Systeme & Strategie",
-      "text": "Systeme, die mit Ihrem Unternehmen wachsen. Ich plane und baue die Grundlage, die heute funktioniert und Sie auch in Zukunft unterstützt.",
+      "title": "Systeme &amp; Strategie",
+      "text": "Systeme, die mit Ihrem Unternehmen wachsen. Ich plane und baue das Fundament, das heute trägt und Sie auch in den kommenden Jahren unterstützt.",
       "details": [
-        "Planung Ihrer IT-Systeme",
-        "Verbindung Ihrer Tools und Plattformen",
-        "Digitale Transformation — Schritt für Schritt",
-        "Automatisierung von Workflows über Abteilungen hinweg",
-        "Einfache Lösungen wo möglich, komplexe wo nötig",
-        "Team-Schulungen & Workshops"
+        "Planung Ihrer IT-Landschaft",
+        "Anbindung Ihrer Tools und Plattformen",
+        "Digitale Transformation – Schritt für Schritt",
+        "Automatisierte Workflows über Abteilungsgrenzen hinweg",
+        "So einfach wie möglich, so komplex wie nötig",
+        "Team-Schulungen &amp; Workshops"
       ]
     },
     {
       "title": "Online-Shops",
-      "text": "Neuer Shop, Migration oder Optimierung — mit intelligenten Produktkatalogen und automatisierten Prozessen, die manuelle Arbeit drastisch reduzieren.",
+      "text": "Neuer Shop, Migration oder Optimierung – mit intelligenten Produktkatalogen und automatisierten Prozessen, die manuelle Arbeit deutlich reduzieren.",
       "details": [
         "Shopware, Shopify, WooCommerce",
         "Anbindung Ihrer Produktdaten",
         "Zahlungslösungen (TWINT, Stripe, Saferpay)",
-        "Wechsel zu einer neuen Shop-Plattform",
+        "Wechsel auf eine neue Shop-Plattform",
         "KI-gestützte Produktbeschreibungen"
       ]
     },
     {
       "title": "Interim IT-Leitung",
-      "text": "Brauchen Sie jemanden, der Ihre IT leitet, aber noch nicht bereit für eine Festanstellung bin? Ich springe temporär ein, um Ihr Team zu organisieren, Prioritäten zu setzen und alles reibungslos zum Laufen zu bringen.",
+      "text": "Sie brauchen jemanden, der Ihre IT führt, sind aber noch nicht bereit für eine Festanstellung? Ich übernehme temporär, strukturiere Ihr Team, setze Prioritäten und bringe den Betrieb zum Laufen.",
       "details": [
-        "Certified Scrum Master & Product Owner"
+        "Certified Scrum Master &amp; Product Owner"
       ]
     }
   ],
@@ -87,13 +86,13 @@
   "pricing_cards": [
     {
       "title": "Setup",
-      "price": "CHF 3.000 – 8.000",
+      "price": "CHF 3'000 – 8'000",
       "price_note": "Einmalig",
       "details": [
-        "Hardware-Lieferung und Installation",
-        "KI-Software-Setup und Konfiguration",
+        "Lieferung und Installation der Hardware",
+        "Einrichtung und Konfiguration der KI-Software",
         "Ihr erster automatisierter Workflow",
-        "Feinabstimmung der KI auf Ihre Bedürfnisse",
+        "Feinabstimmung der KI auf Ihre Anforderungen",
         "Schulung Ihres Teams (2–3 Stunden)"
       ]
     },
@@ -102,31 +101,31 @@
       "price": "CHF 300 – 800 / Mt.",
       "price_note": "Laufend",
       "details": [
-        "Sicherstellung eines reibungslosen Betriebs",
-        "KI-Verbesserungen und Updates",
-        "Anpassung von Workflows basierend auf Ihrem Feedback",
-        "Kleine Änderungen und Fehlerbehebungen",
-        "Prioritäts-Support"
+        "Stabiler Betrieb ohne Überraschungen",
+        "Verbesserungen und Updates der KI",
+        "Anpassung der Workflows an Ihr Feedback",
+        "Kleine Änderungen und Bugfixes",
+        "Priorisierter Support"
       ]
     },
     {
       "title": "Projektbasis",
-      "price": "CHF 2.000 – 10.000",
-      "price_note": "Pro Aufgabe",
+      "price": "CHF 2'000 – 10'000",
+      "price_note": "Pro Projekt",
       "details": [
-        "KI, die aus Ihren Dokumenten sucht und antwortet",
-        "Ein individueller Chatbot für Ihr Team oder Ihre Kunden",
+        "KI, die in Ihren Dokumenten sucht und Antworten liefert",
+        "Individueller Chatbot für Ihr Team oder Ihre Kundschaft",
         "Automatisierte Dokumentenverarbeitung",
-        "Automatisierte E-Mail-Verarbeitung",
-        "Massgeschneiderte Automatisierung für einen bestimmten Prozess"
+        "Automatisierte E-Mail-Bearbeitung",
+        "Massgeschneiderte Automatisierung für einen konkreten Prozess"
       ]
     }
   ],
-  "pricing_note": "Typisches erstes Jahr: CHF 5.000 Setup + CHF 500/Mt. = CHF 11.000/Jahr. Hardware kann gekauft oder gemietet werden — was immer für Sie am besten passt.",
-  "contact_cta": "Sprechen wir darüber",
-  "contact_title": "Bereit anzufangen?",
-  "contact_subtitle": "Zürich, Bern, Basel, Luzern — alles innerhalb einer Stunde mit dem Zug. Treffen wir uns auf einen Kaffee und sprechen darüber, was KI tatsächlich für Ihr Unternehmen leisten kann.",
+  "pricing_note": "Typisches erstes Jahr: CHF 5'000 Setup + CHF 500/Mt. = CHF 11'000/Jahr. Hardware können Sie kaufen oder mieten – ganz wie es für Sie passt.",
+  "contact_cta": "Lassen Sie uns reden",
+  "contact_title": "Bereit loszulegen?",
+  "contact_subtitle": "Zürich, Bern, Basel, Luzern – alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für Ihr Unternehmen leisten kann.",
   "footer_copyright": "© {year} Florian Fackler. Alle Rechte vorbehalten.",
-  "footer_services": "KI-Lösungen • Systeme & Strategie • Online-Shops • Interim IT-Leitung",
+  "footer_services": "KI-Lösungen • Systeme &amp; Strategie • Online-Shops • Interim IT-Leitung",
   "footer_swiss_quality": "Swiss Quality"
 }
