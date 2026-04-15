@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://properflow.ch/sitemap-index.xml
