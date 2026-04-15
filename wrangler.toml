@@ -1,3 +1,6 @@
 name = "florian-fackler-cloud"
 compatibility_date = "2024-04-15"
 pages_build_output_dir = "dist"
+
+[assets]
+directory = "./dist"
