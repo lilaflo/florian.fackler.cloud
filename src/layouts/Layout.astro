@@ -242,6 +242,12 @@ const jsonLd = {
     <link rel="alternate" hreflang="x-default" href={baseUrl} />
     <!-- JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <!-- Analytics (Umami, privacy-friendly, no cookies) -->
+    <script
+      defer
+      src="https://imamu.code-nexus.co/script.js"
+      data-website-id="519d7a56-80eb-4dae-ba6a-f531e5541f61"
+    ></script>
   </head>
   <body>
     <slot />
