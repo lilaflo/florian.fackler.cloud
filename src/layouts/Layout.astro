@@ -15,7 +15,8 @@ const ogLocaleAlternate = isDe ? 'en_GB' : 'de_CH';
 const canonicalUrl = isDe ? baseUrl : `${baseUrl}/en`;
 // TODO: replace with a real 1200×630 PNG/JPG at public/og-image.png for social previews.
 const ogImage: string | null = null;
-const logoUrl = `${baseUrl}/assets/Properflow-Logo.svg`;
+// TODO: Google recommends ≥112×112 for Organization.logo — current favicon is 48×48.
+const logoUrl = `${baseUrl}/assets/favicon-48x48.png`;
 
 // Localized strings for OG / Twitter / JSON-LD
 const copy = isDe
@@ -198,6 +199,15 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-dark-48x48.png" media="(prefers-color-scheme: dark)" />
     <!-- Open Graph -->
     <meta property="og:title" content={copy.ogTitle} />
     <meta property="og:description" content={copy.ogDescription} />
