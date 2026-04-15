@@ -1,0 +1,19 @@
+{
+  "name": "florian.fackler.cloud",
+  "version": "1.0.0",
+  "description": "From \"Florian Fackler, IT Consultant\" to \"Properflow GmbH, AI Automation for Swiss Real Estate.\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "astro": "^6.1.6"
+  }
+}

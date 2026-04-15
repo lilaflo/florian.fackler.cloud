@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContactDialog from '../components/ContactDialog.astro';
+---
+
+<Layout 
+  title="Florian Fackler | Privacy-Focused AI Automation for Swiss SMEs"
+  description="Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, and intelligent assistants. Your data stays in Switzerland. By Florian Fackler IT Services, Starrkirch-Wil."
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Your AI. Your Data.</h1>
+      <p>
+        Smart AI solutions for Swiss companies &mdash; with your data
+        protection built in, not bolted on. 25+ years of experience turning
+        technology into a real advantage for your business.
+      </p>
+      <button type="button" class="btn" onclick="openContactDialog()">
+        Let's Talk
+      </button>
+    </div>
+  </section>
+  
+  <!-- USP / Unique Selling Proposition -->
+  <section>
+    <div class="container">
+      <h2>Why Companies Work With Me</h2>
+      <div class="usp-grid">
+        <div>
+          <h3>Your Data Stays in Switzerland</h3>
+          <p>
+            Your competitors copy sensitive data into ChatGPT every day. I
+            build AI that runs on <strong>your own systems</strong>
+            &mdash; nothing is sent to the internet, nothing leaves your
+            company.
+          </p>
+          <p>
+            <strong>No data leaks. Fully compliant. Real results.</strong>
+          </p>
+        </div>
+        <div>
+          <h3>What you actually get</h3>
+          <ul>
+            <li>
+              An AI assistant that knows your business and answers questions
+              based on your own documents.
+            </li>
+            <li>
+              Automated tasks that save real hours every week &mdash; not just
+              impressive demos.
+            </li>
+            <li>
+              Smart email handling that sorts, drafts replies, and routes
+              messages for you.
+            </li>
+            <li>A partner who translates between technology and business.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Your competitors are already moving</h3>
+          <ul>
+            <li>
+              <strong>71%</strong> of Swiss SMEs use or test AI right now.
+            </li>
+            <li>
+              <strong>85%</strong> use ChatGPT &mdash; but only a third have
+              rules for handling data safely.
+            </li>
+            <li>
+              <strong>62%</strong> can't find the right people to help them
+              keep up.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Industries -->
+  <section id="industries" class="section-alt">
+    <div class="container">
+      <h2>Built for Swiss Industries</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Trade &amp; Online Shops</h3>
+          <p>
+            15,000 Swiss online shops. CHF 14.9 billion in revenue. I help you
+            manage product catalogs, connect your systems, and let AI write
+            your product texts &mdash; while keeping customer data in
+            Switzerland.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Professional Services</h3>
+          <p>
+            Fiduciaries, insurers, and consultancies handle sensitive client
+            data every day. AI assistants that analyze documents and draft
+            reports &mdash; without sending anything to the cloud.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Industry &amp; Manufacturing</h3>
+          <p>
+            Rising costs demand smarter processes. I automate routine work,
+            connect your systems, and eliminate manual steps that drain your
+            team's time.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>Healthcare &amp; Education</h3>
+          <p>
+            When protecting sensitive data is non-negotiable, on-premise AI is
+            the responsible choice. Fully compliant, no data shared with third
+            parties, real productivity gains.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>What I Deliver</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>AI Solutions</h3>
+          <p>
+            From first conversation to a working solution. I find where AI
+            saves you real money, set everything up, and train your team to
+            use it.
+          </p>
+          <ul>
+            <li>
+              AI assistant that answers questions based on your documents
+            </li>
+            <li>Smart chatbots for your website or internal team</li>
+            <li>Automated content and product descriptions</li>
+            <li>Data analysis and reports</li>
+            <li>Automating repetitive tasks</li>
+            <li>Hands-on workshops for your team</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Systems &amp; Strategy</h3>
+          <p>
+            Systems that grow with your business. I plan and build the
+            foundation that works today and supports you for years to come.
+          </p>
+          <ul>
+            <li>Planning your IT systems</li>
+            <li>Connecting your tools and platforms</li>
+            <li>Digital transformation &mdash; step by step</li>
+            <li>Automating workflows across departments</li>
+            <li>
+              Simple solutions where possible, complex ones where needed
+            </li>
+            <li>Team training &amp; workshops</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Online Shops</h3>
+          <p>
+            New shop, migration, or optimization &mdash; with smart product
+            catalogs and automated processes that cut manual work
+            dramatically.
+          </p>
+          <ul>
+            <li>Shopware, Shopify, WooCommerce</li>
+            <li>Connecting your product data</li>
+            <li>Payment solutions (TWINT, Stripe, Saferpay)</li>
+            <li>Switching to a new shop platform</li>
+            <li>AI-powered product descriptions</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Interim IT Leadership</h3>
+          <p>
+            Need someone to lead your IT but not ready for a full-time hire? I
+            step in temporarily to organize your team, set priorities, and get
+            things running smoothly.
+          </p>
+          <p><strong>Certified Scrum Master &amp; Product Owner</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pricing -->
+  <section id="pricing" class="section-alt">
+    <div class="container">
+      <h2>Transparent Pricing</h2>
+      <p>No hidden fees. You know what you pay before we start.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Setup</h3>
+          <p class="price">CHF 3,000 &ndash; 8,000</p>
+          <p class="price-note">One-time</p>
+          <ul>
+            <li>Hardware delivery and installation</li>
+            <li>AI software setup and configuration</li>
+            <li>Your first automated workflow</li>
+            <li>Fine-tuning the AI to your needs</li>
+            <li>Staff training (2&ndash;3 hours)</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Monthly Support</h3>
+          <p class="price">CHF 300 &ndash; 800 / mo</p>
+          <p class="price-note">Ongoing</p>
+          <ul>
+            <li>Making sure everything runs smoothly</li>
+            <li>AI improvements and updates</li>
+            <li>Adjusting workflows to your feedback</li>
+            <li>Small changes and fixes</li>
+            <li>Priority support</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <h3>Per Project</h3>
+          <p class="price">CHF 2,000 &ndash; 10,000</p>
+          <p class="price-note">Per task</p>
+          <ul>
+            <li>AI that searches and answers from your documents</li>
+            <li>A custom chatbot for your team or customers</li>
+            <li>Automated document processing</li>
+            <li>Automated email handling</li>
+            <li>Custom automation for a specific process</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px">
+        <p>
+          <strong>Typical first year:</strong> CHF 5,000 setup + CHF 500/mo =
+          <strong>CHF 11,000/year</strong>. Hardware can be bought or rented
+          monthly &mdash; whichever works best for you.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>
+        Zurich, Bern, Basel, Lucerne &mdash; all within an hour by train.
+        Let's meet for a coffee and talk about what AI can actually do for
+        your business.
+      </p>
+      <br />
+      <button type="button" class="btn" onclick="openContactDialog()">
+        Let's Talk
+      </button>
+    </div>
+  </section>
+  
+  <ContactDialog />
+  <Footer />
+</Layout>

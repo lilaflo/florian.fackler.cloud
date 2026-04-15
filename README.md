@@ -6,6 +6,32 @@ Start: Q2 2026 (May). Target: Q2 2027 (first GmbH customers).
 
 ---
 
+## Development
+
+This website is built with [Astro](https://astro.build/).
+
+### Commands
+
+- **Development server**: `pnpm dev` (runs on http://localhost:4321)
+- **Build for production**: `pnpm build`
+- **Preview production build**: `pnpm preview`
+
+### Project Structure
+
+```
+/
+├── public/           # Static assets (images, favicons, etc.)
+├── src/
+│   ├── components/   # Reusable Astro components
+│   ├── layouts/      # Page layouts
+│   ├── pages/        # File-based routing
+│   └── styles/       # Global CSS
+├── astro.config.mjs  # Astro configuration
+└── package.json
+```
+
+---
+
 ## Month 1 -- Foundation (May 2026)
 
 **Goal:** Set up the business infrastructure and define the offering.

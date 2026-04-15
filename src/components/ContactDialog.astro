@@ -1,0 +1,66 @@
+---
+// Contact Form Dialog
+---
+
+<div
+  class="contact-overlay"
+  id="contactOverlay"
+  onclick="closeContactDialog(event)"
+>
+  <dialog id="contactDialog" onclick="event.stopPropagation()">
+    <div class="contact-dialog-header">
+      <h2>Get in Touch</h2>
+      <button
+        class="contact-dialog-close"
+        onclick="closeContactDialog()"
+        aria-label="Close"
+      >
+        &times;
+      </button>
+    </div>
+    <iframe
+      src="about:blank"
+      id="contactFrame"
+      title="Contact form"
+    ></iframe>
+  </dialog>
+</div>
+
+<script is:inline>
+  var contactOverlay = document.getElementById("contactOverlay");
+  var contactDialog = document.getElementById("contactDialog");
+  var contactFrame = document.getElementById("contactFrame");
+  var formUrl =
+    "https://n8n.code-nexus.co/form/2b1a6ee0-2738-4c5e-a0b6-6b796cce2b37";
+
+  if (contactDialog) contactDialog.removeAttribute("open");
+
+  window.openContactDialog = function() {
+    if (contactOverlay) contactOverlay.classList.add("active");
+    if (contactFrame) contactFrame.src = formUrl;
+    if (contactDialog) contactDialog.showModal();
+    document.body.style.overflow = "hidden";
+  };
+
+  window.closeContactDialog = function(e) {
+    if (e && e.target !== contactOverlay) return;
+    if (contactDialog) contactDialog.close();
+    if (contactOverlay) contactOverlay.classList.remove("active");
+    if (contactFrame) contactFrame.src = "about:blank";
+    document.body.style.overflow = "";
+  };
+
+  if (contactDialog) {
+    contactDialog.addEventListener("close", function() {
+      if (contactOverlay) contactOverlay.classList.remove("active");
+      if (contactFrame) contactFrame.src = "about:blank";
+      document.body.style.overflow = "";
+    });
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && contactDialog && contactDialog.open) {
+      window.closeContactDialog();
+    }
+  });
+</script>

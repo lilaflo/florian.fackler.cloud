@@ -2,37 +2,49 @@
 
 ## Project Overview
 
-This is a static website for Properflow GmbH, a Swiss AI automation company specializing in Real Estate. It is a single-page HTML file (`index.html`) with inline CSS and vanilla JavaScript. No build system, framework, or package manager.
+This is a static website for Florian Fackler IT Services / Properflow GmbH, a Swiss AI automation company. The site is built with Astro, a modern static site generator. The legacy `index.html` file still exists but is superseded by the Astro implementation in `src/`.
 
 ## Build / Lint / Test Commands
 
-There is no build step. The site is served as plain HTML.
-
-- **Preview locally**: Open `index.html` directly in a browser, or use a simple static server:
-  - `python3 -m http.server 8000`
-  - `npx serve .` (requires Node.js)
-- **HTML validation**: `npx html-validate index.html`
-- **CSS validation**: No CSS linter configured. Validate manually via W3C CSS Validator.
-- **Link checking**: `npx hyperlink index.html`
+- **Development server**: `pnpm dev` (runs on http://localhost:4321)
+- **Production build**: `pnpm build` (outputs to `dist/`)
+- **Preview production build**: `pnpm preview`
 - **Tests**: No test framework configured. No tests exist for this project.
 
 ## Project Structure
 
 ```
 /
-├── index.html    # The entire site: HTML, inline CSS, inline JS
-├── README.md     # Business documentation (pricing, hardware tiers)
-└── AGENTS.md     # This file
+├── public/             # Static assets (images, SVGs, etc.)
+│   └── assets/         # Images and other assets
+├── src/
+│   ├── components/     # Reusable Astro components
+│   │   ├── Header.astro
+│   │   ├── Footer.astro
+│   │   └── ContactDialog.astro
+│   ├── layouts/        # Page layouts
+│   │   └── Layout.astro
+│   ├── pages/          # File-based routing
+│   │   └── index.astro # Homepage (becomes / route)
+│   └── styles/         # Global CSS
+│       └── global.css
+├── astro.config.mjs    # Astro configuration
+├── package.json        # Dependencies and scripts
+├── index.html          # Legacy static HTML (superseded by src/)
+├── README.md           # Business documentation (pricing, transition plan)
+└── AGENTS.md           # This file
 ```
 
 ## Code Style Guidelines
 
 ### General
 
-- Single-file static site. All CSS and JS are inline within `index.html`.
+- Astro-based static site with component-based architecture.
 - Use UTF-8 encoding.
-- Use 2-space indentation for HTML, CSS, and JavaScript.
-- Keep the file self-contained — no external CSS or JS files unless absolutely necessary.
+- Use 2-space indentation for HTML, CSS, JavaScript, and Astro files.
+- Organize code into reusable components in `src/components/`.
+- Global styles go in `src/styles/global.css`.
+- Static assets (images, SVGs) go in `public/` directory.
 
 ### HTML
 
@@ -46,7 +58,7 @@ There is no build step. The site is served as plain HTML.
 
 ### CSS
 
-- All styles are inline in a single `<style>` block in `<head>`.
+- All styles are in `src/styles/global.css` and imported in the Layout component.
 - Use CSS custom properties (variables) defined in `:root` for colors, spacing, and theming.
 - Naming convention: `kebab-case` for classes (e.g., `.service-card`, `.usp-grid`).
 - Use `var(--variable-name)` for all theme-aware colors and values.
@@ -138,4 +150,3 @@ The page is a single-page sales site for IT consulting services with these secti
 
 - Footer year is dynamically set via JavaScript (`new Date().getFullYear()`).
 - Do not add external dependencies unless explicitly requested.
-- Do not split into multiple files unless explicitly requested.

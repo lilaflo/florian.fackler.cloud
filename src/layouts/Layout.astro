@@ -1,0 +1,237 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Florian Fackler | AI Automation for Swiss SMEs"
+    />
+    <meta
+      property="og:description"
+      content="Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants. Your data stays in Switzerland."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_CH" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:url" content="https://properflow.ch/" />
+    <meta property="og:site_name" content="Florian Fackler" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Florian Fackler | AI Automation for Swiss SMEs"
+    />
+    <meta
+      name="twitter:description"
+      content="Privacy-focused AI automation for Swiss SMEs. Your data stays in Switzerland."
+    />
+    <!-- Geo -->
+    <meta name="geo.region" content="CH-SO" />
+    <meta name="geo.placename" content="Starrkirch-Wil" />
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://properflow.ch/" />
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://properflow.ch/#organization",
+          "name": "Florian Fackler IT Services",
+          "url": "https://properflow.ch/",
+          "logo": "https://properflow.ch/logo.png",
+          "description": "Privacy-focused AI automation for Swiss SMEs.",
+          "legalName": "Florian Fackler IT Services",
+          "foundingDate": "2026",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bumelochstrasse 35",
+            "addressLocality": "Starrkirch-Wil",
+            "postalCode": "4656",
+            "addressRegion": "SO",
+            "addressCountry": "CH"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://properflow.ch/#website",
+          "url": "https://properflow.ch/",
+          "name": "Florian Fackler IT Services",
+          "publisher": { "@id": "https://properflow.ch/#organization" },
+          "inLanguage": ["de-CH", "en"]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://properflow.ch/#webpage",
+          "url": "https://properflow.ch/",
+          "name": "Florian Fackler | AI Automation for Swiss SMEs",
+          "description": "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants.",
+          "isPartOf": { "@id": "https://properflow.ch/#website" },
+          "about": { "@id": "https://properflow.ch/#organization" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ProfessionalService",
+          "name": "Florian Fackler IT Services",
+          "url": "https://properflow.ch/",
+          "description": "AI automation for Swiss SMEs. Privacy-focused document processing, workflow automation, and intelligent assistants.",
+          "priceRange": "CHF 3000-15000",
+          "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": 47.3539,
+              "longitude": 7.9081
+            },
+            "geoRadius": "80000"
+          },
+          "serviceType": [
+            "AI Document Processing",
+            "Workflow Automation",
+            "Privacy-Focused AI Consulting",
+            "Business Process Automation"
+          ],
+          "knowsAbout": [
+            "Artificial Intelligence",
+            "Workflow Automation",
+            "Business Process Automation",
+            "Data Privacy",
+            "Document Processing",
+            "n8n",
+            "Ollama",
+            "Large Language Models"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "AI Automation Packages",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Starter",
+                  "description": "1 AI workflow, privacy-focused deployment, setup and training included."
+                },
+                "price": "3000",
+                "priceCurrency": "CHF"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Professional",
+                  "description": "3 AI workflows, Swiss-hosted, with monthly monitoring and support."
+                },
+                "price": "8000",
+                "priceCurrency": "CHF"
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Enterprise",
+                  "description": "Custom AI automation, on-premise deployment, dedicated support."
+                },
+                "price": "15000",
+                "priceCurrency": "CHF",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "15000",
+                  "priceCurrency": "CHF",
+                  "priceType": "startingPrice"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does Florian Fackler protect my company data?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "All AI processing runs in privacy-focused environments. Your data stays in Switzerland — on your hardware or in a Swiss data center. No data is sent to OpenAI, Google, or any third-party AI service. DSG and GDPR compliant by architecture, not just policy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What AI workflows does Florian Fackler offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Document Extraction Pipeline (contracts, reports, invoices), Intelligent Communication Automation (inquiry classification, response drafting, routing), and Custom Workflow Automation (tailored to your specific business processes)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a Florian Fackler AI project cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Starter packages begin at CHF 3,000 one-time setup. Professional packages with 3 workflows and ongoing support start at CHF 8,000 setup plus CHF 500/month. Enterprise solutions with on-premise deployment start at CHF 15,000."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Florian Fackler integrate with existing software?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We integrate with your existing systems via APIs, email parsing, and document processing. n8n connects to hundreds of tools and platforms out of the box."
+              }
+            }
+          ]
+        }
+      ]
+    })} />
+  </head>
+  <body>
+    <slot />
+    
+    <script is:inline>
+      const htmlElement = document.documentElement;
+
+      function setTheme(theme) {
+        htmlElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+      }
+
+      const saved = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      setTheme(saved || (prefersDark ? "dark" : "light"));
+
+      document.getElementById("theme-toggle")?.addEventListener("click", () => {
+        const current = htmlElement.getAttribute("data-theme");
+        setTheme(current === "dark" ? "light" : "dark");
+      });
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (!localStorage.getItem("theme")) {
+            setTheme(e.matches ? "dark" : "light");
+          }
+        });
+    </script>
+  </body>
+</html>
