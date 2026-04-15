@@ -23,5 +23,3 @@ Thumbs.db
 # CI/CD (Cloudflare)
 .wrangler/
 
-# Gitea
-.gitea/
