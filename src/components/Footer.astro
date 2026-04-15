@@ -1,21 +1,39 @@
 ---
-const currentYear = new Date().getFullYear();
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'en' } = Astro.props;
+
+const translations = {
+  en: {
+    copyright: `© ${new Date().getFullYear()} Florian Fackler. All rights reserved.`,
+    services: 'AI Solutions • Systems & Strategy • Online Shops • Interim IT Leadership',
+    swissQuality: 'Swiss Quality',
+  },
+  de: {
+    copyright: `© ${new Date().getFullYear()} Florian Fackler. Alle Rechte vorbehalten.`,
+    services: 'KI-Lösungen • Systeme & Strategie • Online-Shops • Interim IT-Leitung',
+    swissQuality: 'Swiss Quality',
+  },
+};
+
+const t = translations[lang as keyof typeof translations] || translations.en;
 ---
 
 <footer>
   <div class="container footer-flex">
     <div>
-      <p>
-        © <span id="year">{currentYear}</span> Florian Fackler. All rights reserved.
-      </p>
-      <p>
-        AI Solutions • Systems &amp; Strategy • Online Shops • Interim IT
-        Leadership
-      </p>
+      <p set:html={t.copyright} />
+      <p>{t.services}</p>
+      <div class="lang-switch">
+        <a href="/">EN</a>
+        <span>|</span>
+        <a href="/de">DE</a>
+      </div>
     </div>
     <div class="trust-element">
-      <span>Swiss Quality</span>
-      <!-- Swiss Flag -->
+      <span>{t.swissQuality}</span>
       <svg
         width="30"
         height="30"

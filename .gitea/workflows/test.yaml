@@ -1,0 +1,27 @@
+name: Test Environment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: facklercloud
+    container:
+      image: node:alpine
+    steps:
+      - name: Show environment
+        shell: sh
+        run: |
+          echo "=== Environment ==="
+          env | sort
+          echo ""
+          echo "=== Network ==="
+          cat /etc/hosts
+          echo ""
+          echo "=== Can we reach gitea? ==="
+          ping -c 2 gitea || echo "Cannot ping gitea"
+          nslookup gitea || echo "Cannot resolve gitea"
+          echo ""
+          echo "=== Working directory ==="
+          pwd
+          ls -la

@@ -1,0 +1,132 @@
+{
+  "title": "Florian Fackler | KI-Automatisierung für Schweizer KMU",
+  "description": "Datenschutzorientierte KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Ihre Daten bleiben in der Schweiz. Von Florian Fackler IT Services, Starrkirch-Wil.",
+  "hero_headline": "Ihre KI. Ihre Daten.",
+  "hero_tagline": "Smarte KI-Lösungen für Schweizer Unternehmen — mit einem eingebauten Datenschutz. Über 25 Jahre Erfahrung in der Umwandlung von Technologie zu einem echten Geschäftsvorteil.",
+  "usp_title": "Warum Unternehmen mit mir zusammenarbeiten",
+  "usp_1_title": "Ihre Daten bleiben in der Schweiz",
+  "usp_1_text": "Ihre Wettbewerber kopieren täglich sensible Daten in ChatGPT. Ich entwickle KI, die auf Ihren eigenen Systemen läuft — nichts wird ins Internet gesendet, nichts verlässt Ihr Unternehmen. Keine Datenlecks. Vollkonform. Echte Ergebnisse.",
+  "usp_2_title": "Was Sie tatsächlich bekommen",
+  "usp_2_list": [
+    "Ein KI-Assistent, der anhand Ihrer eigenen Dokumente Fragen beantwortet.",
+    "Automatisierte Aufgaben, die jede Woche echte Stunden sparen — nicht nur beeindruckende Demos.",
+    "Intelligente E-Mail-Verarbeitung, die Nachrichten sortiert, Entwürfe erstellt und weiterleitet.",
+    "Ein Partner, der zwischen Technologie und Business vermittelt."
+  ],
+  "usp_3_title": "Ihre Wettbewerber sind bereits in Bewegung",
+  "usp_3_list": [
+    "71% der Schweizer KMU nutzen oder testen momentan KI.",
+    "85% nutzen ChatGPT — aber nur ein Drittel hat Regeln für den sicheren Umgang mit Daten.",
+    "62% finden keine geeigneten Fachkräfte, die sie bei dieser Entwicklung unterstützen können."
+  ],
+  "industries_title": "Für Schweizer Branchen entwickelt",
+  "industry_cards": [
+    {
+      "title": "Handel & Online-Shops",
+      "text": "15.000 Schweizer Online-Shops. CHF 14.9 Milliarden Umsatz. Ich helfe Ihnen mit der Verwaltung von Produktkatalogen, der Anbindung Ihrer Systeme und der Texterstellung durch KI — bei gleichzeitiger Sicherstellung des Datenstandortes in der Schweiz."
+    },
+    {
+      "title": "Dienstleistungen",
+      "text": "Treuhänder, Versicherungen und Beratungsunternehmen verarbeiten täglich sensible Kundendaten. KI-Assistenten, die Dokumente analysieren und Berichte entwerfen — ohne dass etwas in die Cloud gesendet wird."
+    },
+    {
+      "title": "Industrie & Fertigung",
+      "text": "Steigende Kosten erfordern intelligentere Prozesse. Automatisieren Sie Routineaufgaben, binden Sie Ihre Systeme an und eliminieren Sie manuelle Schritte, die wertvolle Zeit kosten."
+    },
+    {
+      "title": "Gesundheit & Bildung",
+      "text": "Wenn der Schutz sensibler Daten nicht verhandelbar ist, ist On-Premise-KI die verantwortungsvolle Wahl. Vollkonform, keine Weitergabe an Dritte, echte Produktivitätssteigerungen."
+    }
+  ],
+  "services_title": "Was ich liefere",
+  "service_cards": [
+    {
+      "title": "KI-Lösungen",
+      "text": "Vom ersten Gespräch bis zur funktionierenden Lösung. Ich finde heraus, wo KI Ihnen echtes Geld spart, richte alles ein und schule Ihr Team.",
+      "details": [
+        "KI-Assistent, der Fragen anhand Ihrer Dokumente beantwortet",
+        "Intelligente Chatbots für Ihre Website oder internes Team",
+        "Automatisierte Inhalte und Produktbeschreibungen",
+        "Datenanalyse und Berichte",
+        "Automatisierung repetitiver Aufgaben",
+        "Praktische Workshops für Ihr Team"
+      ]
+    },
+    {
+      "title": "Systeme & Strategie",
+      "text": "Systeme, die mit Ihrem Unternehmen wachsen. Ich plane und baue die Grundlage, die heute funktioniert und Sie auch in Zukunft unterstützt.",
+      "details": [
+        "Planung Ihrer IT-Systeme",
+        "Verbindung Ihrer Tools und Plattformen",
+        "Digitale Transformation — Schritt für Schritt",
+        "Automatisierung von Workflows über Abteilungen hinweg",
+        "Einfache Lösungen wo möglich, komplexe wo nötig",
+        "Team-Schulungen & Workshops"
+      ]
+    },
+    {
+      "title": "Online-Shops",
+      "text": "Neuer Shop, Migration oder Optimierung — mit intelligenten Produktkatalogen und automatisierten Prozessen, die manuelle Arbeit drastisch reduzieren.",
+      "details": [
+        "Shopware, Shopify, WooCommerce",
+        "Anbindung Ihrer Produktdaten",
+        "Zahlungslösungen (TWINT, Stripe, Saferpay)",
+        "Wechsel zu einer neuen Shop-Plattform",
+        "KI-gestützte Produktbeschreibungen"
+      ]
+    },
+    {
+      "title": "Interim IT-Leitung",
+      "text": "Brauchen Sie jemanden, der Ihre IT leitet, aber noch nicht bereit für eine Festanstellung bin? Ich springe temporär ein, um Ihr Team zu organisieren, Prioritäten zu setzen und alles reibungslos zum Laufen zu bringen.",
+      "details": [
+        "Certified Scrum Master & Product Owner"
+      ]
+    }
+  ],
+  "pricing_title": "Transparente Preise",
+  "pricing_cards": [
+    {
+      "title": "Setup",
+      "price": "CHF 3.000 – 8.000",
+      "price_note": "Einmalig",
+      "details": [
+        "Hardware-Lieferung und Installation",
+        "KI-Software-Setup und Konfiguration",
+        "Ihr erster automatisierter Workflow",
+        "Feinabstimmung der KI auf Ihre Bedürfnisse",
+        "Schulung Ihres Teams (2–3 Stunden)"
+      ]
+    },
+    {
+      "title": "Monatlicher Support",
+      "price": "CHF 300 – 800 / Mt.",
+      "price_note": "Laufend",
+      "details": [
+        "Sicherstellung eines reibungslosen Betriebs",
+        "KI-Verbesserungen und Updates",
+        "Anpassung von Workflows basierend auf Ihrem Feedback",
+        "Kleine Änderungen und Fehlerbehebungen",
+        "Prioritäts-Support"
+      ]
+    },
+    {
+      "title": "Projektbasis",
+      "price": "CHF 2.000 – 10.000",
+      "price_note": "Pro Aufgabe",
+      "details": [
+        "KI, die aus Ihren Dokumenten sucht und antwortet",
+        "Ein individueller Chatbot für Ihr Team oder Ihre Kunden",
+        "Automatisierte Dokumentenverarbeitung",
+        "Automatisierte E-Mail-Verarbeitung",
+        "Massgeschneiderte Automatisierung für einen bestimmten Prozess"
+      ]
+    }
+  ],
+  "pricing_note": "Typisches erstes Jahr: CHF 5.000 Setup + CHF 500/Mt. = CHF 11.000/Jahr. Hardware kann gekauft oder gemietet werden — was immer für Sie am besten passt.",
+  "contact_cta": "Sprechen wir darüber",
+  "contact_title": "Bereit anzufangen?",
+  "contact_subtitle": "Zürich, Bern, Basel, Luzern — alles innerhalb einer Stunde mit dem Zug. Treffen wir uns auf einen Kaffee und sprechen darüber, was KI tatsächlich für Ihr Unternehmen leisten kann.",
+  "footer_copyright": "© {year} Florian Fackler. Alle Rechte vorbehalten.",
+  "footer_services": "KI-Lösungen • Systeme & Strategie • Online-Shops • Interim IT-Leitung",
+  "footer_swiss_quality": "Swiss Quality"
+}

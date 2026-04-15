@@ -1,10 +1,28 @@
 ---
-// Header component
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'en' } = Astro.props;
+
+const navItems = lang === 'de' 
+  ? [
+      { label: 'Branchen', href: '#industries' },
+      { label: 'Leistungen', href: '#services' },
+      { label: 'Preise', href: '#pricing' },
+      { label: 'Kontakt', href: '#contact' },
+    ]
+  : [
+      { label: 'Industries', href: '#industries' },
+      { label: 'Services', href: '#services' },
+      { label: 'Pricing', href: '#pricing' },
+      { label: 'Contact', href: '#contact' },
+    ];
 ---
 
 <header>
   <div class="container header-flex">
-    <a href="/" class="logo">
+    <a href={lang === 'de' ? '/de' : '/'} class="logo">
       <span class="name">Florian Fackler</span>
       <span class="accent bold">IT Services</span>
     </a>
@@ -28,10 +46,9 @@
     </button>
     <nav>
       <ul>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
+        {navItems.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
       </ul>
     </nav>
   </div>

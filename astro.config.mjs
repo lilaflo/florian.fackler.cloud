@@ -6,4 +6,11 @@ export default defineConfig({
   build: {
     inlineStylesheets: 'auto',
   },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'de'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });

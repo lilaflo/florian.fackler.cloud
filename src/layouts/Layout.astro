@@ -4,13 +4,18 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
+  lang?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, lang = 'en' } = Astro.props;
+const currentUrl = Astro.url.href;
+const baseUrl = 'https://properflow.ch';
+const ogLocale = lang === 'de' ? 'de_CH' : 'en_GB';
+const canonicalUrl = lang === 'de' ? `${baseUrl}/de` : baseUrl;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,9 +31,9 @@ const { title, description } = Astro.props;
       content="Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants. Your data stays in Switzerland."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="de_CH" />
-    <meta property="og:locale:alternate" content="en_GB" />
-    <meta property="og:url" content="https://properflow.ch/" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={lang === 'de' ? 'en_GB' : 'de_CH'} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Florian Fackler" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,7 +52,10 @@ const { title, description } = Astro.props;
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <!-- Canonical -->
-    <link rel="canonical" href="https://properflow.ch/" />
+    <link rel="canonical" href={canonicalUrl} />
+    <!-- Alternate languages -->
+    <link rel="alternate" hreflang="en" href={baseUrl} />
+    <link rel="alternate" hreflang="de" href={`${baseUrl}/de`} />
     <!-- JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
