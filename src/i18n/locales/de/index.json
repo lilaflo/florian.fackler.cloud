@@ -86,7 +86,7 @@
   "pricing_cards": [
     {
       "title": "Setup",
-      "price": "CHF 3'000 – 8'000",
+      "price": "CHF 8'000 – 20'000",
       "price_note": "Einmalig",
       "details": [
         "Lieferung und Installation der Hardware",
@@ -98,7 +98,7 @@
     },
     {
       "title": "Monatlicher Support",
-      "price": "CHF 300 – 800 / Mt.",
+      "price": "CHF 1'000 – 4'000 / Mt.",
       "price_note": "Laufend",
       "details": [
         "Stabiler Betrieb ohne Überraschungen",
@@ -110,7 +110,7 @@
     },
     {
       "title": "Projektbasis",
-      "price": "CHF 2'000 – 10'000",
+      "price": "CHF 8'000 – 30'000",
       "price_note": "Pro Projekt",
       "details": [
         "KI, die in Ihren Dokumenten sucht und Antworten liefert",
@@ -121,7 +121,7 @@
       ]
     }
   ],
-  "pricing_note": "Typisches erstes Jahr: CHF 5'000 Setup + CHF 500/Mt. = CHF 11'000/Jahr. Hardware können Sie kaufen oder mieten – ganz wie es für Sie passt.",
+  "pricing_note": "Typisches erstes Jahr: CHF 10'000 Setup + CHF 1'500/Mt. = CHF 28'000/Jahr. Hardware können Sie kaufen oder mieten – ganz wie es für Sie passt.",
   "contact_cta": "Lassen Sie uns reden",
   "contact_title": "Bereit loszulegen?",
   "contact_subtitle": "Zürich, Bern, Basel, Luzern – alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für Ihr Unternehmen leisten kann.",
