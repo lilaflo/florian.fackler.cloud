@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a static website for Florian Fackler IT Services / Properflow GmbH, a Swiss AI automation company. The site is built with Astro, a modern static site generator. The legacy `index.html` file still exists but is superseded by the Astro implementation in `src/`.
+This is a static website for Florian Fackler IT Services, a Swiss AI automation and IT consulting practice (Einzelunternehmen). The site is built with Astro, a modern static site generator. The legacy `index.html` file still exists but is superseded by the Astro implementation in `src/`.
 
 ## Build / Lint / Test Commands
 
@@ -162,6 +162,28 @@ Both language variants share the same single-page sales site structure:
 6. **Pricing** — 3 pricing tiers (Setup, Monthly Support, Per Project) with card layout.
 7. **Contact** — CTA, geographic reach selling point (ZH/BE/BS/LU within 1 hour).
 8. **Footer** — Copyright (year via JS), services tagline, language switcher (EN | DE, active locale underlined), Swiss flag SVG.
+
+## Pricing
+
+Pricing on the website must be consistent with the Business Plan filed with the immigration authorities (Kanton Solothurn, 2026). Current hourly rates:
+
+| Service Type | Hourly Rate (CHF) | Daily Rate (CHF) |
+|---|---|---|
+| Software Development / E-Commerce | 160 – 180 | 1,200 – 1,400 |
+| IT Consulting / Architecture / API | 180 – 220 | 1,400 – 1,700 |
+| Process Automation (n8n, Workflows) | 170 – 220 | 1,300 – 1,700 |
+| AI Integration & Data Analysis | 200 – 280 | 1,600 – 2,200 |
+| AI & Digital Strategy Consulting | 220 – 300 | 1,700 – 2,400 |
+
+Website pricing tiers (derived from hourly rates, ~40-100h for setup, 5-22h/mo for support):
+
+- **Setup**: CHF 8,000 – 20,000 (one-time)
+- **Monthly Support**: CHF 1,000 – 4,000/mo
+- **Per Project**: CHF 8,000 – 30,000
+
+The "Monthly Support" tier is for maintenance/operations only. Full-time retainer engagements (Monatspaket) start at CHF 16,000/mo and are negotiated separately — they are not listed on the website.
+
+When updating pricing, always verify alignment with the Business Plan before publishing.
 
 ## Important Notes
 
