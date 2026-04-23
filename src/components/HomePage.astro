@@ -1,0 +1,192 @@
+---
+interface LocaleData {
+  title: string;
+  description: string;
+  hero_headline: string;
+  hero_tagline: string;
+  hero_rate: string;
+  hero_avail: string;
+  usp_title: string;
+  usp_1_title: string;
+  usp_1_text: string;
+  usp_2_title: string;
+  usp_2_list: string[];
+  usp_3_title: string;
+  usp_3_list: string[];
+  references_title: string;
+  references_intro: string;
+  references: { client: string; project: string; result: string; tags: string[] }[];
+  industries_title: string;
+  industry_cards: { title: string; text: string }[];
+  services_title: string;
+  service_cards: { title: string; text: string; details: string[] }[];
+  pricing_title: string;
+  pricing_cards: { title: string; price: string; price_note: string; details: string[] }[];
+  day_rates_title: string;
+  day_rates: { label: string; rate: string }[];
+  pricing_note: string;
+  contact_cta: string;
+  contact_title: string;
+  contact_subtitle: string;
+}
+
+interface Props {
+  t: LocaleData;
+  lang: string;
+}
+
+const { t, lang } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <h1>{t.hero_headline}</h1>
+        <p set:html={t.hero_tagline} />
+        <div class="hero-meta">
+          <span class="hero-rate">{t.hero_rate}</span>
+          <span class="hero-divider">&middot;</span>
+          <span class="hero-avail" set:html={t.hero_avail} />
+        </div>
+        <button type="button" class="btn" onclick="openContactDialog()">
+          {t.contact_cta}
+        </button>
+      </div>
+      <div class="hero-photo">
+        <picture>
+          <source srcset="/assets/lilaflo.avif" type="image/avif" />
+          <source srcset="/assets/lilaflo.webp" type="image/webp" />
+          <img src="/assets/lilaflo.png" alt="Florian Fackler" width="280" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USP Section -->
+<section>
+  <div class="container">
+    <h2>{t.usp_title}</h2>
+    <div class="usp-grid">
+      <div>
+        <h3>{t.usp_1_title}</h3>
+        <p set:html={t.usp_1_text.replace(/\n/g, '<br/><br/>')} />
+      </div>
+      <div>
+        <h3>{t.usp_2_title}</h3>
+        <ul>
+          {t.usp_2_list.map((item: string) => <li set:html={item} />)}
+        </ul>
+      </div>
+      <div>
+        <h3>{t.usp_3_title}</h3>
+        <ul>
+          {t.usp_3_list.map((item: string) => <li set:html={item} />)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- References -->
+<section id="references">
+  <div class="container">
+    <h2>{t.references_title}</h2>
+    <p class="references-intro">{t.references_intro}</p>
+    <div class="references-grid">
+      {t.references.map((ref: { client: string; project: string; result: string; tags: string[] }) => (
+        <div class="reference-card">
+          <div class="ref-header">
+            <span class="ref-client">{ref.client}</span>
+            <div class="ref-tags">
+              {ref.tags.map((tag: string) => <span class="ref-tag">{tag}</span>)}
+            </div>
+          </div>
+          <h3>{ref.project}</h3>
+          <p>{ref.result}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Industries -->
+<section id="industries" class="section-alt">
+  <div class="container">
+    <h2>{t.industries_title}</h2>
+    <div class="services-grid">
+      {t.industry_cards.map((card: { title: string; text: string }) => (
+        <div class="service-card">
+          <h3 set:html={card.title} />
+          <p set:html={card.text} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <h2>{t.services_title}</h2>
+    <div class="services-grid">
+      {t.service_cards.map((card: { title: string; text: string; details: string[] }) => (
+        <div class="service-card">
+          <h3 set:html={card.title} />
+          <p set:html={card.text} />
+          <ul>
+            {card.details.map((detail: string) => <li set:html={detail} />)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="section-alt">
+  <div class="container">
+    <h2>{t.pricing_title}</h2>
+    <div class="services-grid">
+      {t.pricing_cards.map((card: { title: string; price: string; price_note: string; details: string[] }) => (
+        <div class="service-card">
+          <h3>{card.title}</h3>
+          <p class="price">{card.price}</p>
+          <p class="price-note">{card.price_note}</p>
+          <ul>
+            {card.details.map((detail: string) => <li set:html={detail} />)}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="day-rates">
+      <h3>{t.day_rates_title}</h3>
+      <div class="day-rates-grid">
+        {t.day_rates.map((item: { label: string; rate: string }) => (
+          <div class="day-rate-row">
+            <span class="day-rate-label">{item.label}</span>
+            <span class="day-rate-value">{item.rate}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px">
+      <p set:html={t.pricing_note} />
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <h2>{t.contact_title}</h2>
+    <p set:html={t.contact_subtitle} />
+    <br />
+    <button type="button" class="btn" onclick="openContactDialog()">
+      {t.contact_cta}
+    </button>
+  </div>
+</section>

@@ -10,7 +10,8 @@
   "usp_2_list": [
     "An AI assistant that knows your business and answers questions based on your own documents.",
     "Automated tasks that save real hours every week &mdash; not just impressive demos.",
-    "Smart email handling that sorts, drafts replies, and routes messages for you."
+    "Smart email handling that sorts, drafts replies, and routes messages for you.",
+    "A partner who translates between technology and business."
   ],
   "usp_3_title": "Your competitors are already moving",
   "usp_3_list": [
@@ -122,7 +123,7 @@
   ],
   "contact_cta": "Let's Talk",
   "contact_subtitle": "Zurich, Bern, Basel, Lucerne &mdash; all within an hour by train. Let's meet for a coffee and talk about what AI can actually do for your business.",
-  "references_title": "Referenz-Projekte",
+  "references_title": "Reference Projects",
   "references_intro": "Real automation work, not slide decks.",
   "references": [
     {
@@ -192,5 +193,8 @@
       "rate": "CHF 1,700 – 2,400 / day"
     }
   ],
-  "pricing_note": "Project pricing by agreement. Hardware can be purchased or rented."
+  "pricing_note": "Project pricing by agreement. Hardware can be purchased or rented.",
+  "contact_title": "Ready to Get Started?",
+  "hero_rate": "from CHF 150/h",
+  "hero_avail": "Available &ndash; response within 24h"
 }
