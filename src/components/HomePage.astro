@@ -55,9 +55,9 @@ const { t, lang } = Astro.props;
       </div>
       <div class="hero-photo">
         <picture>
-          <source srcset="/assets/lilaflo.avif" type="image/avif" />
-          <source srcset="/assets/lilaflo.webp" type="image/webp" />
-          <img src="/assets/lilaflo.png" alt="Florian Fackler" width="280" />
+          <source srcset="/assets/lilaflo.avif" type="image/avif" fetchpriority="high" />
+          <source srcset="/assets/lilaflo.webp" type="image/webp" fetchpriority="high" />
+          <img src="/assets/lilaflo.png" alt="Florian Fackler" width="280" fetchpriority="high" />
         </picture>
       </div>
     </div>
