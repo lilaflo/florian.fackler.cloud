@@ -133,7 +133,6 @@ const t = (key: string) => {
     </div>
   </section>
   
-  <!-- 
   <section id="pricing" class="section-alt">
     <div class="container">
       <h2>{de.pricing_title}</h2>
@@ -149,12 +148,24 @@ const t = (key: string) => {
           </div>
         ))}
       </div>
+
+      <div class="day-rates">
+        <h3>{de.day_rates_title}</h3>
+        <div class="day-rates-grid">
+          {de.day_rates.map((item: { label: string; rate: string }) => (
+            <div class="day-rate-row">
+              <span class="day-rate-label">{item.label}</span>
+              <span class="day-rate-value">{item.rate}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div style="text-align: center; margin-top: 40px">
         <p set:html={de.pricing_note} />
       </div>
     </div>
   </section>
-  -->
   
   <!-- Contact -->
   <section id="contact">

@@ -98,14 +98,13 @@
     },
     {
       "title": "Monatlicher Support",
-      "price": "CHF 1'000 – 4'000 / Mt.",
-      "price_note": "Laufend",
+      "price": "CHF 16'000 – 40'000 / Mt.",
+      "price_note": "Laufend, ab 1 Monat kündbar",
       "details": [
         "Stabiler Betrieb ohne Überraschungen",
         "Verbesserungen und Updates der KI",
         "Anpassung der Workflows an Ihr Feedback",
-        "Kleine Änderungen und Bugfixes",
-        "Priorisierter Support"
+        "Priorisierter Support mit fester Ansprechperson"
       ]
     },
     {
@@ -113,15 +112,15 @@
       "price": "CHF 8'000 – 30'000",
       "price_note": "Pro Projekt",
       "details": [
-        "KI, die in Ihren Dokumenten sucht und Antworten liefert",
-        "Individueller Chatbot für Ihr Team oder Ihre Kundschaft",
+        "KI die in Ihren Dokumenten sucht und Antworten liefert",
+        "Individueller Chatbot fuer Ihr Team oder Ihre Kundschaft",
         "Automatisierte Dokumentenverarbeitung",
         "Automatisierte E-Mail-Bearbeitung",
-        "Massgeschneiderte Automatisierung für einen konkreten Prozess"
+        "Massgeschneiderte Automatisierung fuer einen konkreten Prozess"
       ]
     }
   ],
-  "pricing_note": "Typisches erstes Jahr: CHF 10'000 Setup + CHF 1'500/Mt. = CHF 28'000/Jahr. Hardware können Sie kaufen oder mieten – ganz wie es für Sie passt.",
+  "pricing_note": "Stundensätze auf Anfrage. Tagespauschalen bei längeren Einsätzen. Hardware kann gekauft oder gemietet werden.",
   "contact_cta": "Lassen Sie uns reden",
   "contact_title": "Bereit loszulegen?",
   "contact_subtitle": "Zürich, Bern, Basel, Luzern – alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für Ihr Unternehmen leisten kann.",
@@ -173,6 +172,29 @@
         "CI/CD",
         "YouTube"
       ]
+    }
+  ],
+  "day_rates_title": "Oder nach Aufwand abrechnen:",
+  "day_rates": [
+    {
+      "label": "Software-Entwicklung, E-Commerce",
+      "rate": "CHF 1'200 – 1'400 / Tag"
+    },
+    {
+      "label": "IT-Beratung, Architektur",
+      "rate": "CHF 1'400 – 1'700 / Tag"
+    },
+    {
+      "label": "Prozessautomatisierung (n8n)",
+      "rate": "CHF 1'300 – 1'700 / Tag"
+    },
+    {
+      "label": "KI-Integration und Datenanalyse",
+      "rate": "CHF 1'600 – 2'200 / Tag"
+    },
+    {
+      "label": "KI-Strategieberatung",
+      "rate": "CHF 1'700 – 2'400 / Tag"
     }
   ]
 }

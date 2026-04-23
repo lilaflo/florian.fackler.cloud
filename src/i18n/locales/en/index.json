@@ -98,14 +98,13 @@
     },
     {
       "title": "Monthly Support",
-      "price": "CHF 1,000 – 4,000 / mo",
-      "price_note": "Ongoing support",
+      "price": "CHF 16,000 – 40,000 / mo",
+      "price_note": "Ongoing, cancel after 1 month",
       "details": [
-        "Making sure everything runs smoothly",
+        "Smooth operations without surprises",
         "AI improvements and updates",
         "Adjusting workflows to your feedback",
-        "Small changes and fixes",
-        "Priority support"
+        "Priority support with a dedicated contact person"
       ]
     },
     {
@@ -169,5 +168,29 @@
         "YouTube"
       ]
     }
-  ]
+  ],
+  "day_rates_title": "Or bill by the day:",
+  "day_rates": [
+    {
+      "label": "Software Development, E-Commerce",
+      "rate": "CHF 1,200 – 1,400 / day"
+    },
+    {
+      "label": "IT Consulting, Architecture",
+      "rate": "CHF 1,400 – 1,700 / day"
+    },
+    {
+      "label": "Process Automation (n8n)",
+      "rate": "CHF 1,300 – 1,700 / day"
+    },
+    {
+      "label": "AI Integration & Data Analysis",
+      "rate": "CHF 1,600 – 2,200 / day"
+    },
+    {
+      "label": "AI Strategy Consulting",
+      "rate": "CHF 1,700 – 2,400 / day"
+    }
+  ],
+  "pricing_note": "Hourly rates on request. Day packages for longer engagements. Hardware can be purchased or rented."
 }
