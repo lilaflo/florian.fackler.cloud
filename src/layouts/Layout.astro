@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title, description, lang = 'de' } = Astro.props;
-const baseUrl = 'https://properflow.ch';
+const baseUrl = 'https://florian.fackler.cloud';
 const isDe = lang !== 'en';
 const ogLocale = isDe ? 'de_CH' : 'en_GB';
 const ogLocaleAlternate = isDe ? 'en_GB' : 'de_CH';
@@ -32,32 +32,32 @@ const copy = isDe
         'Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.',
       inLanguage: 'de-CH',
       serviceTypes: [
-        'KI-Dokumentenverarbeitung',
-        'Workflow-Automatisierung',
-        'Datenschutzkonforme KI-Beratung',
-        'Geschäftsprozess-Automatisierung',
+        'KI-Lösungen',
+        'Systeme & Strategie',
+        'Online-Shops',
+        'Interim IT-Leitung',
       ],
       offers: [
         {
           name: 'Setup',
           description:
-            'Hardware, KI-Software-Einrichtung, erster automatisierter Workflow und Team-Schulung.',
-          price: '3000',
-          priceMax: '8000',
+            'Lieferung und Installation der Hardware, Einrichtung der KI-Software, erster automatisierter Workflow, Feinabstimmung und Team-Schulung (2–3 Stunden).',
+          price: '8000',
+          priceMax: '20000',
         },
         {
           name: 'Monatlicher Support',
           description:
             'Laufender Betrieb, KI-Verbesserungen, Workflow-Anpassungen und priorisierter Support.',
-          price: '300',
-          priceMax: '800',
+          price: '16000',
+          priceMax: '40000',
         },
         {
           name: 'Projektbasis',
           description:
             'Individuelle Automatisierung für einen konkreten Geschäftsprozess – Dokumenten-KI, Chatbot, E-Mail-Bearbeitung.',
-          price: '2000',
-          priceMax: '10000',
+          price: '8000',
+          priceMax: '30000',
         },
       ],
     }
@@ -73,32 +73,32 @@ const copy = isDe
         'Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants.',
       inLanguage: 'en',
       serviceTypes: [
-        'AI Document Processing',
-        'Workflow Automation',
-        'Privacy-Focused AI Consulting',
-        'Business Process Automation',
+        'AI Solutions',
+        'Systems & Strategy',
+        'Online Shops',
+        'Interim IT Management',
       ],
       offers: [
         {
           name: 'Setup',
           description:
-            'Hardware, AI software setup, your first automated workflow, and team training.',
-          price: '3000',
-          priceMax: '8000',
+            'Hardware delivery and installation, AI software setup, first automated workflow, fine-tuning, and team training (2-3 hours).',
+          price: '8000',
+          priceMax: '20000',
         },
         {
           name: 'Monthly Support',
           description:
-            'Ongoing operation, AI improvements, workflow adjustments, and priority support.',
-          price: '300',
-          priceMax: '800',
+            'Stable operation without surprises, AI improvements and updates, workflow adjustments, and priority support with a dedicated contact person.',
+          price: '16000',
+          priceMax: '40000',
         },
         {
           name: 'Per Project',
           description:
-            'Custom automation for a specific business process — document AI, chatbot, email handling.',
-          price: '2000',
-          priceMax: '10000',
+            'Custom automation for a specific business process — document AI, chatbot, email handling, tailored automation.',
+          price: '8000',
+          priceMax: '30000',
         },
       ],
     };
@@ -147,7 +147,7 @@ const jsonLd = {
       name: 'Florian Fackler IT Services',
       url: `${baseUrl}/`,
       description: copy.serviceDescription,
-      priceRange: 'CHF 300 - 10000',
+      priceRange: 'CHF 150/h – CHF 30,000/project',
       areaServed: {
         '@type': 'GeoCircle',
         geoMidpoint: {
@@ -161,12 +161,18 @@ const jsonLd = {
       knowsAbout: [
         'Artificial Intelligence',
         'Workflow Automation',
-        'Business Process Automation',
+        'Interim IT Management',
         'Data Privacy',
         'Document Processing',
         'n8n',
         'Ollama',
         'Large Language Models',
+        'E-Commerce',
+        'Shopware',
+        'Shopify',
+        'Scrum',
+        'IT Strategy',
+        'Digital Transformation',
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
