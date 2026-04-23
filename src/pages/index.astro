@@ -78,7 +78,29 @@ const t = (key: string) => {
     </div>
   </section>
   
-  <!-- Industries -->
+  <!-- References -->
+  <section id="references">
+    <div class="container">
+      <h2>{de.references_title}</h2>
+      <p class="references-intro">{de.references_intro}</p>
+      <div class="references-grid">
+        {de.references.map((ref: { client: string; project: string; result: string; tags: string[] }) => (
+          <div class="reference-card">
+            <div class="ref-header">
+              <span class="ref-client">{ref.client}</span>
+              <div class="ref-tags">
+                {ref.tags.map((tag: string) => <span class="ref-tag">{tag}</span>)}
+              </div>
+            </div>
+            <h3>{ref.project}</h3>
+            <p>{ref.result}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+    <!-- Industries -->
   <section id="industries" class="section-alt">
     <div class="container">
       <h2>{de.industries_title}</h2>
