@@ -65,7 +65,7 @@ const { t, lang } = Astro.props;
 </section>
 
 <!-- USP Section -->
-<section>
+<section class="section-alt">
   <div class="container">
     <h2>{t.usp_title}</h2>
     <div class="usp-grid">
@@ -90,7 +90,7 @@ const { t, lang } = Astro.props;
 </section>
 
 <!-- References -->
-<section id="references" class="section-alt">
+<section id="references">
   <div class="container">
     <h2>{t.references_title}</h2>
     <p class="references-intro">{t.references_intro}</p>
@@ -112,7 +112,7 @@ const { t, lang } = Astro.props;
 </section>
 
 <!-- Industries -->
-<section id="industries">
+<section id="industries" class="section-alt">
   <div class="container">
     <h2>{t.industries_title}</h2>
     <div class="services-grid">
@@ -127,7 +127,7 @@ const { t, lang } = Astro.props;
 </section>
 
 <!-- Services -->
-<section id="services" class="section-alt">
+<section id="services">
   <div class="container">
     <h2>{t.services_title}</h2>
     <div class="services-grid">
@@ -145,7 +145,7 @@ const { t, lang } = Astro.props;
 </section>
 
 <!-- Pricing -->
-<section id="pricing">
+<section id="pricing" class="section-alt">
   <div class="container">
     <h2>{t.pricing_title}</h2>
     <div class="services-grid">
@@ -180,7 +180,7 @@ const { t, lang } = Astro.props;
 </section>
 
 <!-- Contact -->
-<section id="contact" class="section-alt">
+<section id="contact">
   <div class="container">
     <h2>{t.contact_title}</h2>
     <p set:html={t.contact_subtitle} />
