@@ -29,11 +29,27 @@ const t = (key: string) => {
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1>{de.hero_headline}</h1>
-      <p set:html={de.hero_tagline} />
-      <button type="button" class="btn" onclick="openContactDialog()">
-        {de.contact_cta}
-      </button>
+      <div class="hero-layout">
+        <div class="hero-text">
+          <h1>{de.hero_headline}</h1>
+          <p set:html={de.hero_tagline} />
+          <div class="hero-meta">
+            <span class="hero-rate">CHF 150/h</span>
+            <span class="hero-divider">·</span>
+            <span class="hero-avail">Verfügbar – Antwort innerhalb 24h</span>
+          </div>
+          <button type="button" class="btn" onclick="openContactDialog()">
+            {de.contact_cta}
+          </button>
+        </div>
+        <div class="hero-photo">
+          <picture>
+            <source srcset="/assets/lilaflo.avif" type="image/avif" />
+            <source srcset="/assets/lilaflo.webp" type="image/webp" />
+            <img src="/assets/lilaflo.png" alt="Florian Fackler" width="280" />
+          </picture>
+        </div>
+      </div>
     </div>
   </section>
   
