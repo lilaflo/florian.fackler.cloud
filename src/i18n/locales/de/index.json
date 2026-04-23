@@ -127,5 +127,52 @@
   "contact_subtitle": "Zürich, Bern, Basel, Luzern – alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für Ihr Unternehmen leisten kann.",
   "footer_copyright": "© {year} Florian Fackler. Alle Rechte vorbehalten.",
   "footer_services": "KI-Lösungen • Systeme &amp; Strategie • Online-Shops • Interim IT-Leitung",
-  "footer_swiss_quality": "Swiss Quality"
+  "footer_swiss_quality": "Swiss Quality",
+  "references_title": "Referenz-Projekte",
+  "references_intro": "Konkrete Automatisierungen, keine PowerPoint-Folien.",
+  "references": [
+    {
+      "client": "Shirtinator AG",
+      "project": "N8N-PIM-Automation + KI-Produkttexte",
+      "result": "Automatischer Import Produktdaten aus dem Web ins PIM-System. Folgeprojekt: Brand-Voice-Produktbeschreibungen per KI – zero-manual-touch.",
+      "tags": [
+        "n8n",
+        "PIM",
+        "KI",
+        "Automatisierung"
+      ]
+    },
+    {
+      "client": "Shirtinator AG",
+      "project": "Auto-Blog-System",
+      "result": "Wöchentlicher Blog-Post, Brand-Voice-konform, vollautomatisch via CI/CD-Pipeline.",
+      "tags": [
+        "CI/CD",
+        "Hugo",
+        "Automatisierung",
+        "Content"
+      ]
+    },
+    {
+      "client": "Ten-Guitars",
+      "project": "Gitarren-Ähnlichkeitssuche",
+      "result": "Kunden finden Gitarren mit ähnlichem Klangcharakter und Preis – messbarer Conversion-Hebel.",
+      "tags": [
+        "Suche",
+        "E-Commerce",
+        "Conversion"
+      ]
+    },
+    {
+      "client": "Eigenes Projekt",
+      "project": "SEO-Daily-Blog (seolifehacks.com)",
+      "result": "Täglicher Post: YouTube-Transkript → eigene Recherche → Hugo-Post via CI/CD-Commit.",
+      "tags": [
+        "SEO",
+        "Hugo",
+        "CI/CD",
+        "YouTube"
+      ]
+    }
+  ]
 }
