@@ -250,7 +250,9 @@ const jsonLd = {
     ></script>
   </head>
   <body>
-    <slot />
+    <main>
+      <slot />
+    </main>
 
     <script is:inline>
       const htmlElement = document.documentElement;
