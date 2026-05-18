@@ -1,8 +1,4 @@
-# Properflow GmbH -- 12 Month Transition Plan
-
-From "Florian Fackler, IT Consultant" to "Properflow GmbH, AI Automation for Swiss Real Estate."
-
-Start: Q2 2026 (May). Target: Q2 2027 (first GmbH customers).
+# Fackler IT-Solutions
 
 ---
 
