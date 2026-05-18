@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
   title: string;
@@ -7,11 +7,11 @@ interface Props {
   lang?: string;
 }
 
-const { title, description, lang = 'de' } = Astro.props;
-const baseUrl = 'https://florian.fackler.cloud';
-const isDe = lang !== 'en';
-const ogLocale = isDe ? 'de_CH' : 'en_GB';
-const ogLocaleAlternate = isDe ? 'en_GB' : 'de_CH';
+const { title, description, lang = "de" } = Astro.props;
+const baseUrl = "https://florian.fackler.cloud";
+const isDe = lang !== "en";
+const ogLocale = isDe ? "de_CH" : "en_GB";
+const ogLocaleAlternate = isDe ? "en_GB" : "de_CH";
 const canonicalUrl = isDe ? baseUrl : `${baseUrl}/en`;
 // TODO: replace with a real 1200×630 PNG/JPG at public/og-image.png for social previews.
 const ogImage: string | null = null;
@@ -20,175 +20,175 @@ const logoUrl = `${baseUrl}/assets/florian-fackler-logo.png`;
 // Localized strings for OG / Twitter / JSON-LD
 const copy = isDe
   ? {
-      ogTitle: 'Florian Fackler | KI-Automatisierung für Schweizer KMU',
+      ogTitle: "Florian Fackler | KI-Automatisierung für Schweizer KMU",
       ogDescription:
-        'Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Ihre Daten bleiben in der Schweiz.',
+        "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Ihre Daten bleiben in der Schweiz.",
       orgDescription:
-        'Datenschutzkonforme KI-Automatisierung für Schweizer KMU.',
+        "Datenschutzkonforme KI-Automatisierung für Schweizer KMU.",
       serviceDescription:
-        'KI-Automatisierung für Schweizer KMU. Datenschutzkonforme Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.',
-      webPageName: 'Florian Fackler | KI-Automatisierung für Schweizer KMU',
+        "KI-Automatisierung für Schweizer KMU. Datenschutzkonforme Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.",
+      webPageName: "Florian Fackler | KI-Automatisierung für Schweizer KMU",
       webPageDescription:
-        'Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.',
-      inLanguage: 'de-CH',
+        "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.",
+      inLanguage: "de-CH",
       serviceTypes: [
-        'KI-Lösungen',
-        'Systeme & Strategie',
-        'Online-Shops',
-        'Interim IT-Leitung',
+        "KI-Lösungen",
+        "Systeme & Strategie",
+        "Online-Shops",
+        "Interim IT-Leitung",
       ],
       offers: [
         {
-          name: 'Setup',
+          name: "Setup",
           description:
-            'Lieferung und Installation der Hardware, Einrichtung der KI-Software, erster automatisierter Workflow, Feinabstimmung und Team-Schulung (2–3 Stunden).',
-          price: '8000',
-          priceMax: '20000',
+            "Lieferung und Installation der Hardware, Einrichtung der KI-Software, erster automatisierter Workflow, Feinabstimmung und Team-Schulung (2–3 Stunden).",
+          price: "8000",
+          priceMax: "20000",
         },
         {
-          name: 'Monatlicher Support',
+          name: "Monatlicher Support",
           description:
-            'Laufender Betrieb, KI-Verbesserungen, Workflow-Anpassungen und priorisierter Support.',
-          price: '16000',
-          priceMax: '40000',
+            "Laufender Betrieb, KI-Verbesserungen, Workflow-Anpassungen und priorisierter Support.",
+          price: "16000",
+          priceMax: "40000",
         },
         {
-          name: 'Projektbasis',
+          name: "Projektbasis",
           description:
-            'Individuelle Automatisierung für einen konkreten Geschäftsprozess – Dokumenten-KI, Chatbot, E-Mail-Bearbeitung.',
-          price: '8000',
-          priceMax: '30000',
+            "Individuelle Automatisierung für einen konkreten Geschäftsprozess – Dokumenten-KI, Chatbot, E-Mail-Bearbeitung.",
+          price: "8000",
+          priceMax: "30000",
         },
       ],
     }
   : {
-      ogTitle: 'Florian Fackler | AI Automation for Swiss SMEs',
+      ogTitle: "Florian Fackler | AI Automation for Swiss SMEs",
       ogDescription:
-        'Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, and intelligent assistants. Your data stays in Switzerland.',
-      orgDescription: 'Privacy-focused AI automation for Swiss SMEs.',
+        "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, and intelligent assistants. Your data stays in Switzerland.",
+      orgDescription: "Privacy-focused AI automation for Swiss SMEs.",
       serviceDescription:
-        'AI automation for Swiss SMEs. Privacy-focused document processing, workflow automation, and intelligent assistants.',
-      webPageName: 'Florian Fackler | AI Automation for Swiss SMEs',
+        "AI automation for Swiss SMEs. Privacy-focused document processing, workflow automation, and intelligent assistants.",
+      webPageName: "Florian Fackler | AI Automation for Swiss SMEs",
       webPageDescription:
-        'Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants.',
-      inLanguage: 'en',
+        "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants.",
+      inLanguage: "en",
       serviceTypes: [
-        'AI Solutions',
-        'Systems & Strategy',
-        'Online Shops',
-        'Interim IT Management',
+        "AI Solutions",
+        "Systems & Strategy",
+        "Online Shops",
+        "Interim IT Management",
       ],
       offers: [
         {
-          name: 'Setup',
+          name: "Setup",
           description:
-            'Hardware delivery and installation, AI software setup, first automated workflow, fine-tuning, and team training (2-3 hours).',
-          price: '8000',
-          priceMax: '20000',
+            "Hardware delivery and installation, AI software setup, first automated workflow, fine-tuning, and team training (2-3 hours).",
+          price: "8000",
+          priceMax: "20000",
         },
         {
-          name: 'Monthly Support',
+          name: "Monthly Support",
           description:
-            'Stable operation without surprises, AI improvements and updates, workflow adjustments, and priority support with a dedicated contact person.',
-          price: '16000',
-          priceMax: '40000',
+            "Stable operation without surprises, AI improvements and updates, workflow adjustments, and priority support with a dedicated contact person.",
+          price: "16000",
+          priceMax: "40000",
         },
         {
-          name: 'Per Project',
+          name: "Per Project",
           description:
-            'Custom automation for a specific business process — document AI, chatbot, email handling, tailored automation.',
-          price: '8000',
-          priceMax: '30000',
+            "Custom automation for a specific business process — document AI, chatbot, email handling, tailored automation.",
+          price: "8000",
+          priceMax: "30000",
         },
       ],
     };
 
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      '@type': 'Organization',
-      '@id': `${baseUrl}/#organization`,
-      name: 'Florian Fackler IT Services',
+      "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
+      name: "Florian Fackler IT-Solutions",
       url: `${baseUrl}/`,
       logo: logoUrl,
       description: copy.orgDescription,
-      legalName: 'Florian Fackler IT Services',
-      foundingDate: '2026',
+      legalName: "Florian Fackler IT-Solutions",
+      foundingDate: "2026",
       address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Bumelochstrasse 35',
-        addressLocality: 'Starrkirch-Wil',
-        postalCode: '4656',
-        addressRegion: 'SO',
-        addressCountry: 'CH',
+        "@type": "PostalAddress",
+        streetAddress: "Bumelochstrasse 35",
+        addressLocality: "Starrkirch-Wil",
+        postalCode: "4656",
+        addressRegion: "SO",
+        addressCountry: "CH",
       },
     },
     {
-      '@type': 'WebSite',
-      '@id': `${baseUrl}/#website`,
+      "@type": "WebSite",
+      "@id": `${baseUrl}/#website`,
       url: `${baseUrl}/`,
-      name: 'Florian Fackler IT Services',
-      publisher: { '@id': `${baseUrl}/#organization` },
-      inLanguage: ['de-CH', 'en'],
+      name: "Florian Fackler IT-Solutions",
+      publisher: { "@id": `${baseUrl}/#organization` },
+      inLanguage: ["de-CH", "en"],
     },
     {
-      '@type': 'WebPage',
-      '@id': `${canonicalUrl}#webpage`,
+      "@type": "WebPage",
+      "@id": `${canonicalUrl}#webpage`,
       url: canonicalUrl,
       name: copy.webPageName,
       description: copy.webPageDescription,
-      isPartOf: { '@id': `${baseUrl}/#website` },
-      about: { '@id': `${baseUrl}/#organization` },
+      isPartOf: { "@id": `${baseUrl}/#website` },
+      about: { "@id": `${baseUrl}/#organization` },
       inLanguage: copy.inLanguage,
     },
     {
-      '@type': 'ProfessionalService',
-      name: 'Florian Fackler IT Services',
+      "@type": "ProfessionalService",
+      name: "Florian Fackler IT-Solutions",
       url: `${baseUrl}/`,
       description: copy.serviceDescription,
-      priceRange: 'CHF 150/h – CHF 30,000/project',
+      priceRange: "CHF 150/h – CHF 30,000/project",
       areaServed: {
-        '@type': 'GeoCircle',
+        "@type": "GeoCircle",
         geoMidpoint: {
-          '@type': 'GeoCoordinates',
+          "@type": "GeoCoordinates",
           latitude: 47.3539,
           longitude: 7.9081,
         },
-        geoRadius: '80000',
+        geoRadius: "80000",
       },
       serviceType: copy.serviceTypes,
       knowsAbout: [
-        'Artificial Intelligence',
-        'Workflow Automation',
-        'Interim IT Management',
-        'Data Privacy',
-        'Document Processing',
-        'n8n',
-        'Ollama',
-        'Large Language Models',
-        'E-Commerce',
-        'Shopware',
-        'Shopify',
-        'Scrum',
-        'IT Strategy',
-        'Digital Transformation',
+        "Artificial Intelligence",
+        "Workflow Automation",
+        "Interim IT Management",
+        "Data Privacy",
+        "Document Processing",
+        "n8n",
+        "Ollama",
+        "Large Language Models",
+        "E-Commerce",
+        "Shopware",
+        "Shopify",
+        "Scrum",
+        "IT Strategy",
+        "Digital Transformation",
       ],
       hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'AI Automation Packages',
+        "@type": "OfferCatalog",
+        name: "AI Automation Packages",
         itemListElement: copy.offers.map((offer) => ({
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
+            "@type": "Service",
             name: offer.name,
             description: offer.description,
           },
           priceSpecification: {
-            '@type': 'PriceSpecification',
+            "@type": "PriceSpecification",
             minPrice: offer.price,
             maxPrice: offer.priceMax,
-            priceCurrency: 'CHF',
+            priceCurrency: "CHF",
           },
         })),
       },
@@ -206,13 +206,51 @@ const jsonLd = {
     <meta name="description" content={description} />
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon-dark.ico" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-dark-48x48.png" media="(prefers-color-scheme: dark)" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/assets/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/favicon-dark.ico"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-dark-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-dark-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/assets/favicon-dark-48x48.png"
+      media="(prefers-color-scheme: dark)"
+    />
     <!-- Open Graph -->
     <meta property="og:title" content={copy.ogTitle} />
     <meta property="og:description" content={copy.ogDescription} />
@@ -221,16 +259,21 @@ const jsonLd = {
     <meta property="og:locale:alternate" content={ogLocaleAlternate} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Florian Fackler" />
-    {ogImage && (
-      <>
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={copy.ogTitle} />
-      </>
-    )}
+    {
+      ogImage && (
+        <>
+          <meta property="og:image" content={ogImage} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content={copy.ogTitle} />
+        </>
+      )
+    }
     <!-- Twitter Card -->
-    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta
+      name="twitter:card"
+      content={ogImage ? "summary_large_image" : "summary"}
+    />
     <meta name="twitter:title" content={copy.ogTitle} />
     <meta name="twitter:description" content={copy.ogDescription} />
     {ogImage && <meta name="twitter:image" content={ogImage} />}
@@ -252,8 +295,7 @@ const jsonLd = {
     <script
       defer
       src="https://imamu.code-nexus.co/script.js"
-      data-website-id="519d7a56-80eb-4dae-ba6a-f531e5541f61"
-    ></script>
+      data-website-id="519d7a56-80eb-4dae-ba6a-f531e5541f61"></script>
   </head>
   <body>
     <main>

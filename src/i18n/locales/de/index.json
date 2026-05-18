@@ -1,6 +1,6 @@
 {
   "title": "Florian Fackler | KI-Automatisierung für Schweizer KMU",
-  "description": "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten – Ihre Daten bleiben in der Schweiz. Florian Fackler IT Services, Starrkirch-Wil.",
+  "description": "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten – Ihre Daten bleiben in der Schweiz. Florian Fackler IT-Solutions, Starrkirch-Wil.",
   "hero_headline": "Ihre KI. Ihre Daten.",
   "hero_tagline": "Clevere KI-Lösungen für Schweizer Unternehmen – mit Datenschutz von Anfang an, nicht nachträglich aufgesetzt. Über 25 Jahre Erfahrung darin, Technologie in echten Geschäftsnutzen zu verwandeln.",
   "usp_title": "Warum Unternehmen mit mir arbeiten",
@@ -77,9 +77,7 @@
     {
       "title": "Interim IT-Leitung",
       "text": "Sie brauchen jemanden, der Ihre IT führt, sind aber noch nicht bereit für eine Festanstellung? Ich übernehme temporär, strukturiere Ihr Team, setze Prioritäten und bringe den Betrieb zum Laufen.",
-      "details": [
-        "Certified Scrum Master &amp; Product Owner"
-      ]
+      "details": ["Certified Scrum Master &amp; Product Owner"]
     }
   ],
   "pricing_title": "Transparente Preise",
@@ -134,44 +132,25 @@
       "client": "Shirtinator AG",
       "project": "N8N-PIM-Automation + KI-Produkttexte",
       "result": "Automatischer Import Produktdaten aus dem Web ins PIM-System. Folgeprojekt: Brand-Voice-Produktbeschreibungen per KI – zero-manual-touch.",
-      "tags": [
-        "n8n",
-        "PIM",
-        "KI",
-        "Automatisierung"
-      ]
+      "tags": ["n8n", "PIM", "KI", "Automatisierung"]
     },
     {
       "client": "Shirtinator AG",
       "project": "Auto-Blog-System",
       "result": "Wöchentlicher Blog-Post, Brand-Voice-konform, vollautomatisch via CI/CD-Pipeline.",
-      "tags": [
-        "CI/CD",
-        "Hugo",
-        "Automatisierung",
-        "Content"
-      ]
+      "tags": ["CI/CD", "Hugo", "Automatisierung", "Content"]
     },
     {
       "client": "Ten Guitars GmbH",
       "project": "Gitarren-Ähnlichkeitssuche",
       "result": "Kunden finden Gitarren mit ähnlichem Klangcharakter und Preis – messbarer Conversion-Hebel.",
-      "tags": [
-        "Suche",
-        "E-Commerce",
-        "Conversion"
-      ]
+      "tags": ["Suche", "E-Commerce", "Conversion"]
     },
     {
       "client": "Eigenes Projekt",
       "project": "SEO-Daily-Blog (seolifehacks.com)",
       "result": "Täglicher Post: YouTube-Transkript → eigene Recherche → Hugo-Post via CI/CD-Commit.",
-      "tags": [
-        "SEO",
-        "Hugo",
-        "CI/CD",
-        "YouTube"
-      ]
+      "tags": ["SEO", "Hugo", "CI/CD", "YouTube"]
     }
   ],
   "day_rates_title": "Oder nach Aufwand abrechnen:",

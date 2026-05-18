@@ -1,6 +1,6 @@
 {
   "title": "Florian Fackler | AI Automation for Swiss SMEs",
-  "description": "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, and intelligent assistants. Your data stays in Switzerland. By Florian Fackler IT Services, Starrkirch-Wil.",
+  "description": "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, and intelligent assistants. Your data stays in Switzerland. By Florian Fackler IT-Solutions, Starrkirch-Wil.",
   "hero_headline": "Your AI. Your Data.",
   "hero_tagline": "Smart AI solutions for Swiss companies &mdash; with your data protection built in, not bolted on. 25+ years of experience turning technology into a real advantage for your business.",
   "usp_title": "Why Companies Work With Me",
@@ -78,9 +78,7 @@
     {
       "title": "Interim IT Leadership",
       "text": "Need someone to lead your IT but not ready for a full-time hire? I step in temporarily to organize your team, set priorities, and get things running smoothly.",
-      "details": [
-        "Certified Scrum Master &amp; Product Owner"
-      ]
+      "details": ["Certified Scrum Master &amp; Product Owner"]
     }
   ],
   "pricing_title": "Transparent Pricing",
@@ -130,44 +128,25 @@
       "client": "Shirtinator AG",
       "project": "N8N PIM Automation + AI Product Texts",
       "result": "Automatic product data scraping → PIM import. Follow-up: Brand-voice AI product descriptions – zero manual work.",
-      "tags": [
-        "n8n",
-        "PIM",
-        "AI",
-        "Automation"
-      ]
+      "tags": ["n8n", "PIM", "AI", "Automation"]
     },
     {
       "client": "Shirtinator AG",
       "project": "Auto-Blog System",
       "result": "Weekly blog post, brand-voice compliant, fully automated via CI/CD pipeline.",
-      "tags": [
-        "CI/CD",
-        "Hugo",
-        "Automation",
-        "Content"
-      ]
+      "tags": ["CI/CD", "Hugo", "Automation", "Content"]
     },
     {
       "client": "Ten Guitars GmbH",
       "project": "Guitar Similarity Search",
       "result": "Customers find guitars with similar tone characteristics and price – measurable conversion lift.",
-      "tags": [
-        "Search",
-        "E-Commerce",
-        "Conversion"
-      ]
+      "tags": ["Search", "E-Commerce", "Conversion"]
     },
     {
       "client": "Own Project",
       "project": "SEO Daily Blog (seolifehacks.com)",
       "result": "Daily post: YouTube transcript → own research → Hugo post via CI/CD commit.",
-      "tags": [
-        "SEO",
-        "Hugo",
-        "CI/CD",
-        "YouTube"
-      ]
+      "tags": ["SEO", "Hugo", "CI/CD", "YouTube"]
     }
   ],
   "day_rates_title": "Or bill by the day:",
