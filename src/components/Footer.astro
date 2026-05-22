@@ -45,7 +45,7 @@ const t = translations[lang as keyof typeof translations] || translations.en;
       <div class="footer-col footer-brand">
         <p class="footer-name">{t.name}</p>
         <p class="footer-company">{t.company}</p>
-        <p class="footer-company-addon">{t.companyAddon}</p>
+        
       </div>
 
       <div class="footer-col footer-address">
@@ -63,7 +63,7 @@ const t = translations[lang as keyof typeof translations] || translations.en;
 
     <div class="footer-bottom-row">
       <div class="footer-legal">
-        <p>UID {t.uid}</p>
+        <p class="footer-company-addon">{t.companyAddon} ● UID {t.uid}</p>
         <p>&copy; {year} {t.name}. {t.rights}</p>
       </div>
 
