@@ -191,8 +191,10 @@ nav a:hover {
   transition: all 0.3s ease;
   width: 40px;
   height: 40px;
+  opacity: 0.5;
 }
 .theme-toggle:hover {
+  opacity: 1;
   background-color: var(--bg-alt);
   border-color: var(--accent);
 }
@@ -268,7 +270,8 @@ nav a:hover {
 
 .hero-divider {
   color: var(--border);
-} .btn {
+}
+.btn {
   display: inline-block;
   background-color: var(--primary);
   color: #ffffff !important;
@@ -773,7 +776,7 @@ footer {
 .reference-card:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .ref-header {
   display: flex;
@@ -819,9 +822,6 @@ footer {
   font-size: 0.92rem;
   margin: 0;
 }
-
-
-
 
 /* Day rates section */
 .day-rates {
