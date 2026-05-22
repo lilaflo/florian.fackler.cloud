@@ -11,6 +11,7 @@ const translations = {
   en: {
     name: 'Florian Fackler',
     company: 'Fackler IT-Solutions',
+    companyAddon: 'Einzelfirma, eingetragen im Handelsregister des Kantons Solothurn',
     address: 'Bumelochstr. 35',
     zipCity: '4656 Starrkirch-Wil',
     canton: 'Solothurn',
@@ -23,6 +24,7 @@ const translations = {
   de: {
     name: 'Florian Fackler',
     company: 'Fackler IT-Solutions',
+    companyAddon: 'Einzelfirma, eingetragen im Handelsregister des Kantons Solothurn',
     address: 'Bumelochstr. 35',
     zipCity: '4656 Starrkirch-Wil',
     canton: 'Solothurn',
@@ -39,10 +41,11 @@ const t = translations[lang as keyof typeof translations] || translations.en;
 
 <footer>
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-top">
       <div class="footer-col footer-brand">
         <p class="footer-name">{t.name}</p>
         <p class="footer-company">{t.company}</p>
+        <p class="footer-company-addon">{t.companyAddon}</p>
       </div>
 
       <div class="footer-col footer-address">
@@ -51,16 +54,20 @@ const t = translations[lang as keyof typeof translations] || translations.en;
         <p>{t.canton} – {t.country}</p>
       </div>
 
-      <div class="footer-col footer-legal">
-        <p class="footer-uid">UID: {t.uid}</p>
-        <p class="footer-copyright">&copy; {year} {t.name}. {t.rights}</p>
-      </div>
-
       <div class="footer-col footer-services">
         <p>{t.services}</p>
       </div>
+    </div>
 
-      <div class="footer-col footer-bottom">
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom-row">
+      <div class="footer-legal">
+        <p>UID {t.uid}</p>
+        <p>&copy; {year} {t.name}. {t.rights}</p>
+      </div>
+
+      <div class="footer-bottom-right">
         <div class="lang-switch">
           <a href="/en" class:list={[{ active: lang === 'en' }]}>EN</a>
           <span>|</span>
@@ -69,8 +76,8 @@ const t = translations[lang as keyof typeof translations] || translations.en;
         <div class="trust-element">
           <span>{t.swissQuality}</span>
           <svg
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
             aria-label="Swiss flag"

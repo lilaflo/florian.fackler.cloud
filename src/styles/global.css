@@ -347,14 +347,14 @@ nav a:hover {
 footer {
   background-color: var(--header-bg);
   border-top: 2px solid var(--accent);
-  padding: 50px 0 30px;
+  padding: 40px 0 24px;
   margin-top: 60px;
   transition: background-color 0.3s ease;
 }
 
-.footer-grid {
+.footer-top {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1.8fr auto;
+  grid-template-columns: 1.4fr 1fr 2fr;
   gap: 40px;
   align-items: start;
 }
@@ -362,7 +362,7 @@ footer {
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .footer-col p {
@@ -384,32 +384,46 @@ footer {
   font-size: 0.88rem;
 }
 
-.footer-address p {
-  font-style: normal;
-}
-
-.footer-legal .footer-uid {
-  font-size: 0.82rem;
+.footer-brand .footer-company-addon {
+  font-size: 0.8rem;
   color: var(--text-muted);
   opacity: 0.8;
+  max-width: 320px;
 }
 
-.footer-legal .footer-copyright {
-  font-size: 0.82rem;
-  opacity: 0.7;
+.footer-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0 16px;
+  opacity: 0.6;
 }
 
-.footer-services p {
-  font-size: 0.82rem;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.footer-bottom {
+.footer-legal {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
+  gap: 2px;
+}
+
+.footer-legal p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .trust-element {
@@ -417,7 +431,7 @@ footer {
   align-items: center;
   gap: 8px;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-color);
 }
 
@@ -426,7 +440,7 @@ footer {
 }
 
 .lang-switch {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
   gap: 2px;
@@ -585,23 +599,34 @@ footer {
     white-space: normal;
   }
 
-  /* Footer: single column, centered */
-  .footer-grid {
+  /* Footer: stacked, centered */
+  .footer-top {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
     text-align: center;
   }
 
-  .footer-services {
-    grid-column: auto;
-    order: 4;
+  .footer-brand .footer-company-addon {
+    max-width: none;
   }
 
-  .footer-bottom {
-    grid-column: auto;
+  .footer-divider {
+    margin: 16px 0 12px;
+  }
+
+  .footer-bottom-row {
     flex-direction: column;
     align-items: center;
-    order: 5;
+    gap: 12px;
+  }
+
+  .footer-legal {
+    text-align: center;
+  }
+
+  .footer-bottom-right {
+    flex-direction: column;
+    gap: 10px;
   }
 
   /* Pricing: smaller price text */
