@@ -225,18 +225,22 @@ nav a:hover {
   transition: background-color 0.3s ease;
   padding: 60px 0;
 }
-.hero /* --- Hero Layout --- */
+
 .hero-layout {
   display: flex;
   align-items: center;
   gap: 60px;
 }
+
 .hero-text {
   flex: 1;
+  min-width: 0;
 }
+
 .hero-photo {
   flex-shrink: 0;
 }
+
 .hero-photo img {
   width: 280px;
   height: 280px;
@@ -245,6 +249,7 @@ nav a:hover {
   border: 4px solid var(--primary);
   box-shadow: 0 8px 32px rgba(28, 32, 99, 0.15);
 }
+
 .hero-meta {
   display: flex;
   align-items: center;
@@ -252,97 +257,36 @@ nav a:hover {
   margin-bottom: 20px;
   font-size: 0.95rem;
   color: var(--text-muted);
+  flex-wrap: wrap;
 }
+
 .hero-rate {
   font-weight: 700;
   color: var(--accent);
   font-size: 1.1rem;
 }
+
 .hero-divider {
   color: var(--border);
-}
-@media (max-width: 768px) {
-  .hero-layout {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 30px;
-  }
-  .hero-photo img {
-    width: 200px;
-    height: 200px;
-  }
-  .hero-meta {
-    justify-content: center;
-  }
-}
-
-.btn {
-  margin-top: 20px;
-}
-/* --- Hero Layout --- */
-.hero-layout {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
-.hero-text {
-  flex: 1;
-}
-.hero-photo {
-  flex-shrink: 0;
-}
-.hero-photo img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--primary);
-  box-shadow: 0 8px 32px rgba(28, 32, 99, 0.15);
-}
-.hero-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
-.hero-rate {
-  font-weight: 700;
-  color: var(--accent);
-  font-size: 1.1rem;
-}
-.hero-divider {
-  color: var(--border);
-}
-@media (max-width: 768px) {
-  .hero-layout {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 30px;
-  }
-  .hero-photo img {
-    width: 200px;
-    height: 200px;
-  }
-  .hero-meta {
-    justify-content: center;
-  }
-}
-
-.btn {
+} .btn {
   display: inline-block;
   background-color: var(--primary);
   color: #ffffff !important;
   padding: 12px 25px;
   border-radius: var(--border-radius);
   transition: all 0.3s ease;
+  margin-top: 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  width: auto;
 }
+
 .btn:hover {
   background-color: var(--primary-hover);
   text-decoration: none;
   color: #ffffff !important;
-} /* --- USP Section --- */
+}
 .usp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -502,44 +446,201 @@ footer {
   margin: 0 2px;
 } /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  /* Header: stack logo/toggle, wrap nav */
   .header-flex {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 10px;
-    text-align: center;
+    gap: 8px 12px;
+    align-items: center;
   }
+
   .header-flex .theme-toggle {
     align-self: center;
   }
+
   .header-flex nav {
     grid-column: 1 / -1;
   }
-  nav ul {
-    gap: 15px;
-    justify-content: center;
+
+  .logo {
+    font-size: 1.2rem;
+    gap: 8px;
   }
+
+  nav ul {
+    gap: 8px 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  /* Hero: stack vertically, smaller photo */
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero-layout {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .hero-photo img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-meta {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .hero-rate {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  /* Grids: single column on narrow screens */
   .usp-grid {
+    gap: 24px;
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  .references-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Cards: reduce padding */
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+
+  .reference-card {
+    padding: 16px;
+  }
+
+  .reference-card:hover {
+    transform: none;
+  }
+
+  /* Day rates: full width, stack labels */
+  .day-rates {
+    padding: 20px 16px;
+    margin-top: 32px;
+  }
+
+  .day-rate-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 12px;
+  }
+
+  .day-rate-value {
+    white-space: normal;
+  }
+
+  /* Footer: single column, centered */
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 30px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
   }
 
   .footer-services {
-    grid-column: 1 / -1;
+    grid-column: auto;
     order: 4;
   }
 
   .footer-bottom {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    justify-content: center;
+    grid-column: auto;
+    flex-direction: column;
     align-items: center;
     order: 5;
   }
+
+  /* Pricing: smaller price text */
+  .price {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+  }
+
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+  }
+
+  nav ul {
+    gap: 6px 10px;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .hero-photo img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .service-card {
+    padding: 16px;
+  }
+
+  .day-rates {
+    padding: 16px 12px;
+  }
+
+  .day-rate-row {
+    padding: 10px;
   }
 }
 .section-alt {
@@ -604,6 +705,29 @@ footer {
   border: none;
   display: block;
 }
+
+@media (max-width: 768px) {
+  .contact-overlay {
+    padding: 12px;
+  }
+
+  .contact-overlay dialog {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .contact-overlay iframe {
+    height: 75vh;
+  }
+
+  .contact-dialog-header {
+    padding: 12px 16px;
+  }
+
+  .contact-dialog-header h2 {
+    font-size: 1.1rem;
+  }
+}
 .contact-dialog-header {
   display: flex;
   justify-content: space-between;
@@ -658,6 +782,13 @@ footer {
   gap: 10px;
   margin-bottom: 10px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .ref-header {
+    flex-direction: column;
+    gap: 6px;
+  }
 }
 .ref-client {
   font-size: 0.85rem;
