@@ -96,8 +96,8 @@ Despite the conventional wisdom of "no external scripts on a privacy-focused Swi
 ## Deployment
 
 - **Target**: Cloudflare Pages. `wrangler.toml` sets `pages_build_output_dir = "dist"` and the project name is `florian-fackler-cloud`.
-- **CI**: `.gitea/workflows/deploy.yaml` runs on push to `main` and on PRs. It installs via `npm install` (not `pnpm` — inconsistency with the rest of the repo) and invokes `./deploy.fish`. **`deploy.fish` is referenced but does not exist in the repo**; the actual deploy step is therefore a no-op until that script is added.
-- `.gitea/workflows/test.yaml` is a manual `workflow_dispatch` smoke test for the runner environment.
+- **Deploy path**: Cloudflare Pages is connected to the GitHub repo (`origin: git@github.com:lilaflo/florian.fackler.cloud.git`) and auto-deploys `dist/` on push to `main`. No local deploy command is needed.
+- `.gitea/workflows/deploy.yaml` and `.gitea/workflows/test.yaml` are vestigial: they reference `./deploy.fish` (which does not exist) and are not on the real deploy path. Safe to delete if you want a clean tree.
 - **Domain mismatch** to be aware of: `astro.config.mjs` sets `site: 'https://properflow.ch'` (the future canonical), but `Layout.astro` hardcodes `https://florian.fackler.cloud` for `baseUrl`, canonical, OG, and JSON-LD URLs. The two are out of sync — when changing the site URL, update both.
 
 ## Workflow Conventions
