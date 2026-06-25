@@ -80,6 +80,18 @@
       "details": ["Certified Scrum Master &amp; Product Owner"]
     }
   ],
+  "tripwire_badge": "Einstiegs-Angebot",
+  "tripwire_title": "KI-Wissens-Check",
+  "tripwire_price": "CHF 750",
+  "tripwire_note": "Einmalig – wird bei Beauftragung eines Projekts voll angerechnet",
+  "tripwire_action": "Jetzt Termin vereinbaren",
+  "tripwire_details": [
+    "Analyse Ihrer aktuellen Daten- und Prozesslandschaft",
+    "1–2h Gespräch mit den Entscheidern",
+    "Identifikation der grössten Automatisierungs-Potenziale",
+    "Konkreter, priorisierter Aktionsplan",
+    "CHF 750 werden bei Projektstart voll angerechnet – der Check ist faktisch kostenlos"
+  ],
   "pricing_title": "Transparente Preise",
   "pricing_cards": [
     {

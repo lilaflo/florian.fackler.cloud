@@ -343,7 +343,113 @@ nav a:hover {
 .tech-tag:hover {
   border-color: var(--accent);
   color: var(--accent);
-} /* --- Footer --- */
+}
+
+/* --- Tripwire Section --- */
+.section-tripwire {
+  background-color: var(--bg-alt);
+  transition: background-color 0.3s ease;
+}
+
+.tripwire-card {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 48px 40px;
+  background: var(--bg-color);
+  position: relative;
+  box-shadow: 0 8px 32px rgba(204, 4, 18, 0.08);
+  transition: all 0.3s ease;
+}
+
+.tripwire-card:hover {
+  box-shadow: 0 12px 40px rgba(204, 4, 18, 0.15);
+  transform: translateY(-3px);
+}
+
+.tripwire-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.tripwire-heading {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+  border: none;
+  display: block;
+  padding: 0;
+}
+
+.tripwire-price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 16px 0 8px;
+  line-height: 1;
+}
+
+.tripwire-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.tripwire-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 32px;
+  max-width: 480px;
+  text-align: left;
+}
+
+.tripwire-details li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.tripwire-details li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.btn-tripwire {
+  background-color: var(--accent);
+  font-size: 1.1rem;
+  padding: 14px 36px;
+}
+
+.btn-tripwire:hover {
+  background-color: var(--accent-hover);
+}
+
+[data-theme="dark"] .tripwire-card {
+  box-shadow: 0 8px 32px rgba(204, 4, 18, 0.12);
+}
+
+[data-theme="dark"] .tripwire-card:hover {
+  box-shadow: 0 12px 40px rgba(204, 4, 18, 0.2);
+}
+
+/* --- Footer --- */
 footer {
   background-color: var(--header-bg);
   border-top: 2px solid var(--accent);
@@ -464,10 +570,25 @@ footer {
   text-underline-offset: 3px;
 }
 
+.footer-trust-link {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 2px 4px;
+  transition: color 0.2s ease;
+}
+
+.footer-trust-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .lang-switch span {
   color: var(--border);
   margin: 0 2px;
-} /* --- Mobile Responsiveness --- */
+}
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   section {
     padding: 40px 0;
@@ -632,6 +753,23 @@ footer {
   /* Pricing: smaller price text */
   .price {
     font-size: 1.2rem;
+  }
+
+  /* Tripwire mobile */
+  .tripwire-card {
+    padding: 32px 24px;
+  }
+
+  .tripwire-heading {
+    font-size: 1.6rem;
+  }
+
+  .tripwire-price {
+    font-size: 2.2rem;
+  }
+
+  .tripwire-details {
+    text-align: left;
   }
 }
 

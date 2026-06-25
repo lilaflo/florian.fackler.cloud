@@ -68,6 +68,7 @@ const t = translations[lang as keyof typeof translations] || translations.en;
       </div>
 
       <div class="footer-bottom-right">
+        <a href="/trust/" class="footer-trust-link">{lang === 'de' ? 'Datenschutz' : 'Privacy'}</a>
         <div class="lang-switch">
           <a href="/en" class:list={[{ active: lang === 'en' }]}>EN</a>
           <span>|</span>

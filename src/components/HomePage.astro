@@ -20,6 +20,12 @@ interface LocaleData {
   industry_cards: { title: string; text: string }[];
   services_title: string;
   service_cards: { title: string; text: string; details: string[] }[];
+  tripwire_badge: string;
+  tripwire_title: string;
+  tripwire_price: string;
+  tripwire_note: string;
+  tripwire_action: string;
+  tripwire_details: string[];
   pricing_title: string;
   pricing_cards: { title: string; price: string; price_note: string; details: string[] }[];
   day_rates_title: string;
@@ -140,6 +146,24 @@ const { t, lang } = Astro.props;
           </ul>
         </div>
       ))}
+    </div>
+  </div>
+</section>
+
+<!-- Tripwire -->
+<section id="tripwire" class="section-tripwire">
+  <div class="container">
+    <div class="tripwire-card">
+      <span class="tripwire-badge">{t.tripwire_badge}</span>
+      <h2 class="tripwire-heading">{t.tripwire_title}</h2>
+      <p class="tripwire-price">{t.tripwire_price}</p>
+      <p class="tripwire-note">{t.tripwire_note}</p>
+      <ul class="tripwire-details">
+        {t.tripwire_details.map((detail: string) => <li>{detail}</li>)}
+      </ul>
+      <button type="button" class="btn btn-tripwire" onclick="openContactDialog()">
+        {t.tripwire_action}
+      </button>
     </div>
   </div>
 </section>
