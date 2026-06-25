@@ -26,6 +26,9 @@ interface LocaleData {
   tripwire_note: string;
   tripwire_action: string;
   tripwire_details: string[];
+  alert_text: string;
+  alert_cta: string;
+  alert_sub: string;
   pricing_title: string;
   pricing_cards: { title: string; price: string; price_note: string; details: string[] }[];
   day_rates_title: string;
@@ -69,6 +72,22 @@ const { t, lang } = Astro.props;
     </div>
   </div>
 </section>
+
+<!-- Alert Banner -->
+<div class="alert-banner" id="alertBanner">
+  <div class="container alert-banner-inner">
+    <div class="alert-banner-text">
+      <span class="alert-banner-label">{t.alert_text}</span>
+      <span class="alert-banner-sub">{t.alert_sub}</span>
+    </div>
+    <div class="alert-banner-actions">
+      <button type="button" class="btn btn-alert" onclick="openContactDialog()">
+        {t.alert_cta}
+      </button>
+      <button class="alert-close" onclick="dismissAlert()" aria-label="Close">&times;</button>
+    </div>
+  </div>
+</div>
 
 <!-- USP Section -->
 <section class="section-alt">
@@ -214,3 +233,21 @@ const { t, lang } = Astro.props;
     </button>
   </div>
 </section>
+
+<script is:inline>
+  function dismissAlert() {
+    const banner = document.getElementById('alertBanner');
+    if (banner) {
+      banner.classList.add('dismissed');
+      try { localStorage.setItem('alertDismissed', 'true'); } catch(e) {}
+    }
+  }
+  (function() {
+    try {
+      if (localStorage.getItem('alertDismissed') === 'true') {
+        const banner = document.getElementById('alertBanner');
+        if (banner) banner.classList.add('dismissed');
+      }
+    } catch(e) {}
+  })();
+</script>

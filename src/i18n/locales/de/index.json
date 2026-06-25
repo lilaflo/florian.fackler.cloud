@@ -92,6 +92,9 @@
     "Konkreter, priorisierter Aktionsplan",
     "CHF 750 werden bei Projektstart voll angerechnet – der Check ist faktisch kostenlos"
   ],
+  "alert_text": "KI-Chaos im Unternehmen?",
+  "alert_cta": "Jetzt Klarheit schaffen →",
+  "alert_sub": "KI-Wissens-Check ab CHF 750",
   "pricing_title": "Transparente Preise",
   "pricing_cards": [
     {

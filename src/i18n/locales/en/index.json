@@ -93,6 +93,9 @@
     "Concrete, prioritized action plan",
     "CHF 750 is fully credited when we start a project – effectively free"
   ],
+  "alert_text": "AI chaos in your company?",
+  "alert_cta": "Get clarity now →",
+  "alert_sub": "AI Readiness Check from CHF 750",
   "pricing_title": "Transparent Pricing",
   "pricing_cards": [
     {

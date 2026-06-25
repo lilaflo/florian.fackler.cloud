@@ -277,6 +277,101 @@ nav a:hover {
 .hero-divider {
   color: var(--border);
 }
+
+/* --- Alert Banner --- */
+.alert-banner {
+  background: var(--accent);
+  color: #fff;
+  padding: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  max-height: 80px;
+  opacity: 1;
+}
+
+.alert-banner.dismissed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+.alert-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  flex-wrap: wrap;
+}
+
+.alert-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.alert-banner-label {
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.alert-banner-sub {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.alert-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-alert {
+  background: #fff;
+  color: var(--accent) !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  border: none;
+  white-space: nowrap;
+}
+
+.btn-alert:hover {
+  background: #f0f0f0;
+  color: var(--accent) !important;
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.alert-close:hover {
+  opacity: 1;
+}
+
+[data-theme="dark"] .btn-alert {
+  background: var(--bg-color);
+  color: var(--accent) !important;
+}
+
+[data-theme="dark"] .btn-alert:hover {
+  background: var(--bg-alt);
+}
+
+/* --- Hero Section --- */
 .btn {
   display: inline-block;
   background-color: var(--primary);
@@ -770,6 +865,24 @@ footer {
 
   .tripwire-details {
     text-align: left;
+  }
+
+  /* Alert banner mobile */
+  .alert-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .alert-banner-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-alert {
+    flex: 1;
+    text-align: center;
   }
 }
 
