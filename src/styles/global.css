@@ -268,6 +268,10 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+.hero-text .btn {
+  margin-top: 0;
+}
+
 .hero-rate {
   font-weight: 700;
   color: var(--accent);
