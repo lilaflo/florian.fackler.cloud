@@ -84,7 +84,6 @@ const { t, lang } = Astro.props;
       <button type="button" class="btn btn-alert" onclick="openContactDialog()">
         {t.alert_cta}
       </button>
-      <button class="alert-close" onclick="dismissAlert()" aria-label="Close">&times;</button>
     </div>
   </div>
 </div>
@@ -235,19 +234,4 @@ const { t, lang } = Astro.props;
 </section>
 
 <script is:inline>
-  function dismissAlert() {
-    const banner = document.getElementById('alertBanner');
-    if (banner) {
-      banner.classList.add('dismissed');
-      try { localStorage.setItem('alertDismissed', 'true'); } catch(e) {}
-    }
-  }
-  (function() {
-    try {
-      if (localStorage.getItem('alertDismissed') === 'true') {
-        const banner = document.getElementById('alertBanner');
-        if (banner) banner.classList.add('dismissed');
-      }
-    } catch(e) {}
-  })();
 </script>
