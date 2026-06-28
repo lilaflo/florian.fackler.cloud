@@ -58,7 +58,7 @@ const { t, lang } = Astro.props;
           <span class="hero-divider">&middot;</span>
           <span class="hero-avail" set:html={t.hero_avail} />
         </div>
-        <button type="button" class="btn" onclick="openContactDialog()">
+        <button type="button" class="btn" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="hero">
           {t.contact_cta}
         </button>
       </div>
@@ -81,7 +81,7 @@ const { t, lang } = Astro.props;
       <span class="alert-banner-sub">{t.alert_sub}</span>
     </div>
     <div class="alert-banner-actions">
-      <button type="button" class="btn btn-alert mt-0" onclick="openContactDialog()">
+      <button type="button" class="btn btn-alert mt-0" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="alert-banner">
         {t.alert_cta}
       </button>
     </div>
@@ -120,7 +120,7 @@ const { t, lang } = Astro.props;
     <p class="references-intro">{t.references_intro}</p>
     <div class="references-grid">
       {t.references.map((ref: { client: string; project: string; result: string; tags: string[] }) => (
-        <div class="reference-card">
+        <div class="reference-card" data-umami-event="reference-click" data-umami-event-client={ref.client} data-umami-event-project={ref.project}>
           <div class="ref-header">
             <span class="ref-client">{ref.client}</span>
             <div class="ref-tags">
@@ -141,7 +141,7 @@ const { t, lang } = Astro.props;
     <h2>{t.industries_title}</h2>
     <div class="services-grid">
       {t.industry_cards.map((card: { title: string; text: string }) => (
-        <div class="service-card">
+        <div class="service-card" data-umami-event="industry-click" data-umami-event-card={card.title}>
           <h3 set:html={card.title} />
           <p set:html={card.text} />
         </div>
@@ -156,7 +156,7 @@ const { t, lang } = Astro.props;
     <h2>{t.services_title}</h2>
     <div class="services-grid">
       {t.service_cards.map((card: { title: string; text: string; details: string[] }) => (
-        <div class="service-card">
+        <div class="service-card" data-umami-event="service-click" data-umami-event-card={card.title}>
           <h3 set:html={card.title} />
           <p set:html={card.text} />
           <ul>
@@ -179,7 +179,7 @@ const { t, lang } = Astro.props;
       <ul class="tripwire-details">
         {t.tripwire_details.map((detail: string) => <li>{detail}</li>)}
       </ul>
-      <button type="button" class="btn btn-tripwire" onclick="openContactDialog()">
+      <button type="button" class="btn btn-tripwire" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="tripwire">
         {t.tripwire_action}
       </button>
     </div>
@@ -192,7 +192,7 @@ const { t, lang } = Astro.props;
     <h2>{t.pricing_title}</h2>
     <div class="services-grid">
       {t.pricing_cards.map((card: { title: string; price: string; price_note: string; details: string[] }) => (
-        <div class="service-card">
+        <div class="service-card" data-umami-event="pricing-click" data-umami-event-tier={card.title}>
           <h3>{card.title}</h3>
           <p class="price">{card.price}</p>
           <p class="price-note">{card.price_note}</p>
@@ -227,7 +227,7 @@ const { t, lang } = Astro.props;
     <h2>{t.contact_title}</h2>
     <p set:html={t.contact_subtitle} />
     <br />
-    <button type="button" class="btn" onclick="openContactDialog()">
+    <button type="button" class="btn" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="contact">
       {t.contact_cta}
     </button>
   </div>
