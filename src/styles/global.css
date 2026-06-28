@@ -486,6 +486,7 @@ nav a:hover::after {
 .btn span,
 .btn {
   position: relative;
+  z-index: 1;
 }
 .btn:hover {
   border-color: var(--accent);
