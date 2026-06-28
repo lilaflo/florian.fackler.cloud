@@ -59,7 +59,7 @@ const { t, lang } = Astro.props;
           <span class="hero-avail" set:html={t.hero_avail} />
         </div>
         <button type="button" class="btn" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="hero">
-          {t.contact_cta}
+          <span>{t.contact_cta}</span>
         </button>
       </div>
       <div class="hero-photo">
@@ -82,7 +82,7 @@ const { t, lang } = Astro.props;
     </div>
     <div class="alert-banner-actions">
       <button type="button" class="btn btn-alert mt-0" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="alert-banner">
-        {t.alert_cta}
+        <span>{t.alert_cta}</span>
       </button>
     </div>
   </div>
@@ -180,7 +180,7 @@ const { t, lang } = Astro.props;
         {t.tripwire_details.map((detail: string) => <li>{detail}</li>)}
       </ul>
       <button type="button" class="btn btn-tripwire" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="tripwire">
-        {t.tripwire_action}
+        <span>{t.tripwire_action}</span>
       </button>
     </div>
   </div>
@@ -228,7 +228,7 @@ const { t, lang } = Astro.props;
     <p set:html={t.contact_subtitle} />
     <br />
     <button type="button" class="btn" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="contact">
-      {t.contact_cta}
+      <span>{t.contact_cta}</span>
     </button>
   </div>
 </section>
