@@ -200,6 +200,6 @@
   "form_desc_placeholder": "What's it about?",
   "form_submit": "Send Request",
   "form_sending": "Sending…",
-  "form_success": "Thank you for reaching out. A human will take care of you shortly.",
-  "form_error": "Something went wrong. Please try again later or email florian@fackler.cloud directly."
+  "form_success": "Thank you for reaching out. I'm getting in touch with you you shortly.",
+  "form_error": "Oh nose ... Something went wrong. Please try again later or email florian@fackler.cloud directly."
 }

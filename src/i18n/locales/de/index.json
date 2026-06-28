@@ -202,6 +202,6 @@
   "form_desc_placeholder": "Worum geht es?",
   "form_submit": "Anfrage senden",
   "form_sending": "Wird gesendet…",
-  "form_success": "Danke für Ihre Nachricht. Ein Mensch kümmert sich in Kürze um Sie.",
-  "form_error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut oder schreiben Sie direkt an florian@fackler.cloud."
+  "form_success": "Danke für Ihre Nachricht. Ich melde mich in Kürze bei Ihnen.",
+  "form_error": "Oh jeh! Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut oder schreiben Sie direkt an florian@fackler.cloud."
 }
