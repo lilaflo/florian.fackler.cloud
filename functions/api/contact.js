@@ -58,7 +58,7 @@ export async function onRequest(context) {
 }
 
 async function draftReply({ name, description, lang }, env) {
-  const baseUrl = env.OLLAMA_BASE_URL || "https://api.ollama.com";
+  const baseUrl = env.OLLAMA_BASE_URL || "https://ollama.com/v1";
   const apiKey = env.OLLAMA_API_KEY;
   const model = env.OLLAMA_MODEL || "qwen3:32b";
   const isDe = lang !== "en";
@@ -140,7 +140,7 @@ Return only valid JSON with two keys:
   }
 
   try {
-    const res = await fetch(`${baseUrl}/api/chat`, {
+    const res = await fetch(`${baseUrl}/chat/completions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -149,13 +149,14 @@ Return only valid JSON with two keys:
       body: JSON.stringify({
         model,
         messages: [{ role: "user", content: prompt }],
-        format: "json",
+        response_format: { type: "json_object" },
         stream: false
       })
     });
-    if (!res.ok) throw new Error("Ollama HTTP " + res.status);
+    if (!res.ok) throw new Error("Ollama HTTP " + res.status + ": " + await res.text());
     const data = await res.json();
-    const content = JSON.parse(data.message.content || "{}");
+    const raw = data.choices?.[0]?.message?.content || data.message?.content || "{}";
+    const content = JSON.parse(raw);
     return {
       subject: content.subject || "Thanks for reaching out",
       body: content.body || fallbackReply(name, lang).body
@@ -182,7 +183,10 @@ function fallbackReply(name, lang) {
 async function sendReply({ name, email, reply }, env) {
   const apiKey = env.RESEND_API_KEY;
   const from = env.RESEND_FROM || "Florian Fackler <noreply@fackler.cloud>";
-  if (!apiKey) return false;
+  if (!apiKey) {
+    console.debug("sendReply: RESEND_API_KEY not set, skipping");
+    return false;
+  }
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
@@ -198,9 +202,15 @@ async function sendReply({ name, email, reply }, env) {
         text: reply.body
       })
     });
-    return res.ok;
+    const resText = await res.text();
+    if (!res.ok) {
+      console.debug("Resend sendReply failed:", res.status, resText);
+      return false;
+    }
+    console.debug("Resend sendReply OK:", resText);
+    return true;
   } catch (err) {
-    console.debug("Resend sendReply failed:", err.message);
+    console.debug("Resend sendReply exception:", err.message);
     return false;
   }
 }
@@ -209,13 +219,16 @@ async function notifyOwner({ name, email, description }, env) {
   const apiKey = env.RESEND_API_KEY;
   const from = env.RESEND_FROM || "Florian Fackler <noreply@fackler.cloud>";
   const to = env.CONTACT_NOTIFY_TO || "florian@fackler.cloud";
-  if (!apiKey) return;
+  if (!apiKey) {
+    console.debug("notifyOwner: RESEND_API_KEY not set, skipping");
+    return;
+  }
 
   const subject = `Neuer Kontakt: ${name}`;
   const body = `Name: ${name}\nEmail: ${email}\n\nNachricht:\n${description || "(leer)"}`;
 
   try {
-    await fetch("https://api.resend.com/emails", {
+    const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -228,7 +241,13 @@ async function notifyOwner({ name, email, description }, env) {
         text: body
       })
     });
+    const resText = await res.text();
+    if (!res.ok) {
+      console.debug("Resend notifyOwner failed:", res.status, resText);
+    } else {
+      console.debug("Resend notifyOwner OK:", resText);
+    }
   } catch (err) {
-    console.debug("Resend notifyOwner failed:", err.message);
+    console.debug("Resend notifyOwner exception:", err.message);
   }
 }
