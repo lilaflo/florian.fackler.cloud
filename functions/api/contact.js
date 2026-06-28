@@ -45,16 +45,21 @@ export async function onRequest(context) {
     return json({ error: "name and valid email are required" }, 400);
   }
 
-  // 1. Draft a reply via Ollama
-  const reply = await draftReply({ name, description, lang }, env);
+  // Process in the background — user gets an instant response.
+  // context.waitUntil() keeps the Worker alive after the response is sent.
+  context.waitUntil(processInBackground({ name, email, description, lang }, env));
 
-  // 2. Send confirmation email to the visitor via Resend
-  const sendOk = await sendReply({ name, email, reply }, env);
+  return json({ ok: true });
+}
 
-  // 3. Send internal notification via Resend (to the business owner)
-  await notifyOwner({ name, email, description }, env);
-
-  return json({ ok: true, sent: sendOk });
+async function processInBackground({ name, email, description, lang }, env) {
+  try {
+    const reply = await draftReply({ name, description, lang }, env);
+    await sendReply({ name, email, reply }, env);
+    await notifyOwner({ name, email, description }, env);
+  } catch (err) {
+    console.debug("Background processing failed:", err.message);
+  }
 }
 
 async function draftReply({ name, description, lang }, env) {
