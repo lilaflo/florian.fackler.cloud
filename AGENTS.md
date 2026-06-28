@@ -27,10 +27,12 @@ No test runner, no linter, no formatter, no typecheck are configured. Do not add
 │   ├── components/
 │   │   ├── Header.astro          # Logo + theme toggle + nav (nav labels hardcoded per-lang)
 │   │   ├── Footer.astro          # Own inline `translations` object; lang switcher; Swiss flag SVG
-│   │   ├── ContactDialog.astro   # <dialog> wrapping an n8n iframe (formUrl hardcoded)
+│   │   ├── ContactDialog.astro   # <dialog> with native form, POSTs to /api/contact (Pages Function)
 │   │   └── HomePage.astro        # The whole single-page body, driven by `t` prop
+│   ├── functions/
+│   │   └── api/contact.js        # Cloudflare Pages Function: form handler (Ollama + Resend)
 │   ├── i18n/
-│   │   ├── locales/{de,en}/index.json   # Translation strings for HomePage + page metadata
+│   │   ├── locales/{de,en}/index.json   # Translation strings for HomePage + ContactDialog + page metadata
 │   │   └── utils.ts              # locales map, t(), getLocaleFromUrl(), getAlternateUrls()
 │   ├── layouts/Layout.astro      # <head>, OG/JSON-LD, theme JS, 3rd-party scripts
 │   ├── pages/
@@ -87,16 +89,16 @@ Day-rate table also lives in both JSON files. The full rate table (hourly + dail
 
 Despite the conventional wisdom of "no external scripts on a privacy-focused Swiss site," the current build does load third-party scripts in `Layout.astro`:
 
-- **Happierleads** tracking snippet (head, `is:inline`).
+- **Happierleads** tracking snippet (head, plain `<script async src=...>`).
 - **Umami** analytics at `https://imamu.code-nexus.co` (deferred, async, no cookies).
-- **Contact form** is an n8n iframe loaded by `ContactDialog.astro` from `https://n8n.code-nexus.co/form/2b1a6ee0-2738-4c5e-a0b6-6b796cce2b37`. Changing the form URL means editing `ContactDialog.astro` directly — it is not in any i18n file.
+- **Contact form** is a native HTML form in `ContactDialog.astro` that POSTs JSON to `/api/contact`, a Cloudflare Pages Function (`functions/api/contact.js`). The function drafts a reply via **Ollama** (`OLLAMA_BASE_URL`, `OLLAMA_API_KEY`, `OLLAMA_MODEL` env vars) and sends email via **Resend** (`RESEND_API_KEY`, `RESEND_FROM`, `CONTACT_NOTIFY_TO` env vars). All secrets are set in the Cloudflare Pages dashboard → Settings → Environment variables. The function degrades gracefully: if Ollama or Resend is not configured, it returns a canned reply and skips sending.
 
 `Layout.astro` has a `// TODO` for a 1200×630 `og-image.png` in `public/`. OG/Twitter meta tags are conditional on that file existing.
 
 ## Deployment
 
 - **Target**: Cloudflare Pages. `wrangler.toml` sets `pages_build_output_dir = "dist"` and the project name is `florian-fackler-cloud`.
-- **Deploy path**: Cloudflare Pages is connected to the GitHub repo (`origin: git@github.com:lilaflo/florian.fackler.cloud.git`) and auto-deploys `dist/` on push to `main`. No local deploy command is needed.
+- **Deploy path**: Cloudflare Pages is connected to the GitHub repo (`origin: git@github.com:lilaflo/florian.fackler.cloud.git`) and auto-deploys `dist/` on push to `main`. The Cloudflare Pages build setting **Deploy command** must be `npx wrangler pages deploy dist --project-name=florian-fackler-cloud` (NOT `npx wrangler deploy`, which deploys a Worker without env var support or Pages Function processing).
 - `.gitea/workflows/deploy.yaml` and `.gitea/workflows/test.yaml` are vestigial: they reference `./deploy.fish` (which does not exist) and are not on the real deploy path. Safe to delete if you want a clean tree.
 - **Domain mismatch** to be aware of: `astro.config.mjs` sets `site: 'https://properflow.ch'` (the future canonical), but `Layout.astro` hardcodes `https://florian.fackler.cloud` for `baseUrl`, canonical, OG, and JSON-LD URLs. The two are out of sync — when changing the site URL, update both.
 

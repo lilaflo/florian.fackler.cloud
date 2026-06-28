@@ -190,5 +190,16 @@
   "pricing_note": "Project pricing by agreement. Hardware can be purchased or rented.",
   "contact_title": "Ready to Get Started?",
   "hero_rate": "from CHF 150/h",
-  "hero_avail": "Available &ndash; response within 24h"
+  "hero_avail": "Available &ndash; response within 24h",
+  "form_title": "Let's Talk",
+  "form_name_label": "Your Name",
+  "form_name_placeholder": "Peter Smith",
+  "form_email_label": "Your Email Address",
+  "form_email_placeholder": "you@company.com",
+  "form_desc_label": "Your Message",
+  "form_desc_placeholder": "What's it about?",
+  "form_submit": "Send Request",
+  "form_sending": "Sending…",
+  "form_success": "Thank you for reaching out. A human will take care of you shortly.",
+  "form_error": "Something went wrong. Please try again later or email florian@fackler.cloud directly."
 }

@@ -192,5 +192,16 @@
     }
   ],
   "hero_rate": "ab CHF 150/h",
-  "hero_avail": "Verfügbar – Antwort innerhalb 24h"
+  "hero_avail": "Verfügbar – Antwort innerhalb 24h",
+  "form_title": "Lassen Sie uns reden",
+  "form_name_label": "Ihr Name",
+  "form_name_placeholder": "Peter Müller",
+  "form_email_label": "Ihre E-Mail-Adresse",
+  "form_email_placeholder": "sie@firma.ch",
+  "form_desc_label": "Ihre Nachricht",
+  "form_desc_placeholder": "Worum geht es?",
+  "form_submit": "Anfrage senden",
+  "form_sending": "Wird gesendet…",
+  "form_success": "Danke für Ihre Nachricht. Ein Mensch kümmert sich in Kürze um Sie.",
+  "form_error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut oder schreiben Sie direkt an florian@fackler.cloud."
 }

@@ -1,5 +1,22 @@
 ---
-// Contact Form Dialog
+interface Props {
+  lang?: string;
+  t: {
+    form_title: string;
+    form_name_label: string;
+    form_name_placeholder: string;
+    form_email_label: string;
+    form_email_placeholder: string;
+    form_desc_label: string;
+    form_desc_placeholder: string;
+    form_submit: string;
+    form_sending: string;
+    form_success: string;
+    form_error: string;
+  };
+}
+
+const { t, lang = "de" } = Astro.props;
 ---
 
 <div
@@ -9,7 +26,7 @@
 >
   <dialog id="contactDialog" onclick="event.stopPropagation()">
     <div class="contact-dialog-header">
-      <h2>Get in Touch</h2>
+      <h2>{t.form_title}</h2>
       <button
         class="contact-dialog-close"
         onclick="closeContactDialog()"
@@ -18,49 +35,135 @@
         &times;
       </button>
     </div>
-    <iframe
-      src="about:blank"
-      id="contactFrame"
-      title="Contact form"
-    ></iframe>
+    <div class="contact-dialog-body">
+      <form id="contactForm" novalidate>
+        <div class="contact-field">
+          <label for="contact-name">{t.form_name_label}</label>
+          <input
+            type="text"
+            id="contact-name"
+            name="name"
+            placeholder={t.form_name_placeholder}
+            required
+            autocomplete="name"
+          />
+        </div>
+        <div class="contact-field">
+          <label for="contact-email">{t.form_email_label}</label>
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            placeholder={t.form_email_placeholder}
+            required
+            autocomplete="email"
+          />
+        </div>
+        <div class="contact-field">
+          <label for="contact-desc">{t.form_desc_label}</label>
+          <textarea
+            id="contact-desc"
+            name="description"
+            placeholder={t.form_desc_placeholder}
+            rows="4"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn contact-submit" id="contactSubmit">
+          {t.form_submit}
+        </button>
+      </form>
+      <div class="contact-status" id="contactStatus" hidden data-ok={t.form_success} data-error={t.form_error}></div>
+    </div>
   </dialog>
 </div>
 
 <script is:inline>
   var contactOverlay = document.getElementById("contactOverlay");
   var contactDialog = document.getElementById("contactDialog");
-  var contactFrame = document.getElementById("contactFrame");
-  var formUrl =
-    "https://n8n.code-nexus.co/form/2b1a6ee0-2738-4c5e-a0b6-6b796cce2b37";
+  var contactForm = document.getElementById("contactForm");
+  var contactSubmit = document.getElementById("contactSubmit");
+  var contactStatus = document.getElementById("contactStatus");
 
-  if (contactDialog) contactDialog.removeAttribute("open");
+  var labels = {
+    sending: contactSubmit ? contactSubmit.textContent : "",
+    submit: contactSubmit ? contactSubmit.dataset.label || contactSubmit.textContent : ""
+  };
 
-  window.openContactDialog = function() {
+  window.openContactDialog = function () {
     if (contactOverlay) contactOverlay.classList.add("active");
-    if (contactFrame) contactFrame.src = formUrl;
     if (contactDialog) contactDialog.showModal();
     document.body.style.overflow = "hidden";
   };
 
-  window.closeContactDialog = function(e) {
+  window.closeContactDialog = function (e) {
     if (e && e.target !== contactOverlay) return;
     if (contactDialog) contactDialog.close();
     if (contactOverlay) contactOverlay.classList.remove("active");
-    if (contactFrame) contactFrame.src = "about:blank";
     document.body.style.overflow = "";
   };
 
   if (contactDialog) {
-    contactDialog.addEventListener("close", function() {
+    contactDialog.addEventListener("close", function () {
       if (contactOverlay) contactOverlay.classList.remove("active");
-      if (contactFrame) contactFrame.src = "about:blank";
       document.body.style.overflow = "";
     });
   }
 
-  document.addEventListener("keydown", function(e) {
+  document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && contactDialog && contactDialog.open) {
       window.closeContactDialog();
     }
   });
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var name = contactForm.elements["name"].value.trim();
+      var email = contactForm.elements["email"].value.trim();
+      var description = contactForm.elements["description"].value.trim();
+
+      if (!name || !email) {
+        showStatus(dataStatusError, true);
+        return;
+      }
+
+      if (contactSubmit) {
+        contactSubmit.disabled = true;
+        contactSubmit.textContent = labels.sending;
+      }
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name, email: email, description: description, lang: document.documentElement.lang })
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.json();
+        })
+        .then(function () {
+          contactForm.hidden = true;
+          showStatus(dataStatusOk, false);
+        })
+        .catch(function () {
+          if (contactSubmit) {
+            contactSubmit.disabled = false;
+            contactSubmit.textContent = labels.submit;
+          }
+          showStatus(dataStatusError, true);
+        });
+    });
+  }
+
+  var dataStatusOk = contactStatus ? contactStatus.dataset.ok : "";
+  var dataStatusError = contactStatus ? contactStatus.dataset.error : "";
+
+  function showStatus(msg, isError) {
+    if (!contactStatus) return;
+    contactStatus.textContent = msg;
+    contactStatus.hidden = false;
+    contactStatus.classList.toggle("contact-status-error", isError);
+    contactStatus.classList.toggle("contact-status-ok", !isError);
+  }
 </script>
