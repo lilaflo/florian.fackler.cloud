@@ -345,6 +345,47 @@ const jsonLd = {
             setTheme(e.matches ? "dark" : "light");
           }
         });
+
+      // --- Umami event tracking: section visibility + contact dialog ---
+      function trackEvent(name, props) {
+        if (window.umami && typeof window.umami.track === "function") {
+          window.umami.track(name, props || {});
+        }
+      }
+
+      // Track section visibility (scroll depth)
+      var trackedSections = {};
+      var sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !trackedSections[entry.target.id]) {
+            trackedSections[entry.target.id] = true;
+            trackEvent("section-view", { section: entry.target.id });
+          }
+        });
+      }, { threshold: 0.3 });
+
+      document.querySelectorAll("section[id]").forEach(function (s) {
+        sectionObserver.observe(s);
+      });
+
+      // Track contact dialog open/close
+      var dialogEl = document.getElementById("contactDialog");
+      if (dialogEl) {
+        var origOpen = window.openContactDialog;
+        window.openContactDialog = function () {
+          trackEvent("contact-dialog-open");
+          if (origOpen) origOpen.apply(this, arguments);
+        };
+
+        dialogEl.addEventListener("close", function () {
+          var form = document.getElementById("contactForm");
+          if (form && form.hidden) {
+            trackEvent("contact-form-submitted");
+          } else {
+            trackEvent("contact-dialog-close");
+          }
+        });
+      }
     </script>
   </body>
 </html>
