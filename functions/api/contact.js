@@ -56,7 +56,7 @@ async function processInBackground({ name, email, description, lang }, env) {
   try {
     const reply = await draftReply({ name, description, lang }, env);
     await sendReply({ name, email, reply }, env);
-    await notifyOwner({ name, email, description }, env);
+    await notifyOwner({ name, email, description, reply }, env);
   } catch (err) {
     console.debug("Background processing failed:", err.message);
   }
@@ -220,7 +220,7 @@ async function sendReply({ name, email, reply }, env) {
   }
 }
 
-async function notifyOwner({ name, email, description }, env) {
+async function notifyOwner({ name, email, description, reply }, env) {
   const apiKey = env.RESEND_API_KEY;
   const from = env.RESEND_FROM || "Florian Fackler <noreply@fackler.cloud>";
   const to = env.CONTACT_NOTIFY_TO || "florian@fackler.cloud";
@@ -230,7 +230,10 @@ async function notifyOwner({ name, email, description }, env) {
   }
 
   const subject = `Neuer Kontakt: ${name}`;
-  const body = `Name: ${name}\nEmail: ${email}\n\nNachricht:\n${description || "(leer)"}`;
+  var body = `Name: ${name}\nEmail: ${email}\n\nNachricht:\n${description || "(leer)"}`;
+  if (reply) {
+    body += `\n\n--- KI-Antwort an Interessent ---\nBetreff: ${reply.subject}\n\n${reply.body}`;
+  }
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
