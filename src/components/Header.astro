@@ -25,7 +25,7 @@ const navItems =
 
 <header>
   <div class="container header-flex">
-    <a href={lang === "en" ? "/en" : "/"} class="logo">
+    <a href={lang === "en" ? "/en" : "/"} class="logo" data-umami-event="logo-click">
       <span class="name">Fackler</span>
       <span class="accent bold">IT-Solutions</span>
     </a>
@@ -33,6 +33,7 @@ const navItems =
       class="theme-toggle"
       id="theme-toggle"
       aria-label="Toggle dark mode"
+      data-umami-event="theme-toggle"
     >
       <svg class="moon-icon" viewBox="0 0 20 20">
         <path
@@ -51,7 +52,7 @@ const navItems =
         {
           navItems.map((item) => (
             <li>
-              <a href={item.href}>{item.label}</a>
+              <a href={item.href} data-umami-event="nav-click" data-umami-event-target={item.href}>{item.label}</a>
             </li>
           ))
         }

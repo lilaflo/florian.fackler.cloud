@@ -70,9 +70,9 @@ const t = translations[lang as keyof typeof translations] || translations.en;
       <div class="footer-bottom-right">
         <a href="/trust/" class="footer-trust-link">{lang === 'de' ? 'Datenschutz' : 'Privacy'}</a>
         <div class="lang-switch">
-          <a href="/en" class:list={[{ active: lang === 'en' }]}>EN</a>
+          <a href="/en" class:list={[{ active: lang === 'en' }]} data-umami-event="lang-switch" data-umami-event-target="en">EN</a>
           <span>|</span>
-          <a href="/" class:list={[{ active: lang === 'de' }]}>DE</a>
+          <a href="/" class:list={[{ active: lang === 'de' }]} data-umami-event="lang-switch" data-umami-event-target="de">DE</a>
         </div>
         <div class="trust-element">
           <span>{t.swissQuality}</span>
