@@ -145,6 +145,9 @@ const { t, lang = "de" } = Astro.props;
         .then(function () {
           contactForm.hidden = true;
           showStatus(dataStatusOk, false);
+          if (window.umami && typeof window.umami.track === "function") {
+            window.umami.track("contact-dialog-success");
+          }
         })
         .catch(function () {
           if (contactSubmit) {
