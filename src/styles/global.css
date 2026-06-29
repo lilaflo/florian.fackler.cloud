@@ -254,49 +254,6 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Theme Toggle */
-.theme-toggle {
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--text-color);
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  width: 40px;
-  height: 40px;
-  opacity: 0.5;
-}
-.theme-toggle:hover {
-  opacity: 1;
-  background-color: var(--bg-alt);
-  border-color: var(--accent);
-}
-.theme-toggle svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-.sun-icon {
-  display: none;
-}
-[data-theme="dark"] .moon-icon {
-  display: none;
-}
-[data-theme="dark"] .sun-icon {
-  display: block;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .moon-icon {
-    display: none;
-  }
-  :root:not([data-theme="light"]) .sun-icon {
-    display: block;
-  }
-}
 
 /* --- Hero Section --- */
 .hero {
@@ -894,10 +851,6 @@ footer {
     grid-template-columns: 1fr auto;
     gap: 8px 12px;
     align-items: center;
-  }
-
-  .header-flex .theme-toggle {
-    align-self: center;
   }
 
   .header-flex nav {

@@ -328,29 +328,15 @@ const jsonLd = {
 
     <script is:inline>
       const htmlElement = document.documentElement;
-
-      function setTheme(theme) {
-        htmlElement.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-      }
-
-      const saved = localStorage.getItem("theme");
       const prefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
       ).matches;
-      setTheme(saved || (prefersDark ? "dark" : "light"));
-
-      document.getElementById("theme-toggle")?.addEventListener("click", () => {
-        const current = htmlElement.getAttribute("data-theme");
-        setTheme(current === "dark" ? "light" : "dark");
-      });
+      htmlElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
 
       window
         .matchMedia("(prefers-color-scheme: dark)")
         .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
+          htmlElement.setAttribute("data-theme", e.matches ? "dark" : "light");
         });
 
       // --- Umami event tracking: section visibility + contact dialog ---
