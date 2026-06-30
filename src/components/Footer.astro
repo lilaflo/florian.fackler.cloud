@@ -20,6 +20,7 @@ const translations = {
     rights: 'All rights reserved.',
     services: 'AI Solutions • Systems & Strategy • Online Shops • Interim IT Leadership',
     swissQuality: 'Swiss Quality',
+    podcast: 'Podcast: AI Daily News',
   },
   de: {
     name: 'Florian Fackler',
@@ -33,8 +34,11 @@ const translations = {
     rights: 'Alle Rechte vorbehalten.',
     services: 'KI-Lösungen • Systeme & Strategie • Online-Shops • Interim IT-Leitung',
     swissQuality: 'Swiss Quality',
+    podcast: 'Podcast: AI Daily News',
   },
 };
+
+const applePodcastsUrl = 'https://podcasts.apple.com/us/podcast/ai-daily-news/id6780972277';
 
 const t = translations[lang as keyof typeof translations] || translations.en;
 ---
@@ -56,6 +60,7 @@ const t = translations[lang as keyof typeof translations] || translations.en;
 
       <div class="footer-col footer-services">
         <p>{t.services}</p>
+        <p><a href={applePodcastsUrl} target="_blank" rel="noopener noreferrer" class="footer-podcast-link" data-umami-event="footer-podcast-click">{t.podcast}</a></p>
       </div>
     </div>
 
