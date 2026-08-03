@@ -29,11 +29,6 @@ interface LocaleData {
   alert_text: string;
   alert_cta: string;
   alert_sub: string;
-  pricing_title?: string;
-  pricing_cards?: { title: string; price: string; price_note: string; details: string[] }[];
-  day_rates_title?: string;
-  day_rates?: { label: string; rate: string }[];
-  pricing_note?: string;
   contact_cta: string;
   contact_title: string;
   contact_subtitle: string;
@@ -197,6 +192,3 @@ const { t, lang } = Astro.props;
     </button>
   </div>
 </section>
-
-<script is:inline>
-</script>

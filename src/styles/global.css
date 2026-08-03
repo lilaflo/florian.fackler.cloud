@@ -52,29 +52,6 @@
   --accent-hover: #ff6666;
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-color: #0a0a0a;
-    --bg-alt: #141414;
-    --bg-card: #161616;
-    --text-color: #e8e8e3;
-    --text-muted: #888;
-    --text-light: #555;
-    --border: #2a2a2a;
-    --border-strong: #e8e8e3;
-    --tag-bg: #1e1e1e;
-    --tag-border: #333;
-    --white: #e8e8e3;
-    --black: var(--white);
-    --header-bg: rgba(10, 10, 10, 0.85);
-    --primary: #c5d0ff;
-    --primary-hover: #dde4ff;
-    --accent: #ff4444;
-    --accent-hover: #ff6666;
-    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -961,23 +938,6 @@ footer {
     transform: none;
   }
 
-  /* Day rates: full width, stack labels */
-  .day-rates {
-    padding: 20px 16px;
-    margin-top: 32px;
-  }
-
-  .day-rate-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    padding: 12px;
-  }
-
-  .day-rate-value {
-    white-space: normal;
-  }
-
   /* Footer: stacked, centered */
   .footer-top {
     grid-template-columns: 1fr;
@@ -1006,11 +966,6 @@ footer {
   .footer-bottom-right {
     flex-direction: column;
     gap: 10px;
-  }
-
-  /* Pricing: smaller price text */
-  .price {
-    font-size: 1.3rem;
   }
 
   /* Tripwire mobile */
@@ -1087,14 +1042,6 @@ footer {
   .service-card {
     padding: 16px;
   }
-
-  .day-rates {
-    padding: 16px 12px;
-  }
-
-  .day-rate-row {
-    padding: 10px;
-  }
 }
 .section-alt {
   background-color: var(--bg-alt);
@@ -1104,20 +1051,6 @@ footer {
 }
 .bold {
   font-weight: bold;
-}
-.price {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--accent);
-  margin: 12px 0 4px 0;
-  font-family: var(--font-display);
-  letter-spacing: -0.02em;
-}
-.price-note {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin: 0 0 18px 0;
-  font-style: italic;
 }
 .name {
   color: var(--primary);
@@ -1360,57 +1293,6 @@ footer {
   line-height: 1.55;
 }
 
-/* Day rates section */
-.day-rates {
-  margin-top: 56px;
-  padding: 40px 36px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--border-radius);
-}
-.day-rates h3 {
-  text-align: center;
-  font-size: 1.15rem;
-  color: var(--primary);
-  margin-bottom: 28px;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.day-rates-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  max-width: 620px;
-  margin: 0 auto;
-}
-.day-rate-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 18px;
-  background: transparent;
-  border-radius: 0;
-  border-bottom: 1px solid var(--border);
-  transition: background 0.2s ease;
-}
-.day-rate-row:last-child {
-  border-bottom: none;
-}
-.day-rate-row:hover {
-  background: var(--bg-alt);
-}
-.day-rate-label {
-  color: var(--text-color);
-  font-size: 0.95rem;
-}
-.day-rate-value {
-  font-weight: 700;
-  color: var(--accent);
-  font-size: 0.95rem;
-  white-space: nowrap;
-  font-family: var(--font-mono);
-}
 .mt-0 {
   margin-top: 0;
 }

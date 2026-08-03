@@ -68,7 +68,7 @@ const { t, lang = "de" } = Astro.props;
             rows="4"
           ></textarea>
         </div>
-        <button type="submit" class="btn contact-submit" id="contactSubmit">
+        <button type="submit" class="btn contact-submit" id="contactSubmit" data-sending={t.form_sending}>
           <span>{t.form_submit}</span>
         </button>
       </form>
@@ -84,10 +84,7 @@ const { t, lang = "de" } = Astro.props;
   var contactSubmit = document.getElementById("contactSubmit");
   var contactStatus = document.getElementById("contactStatus");
 
-  var labels = {
-    sending: contactSubmit ? contactSubmit.textContent.trim() : "",
-    submit: contactSubmit ? contactSubmit.dataset.label || contactSubmit.textContent.trim() : ""
-  };
+  var submitLabel = contactSubmit ? contactSubmit.textContent.trim() : "";
 
   window.openContactDialog = function () {
     if (contactOverlay) contactOverlay.classList.add("active");
@@ -131,7 +128,7 @@ const { t, lang = "de" } = Astro.props;
       if (contactSubmit) {
         contactSubmit.disabled = true;
         var span = contactSubmit.querySelector("span") || contactSubmit;
-        span.textContent = labels.sending;
+        span.textContent = contactSubmit.dataset.sending;
       }
 
       fetch("/api/contact", {
@@ -154,7 +151,7 @@ const { t, lang = "de" } = Astro.props;
           if (contactSubmit) {
             contactSubmit.disabled = false;
             var span = contactSubmit.querySelector("span") || contactSubmit;
-            span.textContent = labels.submit;
+            span.textContent = submitLabel;
           }
           showStatus(dataStatusError, true);
         });
