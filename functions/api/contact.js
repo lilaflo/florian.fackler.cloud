@@ -5,7 +5,7 @@
 //   RESEND_API_KEY, RESEND_FROM, CONTACT_NOTIFY_TO
 
 const CORS_HEADERS = {
-  "Access-Control-Allow-Origin": "https://florian.fackler.cloud",
+  "Access-Control-Allow-Origin": "https://fackler-it.ch",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
   "Content-Type": "application/json"
@@ -187,7 +187,7 @@ function fallbackReply(name, lang) {
 
 async function sendReply({ name, email, reply }, env) {
   const apiKey = env.RESEND_API_KEY;
-  const from = env.RESEND_FROM || "Florian Fackler <noreply@fackler.cloud>";
+  const from = env.RESEND_FROM || "Florian Fackler <noreply@mail.fackler-it.ch>";
   if (!apiKey) {
     console.debug("sendReply: RESEND_API_KEY not set, skipping");
     return false;
@@ -222,8 +222,8 @@ async function sendReply({ name, email, reply }, env) {
 
 async function notifyOwner({ name, email, description, reply }, env) {
   const apiKey = env.RESEND_API_KEY;
-  const from = env.RESEND_FROM || "Florian Fackler <noreply@fackler.cloud>";
-  const to = env.CONTACT_NOTIFY_TO || "florian@fackler.cloud";
+  const from = env.RESEND_FROM || "Florian Fackler <noreply@mail.fackler-it.ch>";
+  const to = env.CONTACT_NOTIFY_TO || "florian@fackler-it.ch";
   if (!apiKey) {
     console.debug("notifyOwner: RESEND_API_KEY not set, skipping");
     return;

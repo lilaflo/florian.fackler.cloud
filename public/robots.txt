@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://properflow.ch/sitemap-index.xml
+Sitemap: https://fackler-it.ch/sitemap-index.xml

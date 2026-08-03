@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://properflow.ch',
+  site: 'https://fackler-it.ch',
   build: {
     inlineStylesheets: 'auto',
   },

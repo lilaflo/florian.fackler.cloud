@@ -1,7 +1,7 @@
 {
-  "name": "florian.fackler.cloud",
+  "name": "fackler-it",
   "version": "1.0.0",
-  "description": "From \"Florian Fackler, IT Consultant\" to \"Properflow GmbH, AI Automation for Swiss Real Estate.\"",
+  "description": "Florian Fackler IT-Solutions — KI-Automatisierung für Schweizer KMU.",
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
