@@ -38,7 +38,7 @@ const translations = {
   },
 };
 
-const applePodcastsUrl = 'https://podcasts.apple.com/us/podcast/ai-daily-news/id6780972277';
+const podcastUrl = 'https://podcasts.code-nexus.co/';
 
 const t = translations[lang as keyof typeof translations] || translations.en;
 ---
@@ -60,7 +60,7 @@ const t = translations[lang as keyof typeof translations] || translations.en;
 
       <div class="footer-col footer-services">
         <p>{t.services}</p>
-        <p><a href={applePodcastsUrl} target="_blank" rel="noopener noreferrer" class="footer-podcast-link" data-umami-event="footer-podcast-click">{t.podcast}</a></p>
+        <p><a href={podcastUrl} target="_blank" rel="noopener noreferrer" class="footer-podcast-link" data-umami-event="footer-podcast-click">{t.podcast}</a></p>
       </div>
     </div>
 
