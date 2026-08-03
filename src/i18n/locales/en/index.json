@@ -96,45 +96,8 @@
   "alert_text": "AI chaos in your company?",
   "alert_cta": "Get clarity now →",
   "alert_sub": "AI Readiness Check from CHF 750",
-  "pricing_title": "Transparent Pricing",
-  "pricing_cards": [
-    {
-      "title": "Setup",
-      "price": "CHF 8,000 – 20,000",
-      "price_note": "One-time setup",
-      "details": [
-        "Hardware delivery and installation",
-        "AI software setup and configuration",
-        "Your first automated workflow",
-        "Fine-tuning the AI to your needs",
-        "Staff training (2–3 hours)"
-      ]
-    },
-    {
-      "title": "Monthly Support",
-      "price": "CHF 16,000 – 40,000 / mo",
-      "price_note": "Ongoing, cancel after 1 month",
-      "details": [
-        "Smooth operations without surprises",
-        "AI improvements and updates",
-        "Adjusting workflows to your feedback",
-        "Priority support with a dedicated contact person"
-      ]
-    },
-    {
-      "title": "Per Project",
-      "price": "CHF 8,000 – 30,000",
-      "price_note": "Per custom task",
-      "details": [
-        "AI that searches and answers from your documents",
-        "A custom chatbot for your team or customers",
-        "Automated document processing",
-        "Automated email handling",
-        "Custom automation for a specific process"
-      ]
-    }
-  ],
   "contact_cta": "Let's Talk",
+  "contact_title": "Ready to Get Started?",
   "contact_subtitle": "Zurich, Bern, Basel, Lucerne &mdash; all within an hour by train. Let's meet for a coffee and talk about what AI can actually do for your business.",
   "references_title": "Reference Projects",
   "references_intro": "Real automation work, not slide decks.",
@@ -164,31 +127,6 @@
       "tags": ["SEO", "Hugo", "CI/CD", "YouTube"]
     }
   ],
-  "day_rates_title": "Or bill by the day:",
-  "day_rates": [
-    {
-      "label": "Software Development, E-Commerce",
-      "rate": "CHF 1,200 – 1,400 / day"
-    },
-    {
-      "label": "IT Consulting, Architecture",
-      "rate": "CHF 1,400 – 1,700 / day"
-    },
-    {
-      "label": "Process Automation (n8n)",
-      "rate": "CHF 1,300 – 1,700 / day"
-    },
-    {
-      "label": "AI Integration & Data Analysis",
-      "rate": "CHF 1,600 – 2,200 / day"
-    },
-    {
-      "label": "AI Strategy Consulting",
-      "rate": "CHF 1,700 – 2,400 / day"
-    }
-  ],
-  "pricing_note": "Project pricing by agreement. Hardware can be purchased or rented.",
-  "contact_title": "Ready to Get Started?",
   "hero_rate": "from CHF 150/h",
   "hero_avail": "Available &ndash; response within 24h",
   "form_title": "Let's Talk",

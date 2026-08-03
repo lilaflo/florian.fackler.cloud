@@ -29,11 +29,11 @@ interface LocaleData {
   alert_text: string;
   alert_cta: string;
   alert_sub: string;
-  pricing_title: string;
-  pricing_cards: { title: string; price: string; price_note: string; details: string[] }[];
-  day_rates_title: string;
-  day_rates: { label: string; rate: string }[];
-  pricing_note: string;
+  pricing_title?: string;
+  pricing_cards?: { title: string; price: string; price_note: string; details: string[] }[];
+  day_rates_title?: string;
+  day_rates?: { label: string; rate: string }[];
+  pricing_note?: string;
   contact_cta: string;
   contact_title: string;
   contact_subtitle: string;
@@ -182,41 +182,6 @@ const { t, lang } = Astro.props;
       <button type="button" class="btn btn-tripwire" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="tripwire">
         <span>{t.tripwire_action}</span>
       </button>
-    </div>
-  </div>
-</section>
-
-<!-- Pricing -->
-<section id="pricing" class="section-alt">
-  <div class="container">
-    <h2>{t.pricing_title}</h2>
-    <div class="services-grid">
-      {t.pricing_cards.map((card: { title: string; price: string; price_note: string; details: string[] }) => (
-        <div class="service-card" data-umami-event="pricing-click" data-umami-event-tier={card.title}>
-          <h3>{card.title}</h3>
-          <p class="price">{card.price}</p>
-          <p class="price-note">{card.price_note}</p>
-          <ul>
-            {card.details.map((detail: string) => <li set:html={detail} />)}
-          </ul>
-        </div>
-      ))}
-    </div>
-
-    <div class="day-rates">
-      <h3>{t.day_rates_title}</h3>
-      <div class="day-rates-grid">
-        {t.day_rates.map((item: { label: string; rate: string }) => (
-          <div class="day-rate-row">
-            <span class="day-rate-label">{item.label}</span>
-            <span class="day-rate-value">{item.rate}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 40px">
-      <p set:html={t.pricing_note} />
     </div>
   </div>
 </section>
