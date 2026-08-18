@@ -1,18 +1,18 @@
 {
   "title": "Florian Fackler | KI-Automatisierung für Schweizer KMU",
-  "description": "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Ihre Daten bleiben in der Schweiz. Florian Fackler IT-Solutions, Olten.",
-  "hero_headline": "Ihre KI. Ihre Daten.",
-  "hero_tagline": "KI-Lösungen für Schweizer Unternehmen, die auf Ihren eigenen Systemen laufen. Datenschutz ist von Anfang an dabei, nicht nachträglich aufgesetzt. Über 25 Jahre Erfahrung darin, Technologie in echten Geschäftsnutzen zu verwandeln.",
+  "description": "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Deine Daten bleiben in der Schweiz. Florian Fackler IT-Solutions, Olten.",
+  "hero_headline": "Deine KI. Deine Daten.",
+  "hero_tagline": "KI-Lösungen für Schweizer Unternehmen, die bei dir laufen, vor Ort oder in Schweizer Rechenzentren. Datenschutz ist von Anfang an dabei, nicht nachträglich aufgesetzt. Über 25 Jahre Erfahrung darin, Technologie in echten Geschäftsnutzen zu verwandeln.",
   "usp_title": "Warum Unternehmen mit mir arbeiten",
-  "usp_1_title": "Ihre Daten bleiben in der Schweiz",
-  "usp_1_text": "Ihre Mitbewerber kopieren täglich sensible Daten in ChatGPT. Ich baue KI, die auf Ihren eigenen Systemen läuft. Nichts geht ins Internet, nichts verlässt Ihr Unternehmen.\n\nKeine Datenlecks, vollständig DSG-konform, und es kommt echte Arbeit dabei raus.",
-  "usp_2_title": "Was Sie konkret bekommen",
+  "usp_1_title": "Deine Daten bleiben in der Schweiz",
+  "usp_1_text": "Deine Mitbewerber kopieren täglich sensible Daten in ChatGPT. Ich baue KI, die bei dir läuft, vor Ort oder in Schweizer Rechenzentren. Nichts geht ins Ausland, nichts verlässt die Schweiz.\n\nKeine Datenlecks, vollständig DSG-konform, und es kommt echte Arbeit dabei raus.",
+  "usp_2_title": "Was du konkret bekommst",
   "usp_2_list": [
-    "Einen KI-Assistenten, der Ihr Unternehmen kennt und Fragen anhand Ihrer eigenen Dokumente beantwortet.",
+    "Einen KI-Assistenten, der dein Unternehmen kennt und Fragen anhand deiner eigenen Dokumente beantwortet.",
     "Automatisierte Abläufe, die Woche für Woche echte Stunden sparen. Keine Showcase-Demos.",
     "E-Mail-Bearbeitung, die sortiert, Antworten vorbereitet und Nachrichten gezielt weiterleitet."
   ],
-  "usp_3_title": "Ihre Mitbewerber sind längst dran",
+  "usp_3_title": "Deine Mitbewerber sind längst dran",
   "usp_3_list": [
     "71 % der Schweizer KMU setzen KI bereits ein oder testen sie.",
     "85 % nutzen ChatGPT, aber nur ein Drittel hat klare Regeln für den sicheren Umgang mit Daten.",
@@ -22,7 +22,7 @@
   "industry_cards": [
     {
       "title": "Handel &amp; Online-Shops",
-      "text": "15'000 Schweizer Online-Shops. CHF 14.9 Milliarden Umsatz. Ich unterstütze Sie bei Produktkatalogen, der Anbindung Ihrer Systeme und lasse KI Ihre Produkttexte schreiben, während Ihre Kundendaten in der Schweiz bleiben."
+      "text": "15'000 Schweizer Online-Shops. CHF 14.9 Milliarden Umsatz. Ich unterstütze dich bei Produktkatalogen, der Anbindung deiner Systeme und lasse KI deine Produkttexte schreiben, während deine Kundendaten in der Schweiz bleiben."
     },
     {
       "title": "Dienstleistungen",
@@ -30,7 +30,7 @@
     },
     {
       "title": "Industrie &amp; Fertigung",
-      "text": "Steigende Kosten verlangen nach schlaueren Prozessen. Ich automatisiere Routinearbeiten, verbinde Ihre Systeme und eliminiere manuelle Schritte, die Ihrem Team wertvolle Zeit rauben."
+      "text": "Steigende Kosten verlangen nach schlaueren Prozessen. Ich automatisiere Routinearbeiten, verbinde deine Systeme und eliminiere manuelle Schritte, die deinem Team wertvolle Zeit rauben."
     },
     {
       "title": "Gesundheit &amp; Bildung",
@@ -41,22 +41,22 @@
   "service_cards": [
     {
       "title": "KI-Lösungen",
-      "text": "Vom ersten Gespräch bis zur laufenden Lösung. Ich finde heraus, wo KI Ihnen tatsächlich Geld spart, richte alles ein und schule Ihr Team im Umgang damit.",
+      "text": "Vom ersten Gespräch bis zur laufenden Lösung. Ich finde heraus, wo KI dir tatsächlich Geld spart, richte alles ein und schule dein Team im Umgang damit.",
       "details": [
-        "KI-Assistent, der Fragen anhand Ihrer Dokumente beantwortet",
-        "Chatbots für Ihre Website oder Ihr internes Team",
+        "KI-Assistent, der Fragen anhand deiner Dokumente beantwortet",
+        "Chatbots für deine Website oder dein internes Team",
         "Automatisierte Inhalte und Produktbeschreibungen",
         "Datenanalysen und Reports",
         "Automatisierung wiederkehrender Aufgaben",
-        "Praxisnahe Workshops für Ihr Team"
+        "Praxisnahe Workshops für dein Team"
       ]
     },
     {
       "title": "Systeme &amp; Strategie",
-      "text": "Systeme, die mit Ihrem Unternehmen wachsen. Ich plane und baue das Fundament, das heute trägt und Sie auch in den kommenden Jahren unterstützt.",
+      "text": "Systeme, die mit deinem Unternehmen wachsen. Ich plane und baue das Fundament, das heute trägt und dich auch in den kommenden Jahren unterstützt.",
       "details": [
-        "Planung Ihrer IT-Landschaft",
-        "Anbindung Ihrer Tools und Plattformen",
+        "Planung deiner IT-Landschaft",
+        "Anbindung deiner Tools und Plattformen",
         "Digitale Transformation, Schritt für Schritt",
         "Automatisierte Workflows über Abteilungsgrenzen hinweg",
         "So einfach wie möglich, so komplex wie nötig",
@@ -68,7 +68,7 @@
       "text": "Neuer Shop, Migration oder Optimierung mit intelligenten Produktkatalogen und automatisierten Prozessen, die manuelle Arbeit deutlich reduzieren.",
       "details": [
         "Shopware, Shopify, WooCommerce",
-        "Anbindung Ihrer Produktdaten",
+        "Anbindung deiner Produktdaten",
         "Zahlungslösungen (TWINT, Stripe, Saferpay)",
         "Wechsel auf eine neue Shop-Plattform",
         "KI-gestützte Produktbeschreibungen"
@@ -76,7 +76,7 @@
     },
     {
       "title": "Interim IT-Leitung",
-      "text": "Sie brauchen jemanden, der Ihre IT führt, sind aber noch nicht bereit für eine Festanstellung? Ich übernehme temporär, strukturiere Ihr Team, setze Prioritäten und bringe den Betrieb zum Laufen.",
+      "text": "Du brauchst jemanden, der deine IT führt, bist aber noch nicht bereit für eine Festanstellung? Ich übernehme temporär, strukturiere dein Team, setze Prioritäten und bringe den Betrieb zum Laufen.",
       "details": ["Certified Scrum Master &amp; Product Owner"]
     }
   ],
@@ -86,7 +86,7 @@
   "tripwire_note": "Einmalig, wird bei Beauftragung eines Projekts voll angerechnet",
   "tripwire_action": "Jetzt Termin vereinbaren",
   "tripwire_details": [
-    "Analyse Ihrer aktuellen Daten- und Prozesslandschaft",
+    "Analyse deiner aktuellen Daten- und Prozesslandschaft",
     "1–2h Gespräch mit den Entscheidern",
     "Identifikation der grössten Automatisierungs-Potenziale",
     "Konkreter, priorisierter Aktionsplan",
@@ -95,9 +95,9 @@
   "alert_text": "KI-Chaos im Unternehmen?",
   "alert_cta": "Jetzt Klarheit schaffen →",
   "alert_sub": "KI-Wissens-Check für CHF 750",
-  "contact_cta": "Lassen Sie uns reden",
+  "contact_cta": "Lass uns reden",
   "contact_title": "Bereit loszulegen?",
-  "contact_subtitle": "Zürich, Bern, Basel, Luzern. Alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für Ihr Unternehmen leisten kann.",
+  "contact_subtitle": "Zürich, Bern, Basel, Luzern. Alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für dein Unternehmen leisten kann.",
   "footer_copyright": "© {year} Florian Fackler. Alle Rechte vorbehalten.",
   "footer_services": "KI-Lösungen • Systeme &amp; Strategie • Online-Shops • Interim IT-Leitung",
   "footer_swiss_quality": "Swiss Quality",
@@ -131,15 +131,15 @@
   ],
   "hero_rate": "ab CHF 150/h",
   "hero_avail": "Verfügbar. Antwort innerhalb von 24 Stunden.",
-  "form_title": "Lassen Sie uns reden",
-  "form_name_label": "Ihr Name",
+  "form_title": "Lass uns reden",
+  "form_name_label": "Dein Name",
   "form_name_placeholder": "Peter Müller",
-  "form_email_label": "Ihre E-Mail-Adresse",
-  "form_email_placeholder": "sie@firma.ch",
-  "form_desc_label": "Was hält Sie nachts wach?",
-  "form_desc_placeholder": "Z. B. Rechnungen, die nicht fertig werden. Produktdaten, die ewig dauern. Lieferanten, die keine sauberen Dateien liefern. Beschreiben Sie kurz, was Ihr Unternehmen aktuell Zeit und Geld kostet.",
+  "form_email_label": "Deine E-Mail-Adresse",
+  "form_email_placeholder": "du@firma.ch",
+  "form_desc_label": "Was hält dich nachts wach?",
+  "form_desc_placeholder": "Z. B. Rechnungen, die nicht fertig werden. Produktdaten, die ewig dauern. Lieferanten, die keine sauberen Dateien liefern. Beschreib kurz, was dein Unternehmen aktuell Zeit und Geld kostet.",
   "form_submit": "Anfrage senden",
   "form_sending": "Wird gesendet…",
-  "form_success": "Danke für Ihre Nachricht. Ich melde mich in Kürze bei Ihnen.",
-  "form_error": "Oh jeh! Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut oder schreiben Sie direkt an florian@fackler-it.ch."
+  "form_success": "Danke für deine Nachricht. Ich melde mich in Kürze bei dir.",
+  "form_error": "Oh jeh! Etwas ist schiefgelaufen. Bitte versuch es später erneut oder schreib direkt an florian@fackler-it.ch."
 }
