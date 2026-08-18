@@ -1,32 +1,32 @@
 {
   "title": "Florian Fackler | KI-Automatisierung für Schweizer KMU",
-  "description": "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten – Ihre Daten bleiben in der Schweiz. Florian Fackler IT-Solutions, Olten.",
+  "description": "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Ihre Daten bleiben in der Schweiz. Florian Fackler IT-Solutions, Olten.",
   "hero_headline": "Ihre KI. Ihre Daten.",
-  "hero_tagline": "Clevere KI-Lösungen für Schweizer Unternehmen – mit Datenschutz von Anfang an, nicht nachträglich aufgesetzt. Über 25 Jahre Erfahrung darin, Technologie in echten Geschäftsnutzen zu verwandeln.",
+  "hero_tagline": "KI-Lösungen für Schweizer Unternehmen, die auf Ihren eigenen Systemen laufen. Datenschutz ist von Anfang an dabei, nicht nachträglich aufgesetzt. Über 25 Jahre Erfahrung darin, Technologie in echten Geschäftsnutzen zu verwandeln.",
   "usp_title": "Warum Unternehmen mit mir arbeiten",
   "usp_1_title": "Ihre Daten bleiben in der Schweiz",
-  "usp_1_text": "Ihre Mitbewerber kopieren täglich sensible Daten in ChatGPT. Ich baue KI, die auf Ihren eigenen Systemen läuft – nichts geht ins Internet, nichts verlässt Ihr Unternehmen.\n\nKeine Datenlecks. Vollständig DSG-konform. Echte Resultate.",
+  "usp_1_text": "Ihre Mitbewerber kopieren täglich sensible Daten in ChatGPT. Ich baue KI, die auf Ihren eigenen Systemen läuft. Nichts geht ins Internet, nichts verlässt Ihr Unternehmen.\n\nKeine Datenlecks, vollständig DSG-konform, und es kommt echte Arbeit dabei raus.",
   "usp_2_title": "Was Sie konkret bekommen",
   "usp_2_list": [
     "Einen KI-Assistenten, der Ihr Unternehmen kennt und Fragen anhand Ihrer eigenen Dokumente beantwortet.",
-    "Automatisierte Abläufe, die Woche für Woche echte Stunden sparen – keine reinen Showcase-Demos.",
-    "Intelligente E-Mail-Bearbeitung, die sortiert, Antworten vorbereitet und Nachrichten gezielt weiterleitet."
+    "Automatisierte Abläufe, die Woche für Woche echte Stunden sparen. Keine Showcase-Demos.",
+    "E-Mail-Bearbeitung, die sortiert, Antworten vorbereitet und Nachrichten gezielt weiterleitet."
   ],
   "usp_3_title": "Ihre Mitbewerber sind längst dran",
   "usp_3_list": [
     "71 % der Schweizer KMU setzen KI bereits ein oder testen sie.",
-    "85 % nutzen ChatGPT – aber nur ein Drittel hat klare Regeln für den sicheren Umgang mit Daten.",
+    "85 % nutzen ChatGPT, aber nur ein Drittel hat klare Regeln für den sicheren Umgang mit Daten.",
     "62 % finden keine passenden Fachkräfte, die sie dabei begleiten."
   ],
   "industries_title": "Gemacht für Schweizer Branchen",
   "industry_cards": [
     {
       "title": "Handel &amp; Online-Shops",
-      "text": "15'000 Schweizer Online-Shops. CHF 14.9 Milliarden Umsatz. Ich unterstütze Sie bei Produktkatalogen, der Anbindung Ihrer Systeme und lasse KI Ihre Produkttexte schreiben – während Ihre Kundendaten in der Schweiz bleiben."
+      "text": "15'000 Schweizer Online-Shops. CHF 14.9 Milliarden Umsatz. Ich unterstütze Sie bei Produktkatalogen, der Anbindung Ihrer Systeme und lasse KI Ihre Produkttexte schreiben, während Ihre Kundendaten in der Schweiz bleiben."
     },
     {
       "title": "Dienstleistungen",
-      "text": "Treuhänder, Versicherungen und Beratungen arbeiten täglich mit sensiblen Mandantendaten. KI-Assistenten analysieren Dokumente und erstellen Berichtsentwürfe – ganz ohne dass etwas in die Cloud wandert."
+      "text": "Treuhänder, Versicherungen und Beratungen arbeiten täglich mit sensiblen Mandantendaten. KI-Assistenten analysieren Dokumente und erstellen Berichtsentwürfe. Alles ohne dass etwas in die Cloud wandert."
     },
     {
       "title": "Industrie &amp; Fertigung",
@@ -34,7 +34,7 @@
     },
     {
       "title": "Gesundheit &amp; Bildung",
-      "text": "Wo der Schutz sensibler Daten nicht verhandelbar ist, ist On-Premise-KI die verantwortungsvolle Wahl. DSG-konform, keine Weitergabe an Dritte, spürbare Produktivitätsgewinne."
+      "text": "Wo der Schutz sensibler Daten nicht verhandelbar ist, ist On-Premise-KI die verantwortungsvolle Wahl. DSG-konform, ohne Weitergabe an Dritte, mit spürbaren Produktivitätsgewinnen."
     }
   ],
   "services_title": "Was ich liefere",
@@ -44,7 +44,7 @@
       "text": "Vom ersten Gespräch bis zur laufenden Lösung. Ich finde heraus, wo KI Ihnen tatsächlich Geld spart, richte alles ein und schule Ihr Team im Umgang damit.",
       "details": [
         "KI-Assistent, der Fragen anhand Ihrer Dokumente beantwortet",
-        "Smarte Chatbots für Ihre Website oder Ihr internes Team",
+        "Chatbots für Ihre Website oder Ihr internes Team",
         "Automatisierte Inhalte und Produktbeschreibungen",
         "Datenanalysen und Reports",
         "Automatisierung wiederkehrender Aufgaben",
@@ -57,7 +57,7 @@
       "details": [
         "Planung Ihrer IT-Landschaft",
         "Anbindung Ihrer Tools und Plattformen",
-        "Digitale Transformation – Schritt für Schritt",
+        "Digitale Transformation, Schritt für Schritt",
         "Automatisierte Workflows über Abteilungsgrenzen hinweg",
         "So einfach wie möglich, so komplex wie nötig",
         "Team-Schulungen &amp; Workshops"
@@ -65,7 +65,7 @@
     },
     {
       "title": "Online-Shops",
-      "text": "Neuer Shop, Migration oder Optimierung – mit intelligenten Produktkatalogen und automatisierten Prozessen, die manuelle Arbeit deutlich reduzieren.",
+      "text": "Neuer Shop, Migration oder Optimierung mit intelligenten Produktkatalogen und automatisierten Prozessen, die manuelle Arbeit deutlich reduzieren.",
       "details": [
         "Shopware, Shopify, WooCommerce",
         "Anbindung Ihrer Produktdaten",
@@ -83,21 +83,21 @@
   "tripwire_badge": "Einstiegs-Angebot",
   "tripwire_title": "KI-Wissens-Check",
   "tripwire_price": "CHF 750",
-  "tripwire_note": "Einmalig – wird bei Beauftragung eines Projekts voll angerechnet",
+  "tripwire_note": "Einmalig, wird bei Beauftragung eines Projekts voll angerechnet",
   "tripwire_action": "Jetzt Termin vereinbaren",
   "tripwire_details": [
     "Analyse Ihrer aktuellen Daten- und Prozesslandschaft",
     "1–2h Gespräch mit den Entscheidern",
     "Identifikation der grössten Automatisierungs-Potenziale",
     "Konkreter, priorisierter Aktionsplan",
-    "CHF 750 werden bei Projektstart voll angerechnet – der Check ist faktisch kostenlos"
+    "CHF 750 werden bei Projektstart voll angerechnet. Der Check ist damit faktisch kostenlos."
   ],
   "alert_text": "KI-Chaos im Unternehmen?",
   "alert_cta": "Jetzt Klarheit schaffen →",
-  "alert_sub": "KI-Wissens-Check ab CHF 750",
+  "alert_sub": "KI-Wissens-Check für CHF 750",
   "contact_cta": "Lassen Sie uns reden",
   "contact_title": "Bereit loszulegen?",
-  "contact_subtitle": "Zürich, Bern, Basel, Luzern – alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für Ihr Unternehmen leisten kann.",
+  "contact_subtitle": "Zürich, Bern, Basel, Luzern. Alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für Ihr Unternehmen leisten kann.",
   "footer_copyright": "© {year} Florian Fackler. Alle Rechte vorbehalten.",
   "footer_services": "KI-Lösungen • Systeme &amp; Strategie • Online-Shops • Interim IT-Leitung",
   "footer_swiss_quality": "Swiss Quality",
@@ -107,7 +107,7 @@
     {
       "client": "Shirtinator AG",
       "project": "N8N-PIM-Automation + KI-Produkttexte",
-      "result": "Automatischer Import Produktdaten aus dem Web ins PIM-System. Folgeprojekt: Brand-Voice-Produktbeschreibungen per KI – zero-manual-touch.",
+      "result": "Automatischer Import Produktdaten aus dem Web ins PIM-System. Folgeprojekt: Brand-Voice-Produktbeschreibungen per KI, ohne manuellen Eingriff.",
       "tags": ["n8n", "PIM", "KI", "Automatisierung"]
     },
     {
@@ -119,7 +119,7 @@
     {
       "client": "Ten Guitars GmbH",
       "project": "Gitarren-Ähnlichkeitssuche",
-      "result": "Kunden finden Gitarren mit ähnlichem Klangcharakter und Preis – messbarer Conversion-Hebel.",
+      "result": "Kunden finden Gitarren mit ähnlichem Klangcharakter und Preis. Messbare Steigerung der Konversion.",
       "tags": ["Suche", "E-Commerce", "Conversion"]
     },
     {
@@ -130,14 +130,14 @@
     }
   ],
   "hero_rate": "ab CHF 150/h",
-  "hero_avail": "Verfügbar – Antwort innerhalb 24h",
+  "hero_avail": "Verfügbar. Antwort innerhalb von 24 Stunden.",
   "form_title": "Lassen Sie uns reden",
   "form_name_label": "Ihr Name",
   "form_name_placeholder": "Peter Müller",
   "form_email_label": "Ihre E-Mail-Adresse",
   "form_email_placeholder": "sie@firma.ch",
-  "form_desc_label": "Ihre Nachricht",
-  "form_desc_placeholder": "Worum geht es?",
+  "form_desc_label": "Was hält Sie nachts wach?",
+  "form_desc_placeholder": "Z. B. Rechnungen, die nicht fertig werden. Produktdaten, die ewig dauern. Lieferanten, die keine sauberen Dateien liefern. Beschreiben Sie kurz, was Ihr Unternehmen aktuell Zeit und Geld kostet.",
   "form_submit": "Anfrage senden",
   "form_sending": "Wird gesendet…",
   "form_success": "Danke für Ihre Nachricht. Ich melde mich in Kürze bei Ihnen.",
