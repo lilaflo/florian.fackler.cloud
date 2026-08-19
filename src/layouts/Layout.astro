@@ -12,7 +12,7 @@ const baseUrl = "https://fackler-it.ch";
 const isDe = lang !== "en";
 const ogLocale = isDe ? "de_CH" : "en_GB";
 const ogLocaleAlternate = isDe ? "en_GB" : "de_CH";
-const canonicalUrl = isDe ? baseUrl : `${baseUrl}/en`;
+const canonicalUrl = isDe ? `${baseUrl}/` : `${baseUrl}/en/`;
 // TODO: replace with a real 1200×630 PNG/JPG at public/og-image.png for social previews.
 const ogImage: string | null = null;
 const logoUrl = `${baseUrl}/assets/florian-fackler-logo.png`;
@@ -22,14 +22,14 @@ const copy = isDe
   ? {
       ogTitle: "Florian Fackler | KI-Automatisierung für Schweizer KMU",
       ogDescription:
-        "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten. Deine Daten bleiben in der Schweiz.",
+        "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Workflows, Dokumente, Assistenten. Deine Daten bleiben in der Schweiz.",
       orgDescription:
         "Datenschutzkonforme KI-Automatisierung für Schweizer KMU.",
       serviceDescription:
         "KI-Automatisierung für Schweizer KMU. Datenschutzkonforme Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.",
       webPageName: "Florian Fackler | KI-Automatisierung für Schweizer KMU",
       webPageDescription:
-        "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Dokumentenverarbeitung, Workflow-Automatisierung und intelligente Assistenten.",
+        "Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Workflows, Dokumente, Assistenten. Deine Daten bleiben in der Schweiz.",
       inLanguage: "de-CH",
       serviceTypes: [
         "KI-Lösungen",
@@ -50,13 +50,13 @@ const copy = isDe
   : {
       ogTitle: "Florian Fackler | AI Automation for Swiss SMEs",
       ogDescription:
-        "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, and intelligent assistants. Your data stays in Switzerland.",
+        "Privacy-focused AI automation for Swiss SMEs. Workflow automation, document processing, AI assistants. Your data stays in Switzerland.",
       orgDescription: "Privacy-focused AI automation for Swiss SMEs.",
       serviceDescription:
         "AI automation for Swiss SMEs. Privacy-focused document processing, workflow automation, and intelligent assistants.",
       webPageName: "Florian Fackler | AI Automation for Swiss SMEs",
       webPageDescription:
-        "Privacy-focused AI automation for Swiss SMEs. Document processing, workflow automation, intelligent assistants.",
+        "Privacy-focused AI automation for Swiss SMEs. Workflow automation, document processing, AI assistants.",
       inLanguage: "en",
       serviceTypes: [
         "AI Solutions",
@@ -268,10 +268,10 @@ const jsonLd = {
     <meta name="googlebot" content="index, follow" />
     <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />
-    <!-- Alternate languages -->
-    <link rel="alternate" hreflang="de" href={baseUrl} />
-    <link rel="alternate" hreflang="en" href={`${baseUrl}/en`} />
-    <link rel="alternate" hreflang="x-default" href={baseUrl} />
+    <!-- Alternate languages (must match sitemap-0.xml exactly: de-CH, /en/ with trailing slash) -->
+    <link rel="alternate" hreflang="de-CH" href={`${baseUrl}/`} />
+    <link rel="alternate" hreflang="en" href={`${baseUrl}/en/`} />
+    <link rel="alternate" hreflang="x-default" href={`${baseUrl}/`} />
     <!-- JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <!-- Analytics (Umami, privacy-friendly, no cookies) -->
