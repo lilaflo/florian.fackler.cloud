@@ -26,9 +26,9 @@
     {
       "parameters": {
         "httpMethod": "POST",
-        "path": "0",
-        "responseMode": "responseNode",
-        "responseData": "allEntries",
+        "path": "2b1a6ee0-2738-4c5e-a0b6-6b796cce2b37",
+        "responseMode": "onReceived",
+        "responseData": "noData",
         "options": {}
       },
       "type": "n8n-nodes-base.webhook",
