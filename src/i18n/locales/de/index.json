@@ -183,6 +183,8 @@
   "form_email_placeholder": "du@firma.ch",
   "form_desc_label": "Was hält dich nachts wach?",
   "form_desc_placeholder": "Z. B. Rechnungen, die nicht fertig werden. Produktdaten, die ewig dauern. Lieferanten, die keine sauberen Dateien liefern. Beschreib kurz, was dein Unternehmen aktuell Zeit und Geld kostet.",
+  "form_time_label": "Wann passt dir ein Gespräch?",
+  "form_time_placeholder": "Z. B. nächste Woche Dienstag Vormittag oder am 15.8. ab 14 Uhr",
   "form_submit": "Anfrage senden",
   "form_sending": "Wird gesendet…",
   "form_success": "Danke für deine Nachricht. Ich melde mich in Kürze bei dir.",
