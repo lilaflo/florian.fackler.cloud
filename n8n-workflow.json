@@ -25,39 +25,14 @@
     },
     {
       "parameters": {
-        "formTitle": "Thanks for contacting us",
-        "formFields": {
-          "values": [
-            {
-              "fieldLabel": "Your Name",
-              "placeholder": "Peter Gibbins",
-              "requiredField": true
-            },
-            {
-              "fieldLabel": "Your Email address",
-              "fieldType": "email",
-              "placeholder": "you@example.com",
-              "requiredField": true
-            },
-            {
-              "fieldLabel": "Additional description",
-              "fieldType": "textarea",
-              "placeholder": "Some details about your request"
-            }
-          ]
-        },
-        "options": {
-          "appendAttribution": false,
-          "buttonLabel": "Contact us",
-          "respondWithOptions": {
-            "values": {
-              "formSubmittedText": "Thank you for contacting us. A human will take care of you soon "
-            }
-          }
-        }
+        "httpMethod": "POST",
+        "path": "0",
+        "responseMode": "responseNode",
+        "responseData": "allEntries",
+        "options": {}
       },
-      "type": "n8n-nodes-base.formTrigger",
-      "typeVersion": 2.3,
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.0,
       "position": [
         0,
         -16
@@ -73,19 +48,25 @@
             {
               "id": "87a90710-aa9c-4c24-a578-e933ca4a8e54",
               "name": "Name",
-              "value": "={{ $json['Your Name'] }}",
+              "value": "={{ $json.name }}",
               "type": "string"
             },
             {
               "id": "6310e6d1-3b3c-4c19-afbd-a9750fe59267",
               "name": "Email",
-              "value": "={{ $json['Your Email address'] }}",
+              "value": "={{ $json.email }}",
               "type": "string"
             },
             {
               "id": "9f77ee88-4115-477b-8869-eb6c3c39e691",
               "name": "Description",
-              "value": "={{ $json['Additional description'] }}",
+              "value": "={{ $json.description }}",
+              "type": "string"
+            },
+            {
+              "id": "3f66aa11-9001-4a11-b000-111111111111",
+              "name": "PreferredTime",
+              "value": "={{ $json.preferred_time }}",
               "type": "string"
             }
           ]
@@ -104,7 +85,7 @@
     {
       "parameters": {
         "chatId": "8518795443",
-        "text": "=Neuer Interessent \"{{ $json.Name }}\" hat das Formular zur AI-Beratung ausgefüllt. \nBemerkung: {{ $json.Description }}\n\nEintrag in nocodb gespeichert.",
+        "text": "=Neuer Interessent \"{{ $json.Name }}\" hat das Formular zur AI-Beratung ausgefüllt.\nBemerkung: {{ $json.Description }}\nBevorzugte Kontaktzeit: {{ $json.PreferredTime }}\n\nEintrag in nocodb gespeichert.",
         "additionalFields": {
           "appendAttribution": false
         }
@@ -127,7 +108,7 @@
     },
     {
       "parameters": {
-        "sendTo": "={{ $('On form submission').item.json['Your Email address'] }}",
+        "sendTo": "={{ $('On form submission').item.json.email }}",
         "subject": "={{ $json.output.subject }}",
         "emailType": "text",
         "message": "={{ $json.output.body }}",
@@ -155,12 +136,12 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "={{ $json.Description }}",
+        "text": "={{ $json.Description }}\n\nBevorzugte Kontaktzeit des Absenders: {{ $json.PreferredTime }}",
         "hasOutputParser": true,
         "messages": {
           "messageValues": [
             {
-              "message": "=You are Florian Fackler, the founder of an AI automation company in Switzerland. You reply to contact form submissions on your website.\n\n## Sender\nName: {{ $json.Name }}\n\n## Message\n{{ $json.Description }}\n\n## Rules\n- Match the sender's language (German, English, or French).\n- Use as few acronyms as possible.\n- Use plain language.\n- Write a concise, warm email (max 5 sentences).\n- If the message is empty or just a greeting, use this default body:\n<mail>\nHi {{ $json.Name }},\n\nThanks for reaching out. I'll review your message and get back to you within one business day.\n\nIn the meantime, feel free to reply to this email if anything comes to mind.\n\nBest regards,\nFlorian Fackler\n</mail>\n\n- If the message contains a question, pick up the question and tell the applicant, that you will clarify this in a personal call\n- If the language is German, use the formal \"Sie\" (not \"Du\")\n- If the message is unrelated to your services (spam, job applications, etc.), respond politely that you can't help with this specific request.\n- Do not invent pricing, dates, or technical details that aren't stated here.\n- Sign off as \"Florian Fackler\" — no titles, no company name in the signature.\n\n## Output\nReturn only valid JSON with two keys:\n- \"subject\": a short, relevant email subject containing the applicant's name\n- \"body\": the full email text including the sign-off\n- **No markdown**\n- **no explanation** \n- **no code fences**\n- **Raw JSON only**"
+              "message": "=You are Florian Fackler, the founder of an AI automation company in Switzerland. You reply to contact form submissions on your website.\n\n## Sender\nName: {{ $json.Name }}\n\n## Message\n{{ $json.Description }}\n\n## Preferred call time\n{{ $json.PreferredTime }}\n\n## Rules\n- Match the sender's language (German, English, or French).\n- Use as few acronyms as possible.\n- Use plain language.\n- Write a concise, warm email (max 5 sentences).\n- If the message is empty or just a greeting, use this default body:\n<mail>\nHi {{ $json.Name }},\n\nThanks for reaching out. I'll review your message and get back to you within one business day.\n\nIn the meantime, feel free to reply to this email if anything comes to mind.\n\nBest regards,\nFlorian Fackler\n</mail>\n\n- If the message contains a question, pick up the question and tell the applicant, that you will clarify this in a personal call\n- If the language is German, use the formal \"Sie\" (not \"Du\")\n- If the message is unrelated to your services (spam, job applications, etc.), respond politely that you can't help with this specific request.\n- Do not invent pricing, dates, or technical details that aren't stated here.\n- Sign off as \"Florian Fackler\" — no titles, no company name in the signature.\n\n## Output\nReturn only valid JSON with two keys:\n- \"subject\": a short, relevant email subject containing the applicant's name\n- \"body\": the full email text including the sign-off\n- **No markdown**\n- **no explanation** \n- **no code fences**\n- **Raw JSON only**"
             }
           ]
         },
