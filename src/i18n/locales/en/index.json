@@ -88,20 +88,20 @@
   "tripwire_action": "Book Your Intro Call",
   "tripwire_details": [
     "Get to know each other, assess your needs",
-    "First take on where AI saves you money",
-    "No sales pressure, no obligation"
+    "First ideas on where AI saves you time",
+    "No sales pressure"
   ],
   "offers_title": "How we work together",
   "offers": [
     {
       "step": "Step 1",
-      "title": "Free Intro Call",
+      "title": "Intro Call",
       "price": "Free",
-      "desc": "30 minutes, no commitment. We get to know each other and assess where AI can save you money.",
+      "desc": "30 minutes, no commitment. We talk about your business and where you're currently losing time.",
       "points": [
         "Get to know each other and assess your needs",
-        "First take on optimization opportunities",
-        "No sales pressure, no obligation"
+        "First ideas on where AI saves you time",
+        "No sales pressure"
       ],
       "cta": "Book Your Intro Call"
     },
@@ -109,29 +109,29 @@
       "step": "Step 2",
       "title": "On-Site Analysis",
       "price": "CHF 750",
-      "desc": "A full day in your company. I review your processes live and deliver a multi-page analysis with AI optimization opportunities and implementation time per item.",
+      "desc": "A full day at your company. I look at how your workflows actually run and write down where automation pays off and what it gets you.",
       "points": [
-        "A full day on site, reviewing processes live",
-        "Multi-page handout: 3-4 clear simplifications",
-        "Estimated implementation time per item"
+        "A full day on site, reviewing workflows live",
+        "Handout with 3-4 concrete simplifications",
+        "Implementation time per item"
       ],
       "cta": "Book Your Analysis Day"
     },
     {
       "step": "Step 3",
-      "title": "Implementation & Retainer",
+      "title": "Implementation",
       "price": "from CHF 3,000",
-      "desc": "After the analysis we know exactly what to do. I implement the prioritized items and support you ongoing.",
+      "desc": "The analysis is the starting point. I implement what helps you most and stay available afterwards.",
       "points": [
         "One-off projects from CHF 3,000",
         "Monthly support from CHF 1,000",
-        "Built on the analysis, no guessing"
+        "All built on the analysis"
       ],
       "cta": "Get Started"
     }
   ],
-  "alert_text": "First, find out what AI really saves you.",
-  "alert_cta": "Book your free intro call",
+  "alert_text": "First, see where AI saves you something.",
+  "alert_cta": "Book your intro call",
   "alert_sub": "30 minutes, no commitment.",
   "contact_cta": "Let's Talk",
   "contact_title": "Ready to Get Started?",

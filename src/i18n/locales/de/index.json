@@ -87,20 +87,20 @@
   "tripwire_action": "Jetzt Erstgespräch buchen",
   "tripwire_details": [
     "Kennenlernen, Bedarf prüfen",
-    "Erste Einschätzung, wo KI dir Geld spart",
-    "Ohne Verkaufsdruck, ohne Verpflichtung"
+    "Erste Ideen, wo KI dir Zeit spart",
+    "Ohne Verkaufsdruck"
   ],
   "offers_title": "So arbeiten wir zusammen",
   "offers": [
     {
       "step": "Schritt 1",
-      "title": "Kostenloses Erstgespräch",
+      "title": "Erstgespräch",
       "price": "Gratis",
-      "desc": "30 Minuten, unverbindlich. Wir lernen uns kennen und prüfen, wo KI dir konkret Geld spart.",
+      "desc": "30 Minuten, unverbindlich. Wir sprechen über deinen Betrieb und wo du gerade Zeit verlierst.",
       "points": [
         "Kennenlernen und Bedarf prüfen",
-        "Erste Einschätzung der Optimierungspotenziale",
-        "Ohne Verkaufsdruck, ohne Verpflichtung"
+        "Erste Ideen, wo KI dir Zeit spart",
+        "Ohne Verkaufsdruck"
       ],
       "cta": "Jetzt Erstgespräch buchen"
     },
@@ -108,29 +108,29 @@
       "step": "Schritt 2",
       "title": "Vor-Ort-Analyse",
       "price": "CHF 750",
-      "desc": "Ein Tag in deinem Unternehmen. Ich sehe mir die Prozesse live an und erstelle dir eine mehrseitige Analyse mit KI-Optimierungspotenzialen und Umsetzungsdauer je Position.",
+      "desc": "Ein Tag bei dir im Betrieb. Ich sehe mir an, wie deine Abläufe wirklich laufen, und schreibe dir auf, wo sich Automatisierung lohnt und was sie dir bringt.",
       "points": [
-        "Ein Tag vor Ort, Prozesse live ansehen",
-        "Mehrseitiges Hand-Out: 3-4 offensichtliche Vereinfachungen",
-        "Einschätzung der Umsetzungsdauer pro Punkt"
+        "Ein Tag vor Ort, Abläufe live ansehen",
+        "Hand-Out mit 3-4 konkreten Vereinfachungen",
+        "Umsetzungsdauer je Punkt"
       ],
       "cta": "Analyse-Tag buchen"
     },
     {
       "step": "Schritt 3",
-      "title": "Umsetzung & Retainer",
+      "title": "Umsetzung",
       "price": "ab CHF 3'000",
-      "desc": "Nach der Analyse wissen wir genau, was zu tun ist. Ich setze die priorisierten Punkte um und betreue dich laufend.",
+      "desc": "Die Analyse ist die Grundlage. Ich setze die Punkte um, die dir am meisten bringen, und stehe dir danach weiter zur Seite.",
       "points": [
         "Einzelprojekte ab CHF 3'000",
         "Monatlicher Support ab CHF 1'000",
-        "Aufbau auf der Analyse, nichts raten"
+        "Alles aufbauend auf der Analyse"
       ],
       "cta": "Jetzt starten"
     }
   ],
-  "alert_text": "Erst klären, was dir KI wirklich spart.",
-  "alert_cta": "Jetzt kostenloses Erstgespräch",
+  "alert_text": "Erst sehen, wo dir KI was spart.",
+  "alert_cta": "Jetzt Erstgespräch buchen",
   "alert_sub": "30 Minuten, unverbindlich.",
   "contact_cta": "Lass uns reden",
   "contact_title": "Bereit loszulegen?",
