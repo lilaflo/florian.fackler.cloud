@@ -28,6 +28,10 @@ interface LocaleData {
   tripwire_details: string[];
   offers_title: string;
   offers: { step: string; title: string; price: string; desc: string; points: string[]; cta: string }[];
+  demo_title: string;
+  demo_intro: string;
+  demo_link: string;
+  demo_points: string[];
   alert_text: string;
   alert_cta: string;
   alert_sub: string;
@@ -162,6 +166,20 @@ const { t, lang } = Astro.props;
         </div>
       ))}
     </div>
+  </div>
+</section>
+
+<!-- Demo (Proof) -->
+<section id="demo" class="section-demo">
+  <div class="container">
+    <h2>{t.demo_title}</h2>
+    <p class="demo-intro">{t.demo_intro}</p>
+    <ul class="demo-points">
+      {t.demo_points.map((point: string) => <li>{point}</li>)}
+    </ul>
+    <a class="btn btn-demo" href="https://podcasts.code-nexus.co" target="_blank" rel="noopener" data-umami-event="demo-click">
+      <span>{t.demo_link}</span>
+    </a>
   </div>
 </section>
 

@@ -92,6 +92,14 @@
     "No sales pressure"
   ],
   "offers_title": "How we work together",
+  "demo_title": "Proof, not promises",
+  "demo_intro": "This podcast runs fully automatically. Every day a system collects the top AI news, turns it into a two-voice episode, and adds music. No human involved.",
+  "demo_link": "See the live system",
+  "demo_points": [
+    "Created automatically every day, around the clock",
+    "Two voices and music, fully generated",
+    "Runs on its own infrastructure, data stays in Switzerland"
+  ],
   "offers": [
     {
       "step": "Step 1",

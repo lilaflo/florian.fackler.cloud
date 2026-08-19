@@ -91,6 +91,14 @@
     "Ohne Verkaufsdruck"
   ],
   "offers_title": "So arbeiten wir zusammen",
+  "demo_title": "Beweis statt Versprechen",
+  "demo_intro": "Dieser Podcast läuft komplett automatisch. Jeden Tag sammelt ein System die wichtigsten KI-News, schreibt daraus einen Beitrag mit zwei Sprechern und fügt Musik hinzu. Ohne dass ein Mensch eingreift.",
+  "demo_link": "Zum Live-System",
+  "demo_points": [
+    "Täglich automatisch erstellt, rund um die Uhr",
+    "Zwei Sprecher und Musik, komplett generiert",
+    "Läuft auf eigener Infrastruktur, Daten bleiben in der Schweiz"
+  ],
   "offers": [
     {
       "step": "Schritt 1",

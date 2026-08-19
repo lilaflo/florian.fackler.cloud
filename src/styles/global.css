@@ -650,6 +650,75 @@ nav a:hover::after {
   border-color: var(--primary);
 }
 
+/* --- Demo (Proof) Section --- */
+.section-demo {
+  background-color: var(--bg-alt);
+  position: relative;
+}
+.section-demo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, color-mix(in srgb, var(--accent) 5%, transparent), transparent 65%);
+  pointer-events: none;
+}
+.section-demo .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 720px;
+}
+.section-demo h2 {
+  margin-bottom: 16px;
+}
+.demo-intro {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+.demo-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 32px;
+  max-width: 520px;
+  text-align: left;
+}
+.demo-points li {
+  padding: 10px 0 10px 32px;
+  position: relative;
+  line-height: 1.5;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.98rem;
+}
+.demo-points li:last-child {
+  border-bottom: none;
+}
+.demo-points li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: var(--font-mono);
+}
+.btn-demo {
+  background-color: var(--accent);
+  font-size: 1.05rem;
+  padding: 16px 40px;
+  border-color: var(--accent);
+  display: inline-block;
+}
+.btn-demo::before {
+  background: var(--primary);
+}
+.btn-demo:hover {
+  border-color: var(--primary);
+}
+
 /* --- Offers (Funnel) Section --- */
 .offers-heading {
   text-align: center;
