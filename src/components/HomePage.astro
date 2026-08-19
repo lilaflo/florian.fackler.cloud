@@ -26,6 +26,8 @@ interface LocaleData {
   tripwire_note: string;
   tripwire_action: string;
   tripwire_details: string[];
+  offers_title: string;
+  offers: { step: string; title: string; price: string; desc: string; points: string[]; cta: string }[];
   alert_text: string;
   alert_cta: string;
   alert_sub: string;
@@ -163,20 +165,25 @@ const { t, lang } = Astro.props;
   </div>
 </section>
 
-<!-- Tripwire -->
+<!-- Offers (Funnel) -->
 <section id="tripwire" class="section-tripwire">
   <div class="container">
-    <div class="tripwire-card">
-      <span class="tripwire-badge">{t.tripwire_badge}</span>
-      <h2 class="tripwire-heading">{t.tripwire_title}</h2>
-      <p class="tripwire-price">{t.tripwire_price}</p>
-      <p class="tripwire-note">{t.tripwire_note}</p>
-      <ul class="tripwire-details">
-        {t.tripwire_details.map((detail: string) => <li>{detail}</li>)}
-      </ul>
-      <button type="button" class="btn btn-tripwire" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="tripwire">
-        <span>{t.tripwire_action}</span>
-      </button>
+    <h2 class="offers-heading">{t.offers_title}</h2>
+    <div class="offers-grid">
+      {t.offers.map((offer: { step: string; title: string; price: string; desc: string; points: string[]; cta: string }) => (
+        <div class="offer-card">
+          <span class="tripwire-badge">{offer.step}</span>
+          <h3>{offer.title}</h3>
+          <p class="tripwire-price">{offer.price}</p>
+          <p class="offer-desc">{offer.desc}</p>
+          <ul class="offer-points">
+            {offer.points.map((point: string) => <li>{point}</li>)}
+          </ul>
+          <button type="button" class="btn btn-tripwire" onclick="openContactDialog()" data-umami-event="cta-click" data-umami-event-location="offer">
+            <span>{offer.cta}</span>
+          </button>
+        </div>
+      ))}
     </div>
   </div>
 </section>

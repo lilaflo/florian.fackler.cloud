@@ -81,21 +81,58 @@
       "details": ["Certified Scrum Master &amp; Product Owner"]
     }
   ],
-  "tripwire_badge": "Starter Offer",
-  "tripwire_title": "AI Readiness Check",
-  "tripwire_price": "CHF 750",
-  "tripwire_note": "One-time, fully credited when you start a project",
-  "tripwire_action": "Book Your Check Now",
+  "tripwire_badge": "Step 1",
+  "tripwire_title": "Intro Call",
+  "tripwire_price": "Free",
+  "tripwire_note": "30 minutes, no commitment",
+  "tripwire_action": "Book Your Intro Call",
   "tripwire_details": [
-    "Analysis of your current data and process landscape",
-    "1–2 hour meeting with decision makers",
-    "Identification of your biggest automation opportunities",
-    "Concrete, prioritized action plan",
-    "CHF 750 is fully credited when we start a project. Effectively that makes the check free."
+    "Get to know each other, assess your needs",
+    "First take on where AI saves you money",
+    "No sales pressure, no obligation"
   ],
-  "alert_text": "AI chaos in your company?",
-  "alert_cta": "Get clarity now →",
-  "alert_sub": "AI Readiness Check from CHF 750",
+  "offers_title": "How we work together",
+  "offers": [
+    {
+      "step": "Step 1",
+      "title": "Free Intro Call",
+      "price": "Free",
+      "desc": "30 minutes, no commitment. We get to know each other and assess where AI can save you money.",
+      "points": [
+        "Get to know each other and assess your needs",
+        "First take on optimization opportunities",
+        "No sales pressure, no obligation"
+      ],
+      "cta": "Book Your Intro Call"
+    },
+    {
+      "step": "Step 2",
+      "title": "On-Site Analysis",
+      "price": "CHF 750",
+      "desc": "A full day in your company. I review your processes live and deliver a multi-page analysis with AI optimization opportunities and implementation time per item.",
+      "points": [
+        "A full day on site, reviewing processes live",
+        "Multi-page handout: 3-4 clear simplifications",
+        "Estimated implementation time per item"
+      ],
+      "cta": "Book Your Analysis Day"
+    },
+    {
+      "step": "Step 3",
+      "title": "Implementation & Retainer",
+      "price": "from CHF 3,000",
+      "desc": "After the analysis we know exactly what to do. I implement the prioritized items and support you ongoing.",
+      "points": [
+        "One-off projects from CHF 3,000",
+        "Monthly support from CHF 1,000",
+        "Built on the analysis, no guessing"
+      ],
+      "cta": "Get Started"
+    }
+  ],
+  "alert_text": "First, find out what AI really saves you.",
+  "alert_cta": "Book your free intro call",
+  "alert_sub": "30 minutes, no commitment.",
   "contact_cta": "Let's Talk",
   "contact_title": "Ready to Get Started?",
   "contact_subtitle": "Zurich, Bern, Basel, Lucerne. All within an hour by train. Let's meet for a coffee and talk about what AI can actually do for your business.",

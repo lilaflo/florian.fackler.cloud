@@ -649,6 +649,124 @@ nav a:hover::after {
 .btn-tripwire:hover {
   border-color: var(--primary);
 }
+
+/* --- Offers (Funnel) Section --- */
+.offers-heading {
+  text-align: center;
+  font-size: 2.25rem;
+  color: var(--primary);
+  margin-bottom: 48px;
+  border: none;
+  display: block;
+  padding: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border-strong);
+  border-radius: var(--border-radius);
+  padding: 40px 32px;
+  background: var(--bg-card);
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.offer-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid var(--accent);
+  border-radius: var(--border-radius);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.offer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.12);
+}
+.offer-card:hover::before {
+  opacity: 1;
+}
+.offer-card h3 {
+  font-size: 1.35rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+  border: none;
+  display: block;
+  padding: 0;
+}
+.offer-card .tripwire-price {
+  font-size: 2.5rem;
+}
+.offer-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0 0 24px;
+  text-align: left;
+}
+.offer-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 32px;
+  text-align: left;
+  flex-grow: 1;
+}
+.offer-points li {
+  padding: 10px 0 10px 32px;
+  position: relative;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+.offer-points li:last-child {
+  border-bottom: none;
+}
+.offer-points li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: var(--font-mono);
+}
+.offer-card .btn-tripwire {
+  align-self: center;
+}
+[data-theme="dark"] .offer-card {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] .offer-card:hover {
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 960px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+  .offer-card {
+    max-width: 640px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 [data-theme="dark"] .tripwire-card {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }

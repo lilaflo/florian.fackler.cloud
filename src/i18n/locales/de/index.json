@@ -80,21 +80,58 @@
       "details": ["Certified Scrum Master &amp; Product Owner"]
     }
   ],
-  "tripwire_badge": "Einstiegs-Angebot",
-  "tripwire_title": "KI-Wissens-Check",
-  "tripwire_price": "CHF 750",
-  "tripwire_note": "Einmalig, wird bei Beauftragung eines Projekts voll angerechnet",
-  "tripwire_action": "Jetzt Termin vereinbaren",
+  "tripwire_badge": "Einstieg",
+  "tripwire_title": "Erstgespräch",
+  "tripwire_price": "Gratis",
+  "tripwire_note": "30 Minuten, unverbindlich",
+  "tripwire_action": "Jetzt Erstgespräch buchen",
   "tripwire_details": [
-    "Analyse deiner aktuellen Daten- und Prozesslandschaft",
-    "1–2h Gespräch mit den Entscheidern",
-    "Identifikation der grössten Automatisierungs-Potenziale",
-    "Konkreter, priorisierter Aktionsplan",
-    "CHF 750 werden bei Projektstart voll angerechnet. Der Check ist damit faktisch kostenlos."
+    "Kennenlernen, Bedarf prüfen",
+    "Erste Einschätzung, wo KI dir Geld spart",
+    "Ohne Verkaufsdruck, ohne Verpflichtung"
   ],
-  "alert_text": "KI-Chaos im Unternehmen?",
-  "alert_cta": "Jetzt Klarheit schaffen →",
-  "alert_sub": "KI-Wissens-Check für CHF 750",
+  "offers_title": "So arbeiten wir zusammen",
+  "offers": [
+    {
+      "step": "Schritt 1",
+      "title": "Kostenloses Erstgespräch",
+      "price": "Gratis",
+      "desc": "30 Minuten, unverbindlich. Wir lernen uns kennen und prüfen, wo KI dir konkret Geld spart.",
+      "points": [
+        "Kennenlernen und Bedarf prüfen",
+        "Erste Einschätzung der Optimierungspotenziale",
+        "Ohne Verkaufsdruck, ohne Verpflichtung"
+      ],
+      "cta": "Jetzt Erstgespräch buchen"
+    },
+    {
+      "step": "Schritt 2",
+      "title": "Vor-Ort-Analyse",
+      "price": "CHF 750",
+      "desc": "Ein Tag in deinem Unternehmen. Ich sehe mir die Prozesse live an und erstelle dir eine mehrseitige Analyse mit KI-Optimierungspotenzialen und Umsetzungsdauer je Position.",
+      "points": [
+        "Ein Tag vor Ort, Prozesse live ansehen",
+        "Mehrseitiges Hand-Out: 3-4 offensichtliche Vereinfachungen",
+        "Einschätzung der Umsetzungsdauer pro Punkt"
+      ],
+      "cta": "Analyse-Tag buchen"
+    },
+    {
+      "step": "Schritt 3",
+      "title": "Umsetzung & Retainer",
+      "price": "ab CHF 3'000",
+      "desc": "Nach der Analyse wissen wir genau, was zu tun ist. Ich setze die priorisierten Punkte um und betreue dich laufend.",
+      "points": [
+        "Einzelprojekte ab CHF 3'000",
+        "Monatlicher Support ab CHF 1'000",
+        "Aufbau auf der Analyse, nichts raten"
+      ],
+      "cta": "Jetzt starten"
+    }
+  ],
+  "alert_text": "Erst klären, was dir KI wirklich spart.",
+  "alert_cta": "Jetzt kostenloses Erstgespräch",
+  "alert_sub": "30 Minuten, unverbindlich.",
   "contact_cta": "Lass uns reden",
   "contact_title": "Bereit loszulegen?",
   "contact_subtitle": "Zürich, Bern, Basel, Luzern. Alles in einer Zugstunde erreichbar. Treffen wir uns auf einen Kaffee und besprechen, was KI konkret für dein Unternehmen leisten kann.",
