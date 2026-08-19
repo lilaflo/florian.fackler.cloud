@@ -32,14 +32,13 @@
         "options": {}
       },
       "type": "n8n-nodes-base.webhook",
-      "typeVersion": 2.0,
+      "typeVersion": 3,
       "position": [
         0,
         -16
       ],
       "id": "6a46d329-a969-4561-9548-636abc236701",
-      "name": "On form submission",
-      "webhookId": "2b1a6ee0-2738-4c5e-a0b6-6b796cce2b37"
+      "name": "On form submission"
     },
     {
       "parameters": {
