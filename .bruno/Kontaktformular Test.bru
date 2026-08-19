@@ -1,0 +1,31 @@
+meta {
+  name: Kontaktformular Test
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://n8n.code-nexus.co/webhook/ba015b6d-5237-4234-86f5-55c001446b72
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Peter Testname",
+    "email": "peter.test@example.com",
+    "description": "Ich möchte meinen Toaster automatisieren (Testanfrage für den n8n-Workflow)",
+    "preferred_time": "Nächste Woche Dienstag nachmittags",
+    "lang": "de"
+  }
+}
+
+tests {
+  test("status is 200", function() {
+    expect(res.status).to.equal(200);
+  });
+}
