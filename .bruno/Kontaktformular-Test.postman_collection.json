@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "fackler-it Kontaktformular",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Kontaktformular Test",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Peter Testname\",\"email\":\"peter.test@example.com\",\"description\":\"Ich möchte meinen Toaster automatisieren (Testanfrage für den n8n-Workflow)\",\"preferred_time\":\"Nächste Woche Dienstag nachmittags\",\"lang\":\"de\"}"
+        },
+        "url": {
+          "raw": "https://n8n.code-nexus.co/webhook/ba015b6d-5237-4234-86f5-55c001446b72",
+          "protocol": "https",
+          "host": ["n8n", "code-nexus", "co"],
+          "path": ["webhook", "ba015b6d-5237-4234-86f5-55c001446b72"]
+        }
+      }
+    }
+  ]
+}

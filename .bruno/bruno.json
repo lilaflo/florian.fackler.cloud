@@ -1,5 +1,7 @@
 {
   "version": "1",
   "name": "fackler-it",
-  "type": "collection"
+  "type": "collection",
+  "icon": "shield",
+  "presets": {}
 }
