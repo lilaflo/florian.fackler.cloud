@@ -90,7 +90,7 @@
     },
     {
       "parameters": {
-        "sendTo": "={{ $('On form submission').item.json.email }}",
+        "sendTo": "={{ $('Webhook').item.json.email }}",
         "subject": "={{ $json.output.subject }}",
         "emailType": "text",
         "message": "={{ $json.output.body }}",
