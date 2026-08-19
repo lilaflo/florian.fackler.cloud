@@ -11,10 +11,10 @@
       "type": "n8n-nodes-base.nocoDb",
       "typeVersion": 3,
       "position": [
-        512,
-        176
+        -272,
+        816
       ],
-      "id": "eb238c8d-eccc-4448-84d5-6c523dcc3910",
+      "id": "0b2dc907-8f90-4770-9f18-d96af905f140",
       "name": "Create a row",
       "credentials": {
         "nocoDbApiToken": {
@@ -22,23 +22,6 @@
           "name": "NocoDB (Code Nexus)"
         }
       }
-    },
-    {
-      "parameters": {
-        "httpMethod": "POST",
-        "path": "2b1a6ee0-2738-4c5e-a0b6-6b796cce2b37",
-        "responseMode": "onReceived",
-        "responseData": "noData",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.webhook",
-      "typeVersion": 3,
-      "position": [
-        0,
-        -16
-      ],
-      "id": "6a46d329-a969-4561-9548-636abc236701",
-      "name": "On form submission"
     },
     {
       "parameters": {
@@ -75,10 +58,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        224,
-        -16
+        -560,
+        624
       ],
-      "id": "53b7ac9f-0376-4101-8f64-644500765406",
+      "id": "8bc7e9f7-4358-412a-9bc5-ddf35b54eee5",
       "name": "Edit Fields"
     },
     {
@@ -92,10 +75,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        512,
-        -16
+        -272,
+        624
       ],
-      "id": "bddd8931-d822-4e95-b509-a588a653a032",
+      "id": "3e584cef-7f38-4344-96ad-a4575d3a0069",
       "name": "Send a text message2",
       "webhookId": "175b3afd-1532-4e21-9012-31a3d7bddc18",
       "credentials": {
@@ -119,10 +102,10 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        864,
-        -416
+        80,
+        224
       ],
-      "id": "24c03375-a6ac-4f61-a2fd-9746bbfa301d",
+      "id": "56e94f77-dfc0-4d07-bea7-349c8d075c6a",
       "name": "Send a message",
       "webhookId": "a2500782-8091-4e05-b71e-afe9f4bea2f1",
       "credentials": {
@@ -149,10 +132,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.9,
       "position": [
-        448,
-        -416
+        -336,
+        224
       ],
-      "id": "985ed080-5c04-4e6d-b851-e7bff487bff3",
+      "id": "48c33be4-7f2f-44dc-bfa9-9ad265764949",
       "name": "Basic LLM Chain"
     },
     {
@@ -168,10 +151,10 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
       "typeVersion": 1.3,
       "position": [
-        448,
-        -208
+        -336,
+        432
       ],
-      "id": "16de68a1-8e36-43dc-8d4e-a3f6de8ce271",
+      "id": "1a851e5b-301e-4a62-978e-fa22c1e0d352",
       "name": "Anthropic Chat Model",
       "credentials": {
         "anthropicApi": {
@@ -187,25 +170,30 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3,
       "position": [
-        592,
-        -208
+        -192,
+        432
       ],
-      "id": "bd0cbb27-c69e-4852-9a84-6e766a136fce",
+      "id": "7958f667-dbef-4b6e-ba5e-f09a8dab0c77",
       "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ba015b6d-5237-4234-86f5-55c001446b72",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -800,
+        624
+      ],
+      "id": "e740e2d4-22ef-411b-914a-9a9a4553bf52",
+      "name": "Webhook",
+      "webhookId": "ba015b6d-5237-4234-86f5-55c001446b72"
     }
   ],
   "connections": {
-    "On form submission": {
-      "main": [
-        [
-          {
-            "node": "Edit Fields",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Edit Fields": {
       "main": [
         [
@@ -259,11 +247,21 @@
           }
         ]
       ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "pinData": {},
   "meta": {
-    "templateCredsSetupCompleted": true,
     "instanceId": "43a65ad6a645a1590bb81e7fa2db0df8bcd01879de8b163438c3ae3e6f48e7c8"
   }
 }

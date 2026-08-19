@@ -143,7 +143,7 @@ const { t, lang = "de" } = Astro.props;
         span.textContent = contactSubmit.dataset.sending;
       }
 
-      fetch("https://n8n.code-nexus.co/form-test/2b1a6ee0-2738-4c5e-a0b6-6b796cce2b37", {
+      fetch("https://n8n.code-nexus.co/webhook/ba015b6d-5237-4234-86f5-55c001446b72", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: name, email: email, description: description, preferred_time: preferredTime, lang: document.documentElement.lang })
