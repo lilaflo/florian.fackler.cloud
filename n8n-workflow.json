@@ -4,17 +4,38 @@
       "parameters": {
         "authentication": "nocoDbApiToken",
         "operation": "create",
+        "workspaceId": "wiz5cm1j",
         "projectId": "p2lv3lrrkzir16u",
         "table": "mwygpz7tlwklceb",
-        "dataToSend": "autoMapInputData"
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldName": "name",
+              "fieldValue": "={{ $json.body.name }}"
+            },
+            {
+              "fieldName": "email",
+              "fieldValue": "={{ $json.body.email }}"
+            },
+            {
+              "fieldName": "description",
+              "fieldValue": "={{ $json.body.description }}"
+            },
+            {
+              "fieldName": "preferred_time",
+              "fieldValue": "={{ $json.body.preferred_time }}"
+            },
+            {
+              "fieldName": "language",
+              "fieldValue": "={{ $json.body.lang }}"
+            }
+          ]
+        }
       },
       "type": "n8n-nodes-base.nocoDb",
       "typeVersion": 3,
-      "position": [
-        -272,
-        816
-      ],
-      "id": "0b2dc907-8f90-4770-9f18-d96af905f140",
+      "position": [-224, 128],
+      "id": "dfeed020-da90-4aad-9f5e-e5af5a315304",
       "name": "Create a row",
       "credentials": {
         "nocoDbApiToken": {
@@ -25,60 +46,16 @@
     },
     {
       "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "87a90710-aa9c-4c24-a578-e933ca4a8e54",
-              "name": "Name",
-              "value": "={{ $json.name }}",
-              "type": "string"
-            },
-            {
-              "id": "6310e6d1-3b3c-4c19-afbd-a9750fe59267",
-              "name": "Email",
-              "value": "={{ $json.email }}",
-              "type": "string"
-            },
-            {
-              "id": "9f77ee88-4115-477b-8869-eb6c3c39e691",
-              "name": "Description",
-              "value": "={{ $json.description }}",
-              "type": "string"
-            },
-            {
-              "id": "3f66aa11-9001-4a11-b000-111111111111",
-              "name": "PreferredTime",
-              "value": "={{ $json.preferred_time }}",
-              "type": "string"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4,
-      "position": [
-        -560,
-        624
-      ],
-      "id": "8bc7e9f7-4358-412a-9bc5-ddf35b54eee5",
-      "name": "Edit Fields"
-    },
-    {
-      "parameters": {
         "chatId": "8518795443",
-        "text": "=Neuer Interessent \"{{ $json.Name }}\" hat das Formular zur AI-Beratung ausgefüllt.\nBemerkung: {{ $json.Description }}\nBevorzugte Kontaktzeit: {{ $json.PreferredTime }}\n\nEintrag in nocodb gespeichert.",
+        "text": "=Neuer Interessent \"{{ $json.body.name }}\" hat das Formular zur AI-Beratung ausgefüllt.\nBemerkung: {{ $json.body.description}}\nBevorzugte Kontaktzeit: {{ $json.body.preferred_time }}\n\nEintrag in nocodb gespeichert.",
         "additionalFields": {
           "appendAttribution": false
         }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
-      "position": [
-        -272,
-        624
-      ],
-      "id": "3e584cef-7f38-4344-96ad-a4575d3a0069",
+      "position": [-224, 720],
+      "id": "cc8ae7f0-ac15-472c-ab3b-8906e166ca55",
       "name": "Send a text message2",
       "webhookId": "175b3afd-1532-4e21-9012-31a3d7bddc18",
       "credentials": {
@@ -90,7 +67,7 @@
     },
     {
       "parameters": {
-        "sendTo": "={{ $('Webhook').item.json.email }}",
+        "sendTo": "={{ $('Webhook').item.json.body.email }}",
         "subject": "={{ $json.output.subject }}",
         "emailType": "text",
         "message": "={{ $json.output.body }}",
@@ -101,11 +78,8 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
-      "position": [
-        80,
-        224
-      ],
-      "id": "56e94f77-dfc0-4d07-bea7-349c8d075c6a",
+      "position": [64, 432],
+      "id": "bba2abaf-0340-42c2-8629-d38a2cddfbc4",
       "name": "Send a message",
       "webhookId": "a2500782-8091-4e05-b71e-afe9f4bea2f1",
       "credentials": {
@@ -118,12 +92,12 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "={{ $json.Description }}\n\nBevorzugte Kontaktzeit des Absenders: {{ $json.PreferredTime }}",
+        "text": "={{ $json.body.description }}\n\nBevorzugte Kontaktzeit des Absenders: {{ $json.body.preferred_time }}",
         "hasOutputParser": true,
         "messages": {
           "messageValues": [
             {
-              "message": "=You are Florian Fackler, the founder of an AI automation company in Switzerland. You reply to contact form submissions on your website.\n\n## Sender\nName: {{ $json.Name }}\n\n## Message\n{{ $json.Description }}\n\n## Preferred call time\n{{ $json.PreferredTime }}\n\n## Rules\n- Match the sender's language (German, English, or French).\n- Use as few acronyms as possible.\n- Use plain language.\n- Write a concise, warm email (max 5 sentences).\n- If the message is empty or just a greeting, use this default body:\n<mail>\nHi {{ $json.Name }},\n\nThanks for reaching out. I'll review your message and get back to you within one business day.\n\nIn the meantime, feel free to reply to this email if anything comes to mind.\n\nBest regards,\nFlorian Fackler\n</mail>\n\n- If the message contains a question, pick up the question and tell the applicant, that you will clarify this in a personal call\n- If the language is German, use the formal \"Sie\" (not \"Du\")\n- If the message is unrelated to your services (spam, job applications, etc.), respond politely that you can't help with this specific request.\n- Do not invent pricing, dates, or technical details that aren't stated here.\n- Sign off as \"Florian Fackler\" — no titles, no company name in the signature.\n\n## Output\nReturn only valid JSON with two keys:\n- \"subject\": a short, relevant email subject containing the applicant's name\n- \"body\": the full email text including the sign-off\n- **No markdown**\n- **no explanation** \n- **no code fences**\n- **Raw JSON only**"
+              "message": "=You are Florian Fackler, the founder of an AI automation company in Switzerland named 'Fackler IT-Solutions'. Based in Olten, Solothurn. You reply to contact form submissions on your website.\n\n## Sender\nName: {{ $json.body.name }}\n\n## Message\n{{ $json.body.description }}\n\n## Preferred call time\n{{ $json.body.preferred_time }}\n\n## Rules\n- Match the sender's language (German, English, or French).\n- Use as few acronyms as possible.\n- Use plain language.\n- Write a concise, warm email (max 5 sentences).\n- If the message is empty or just a greeting, use this default body:\n<mail>\nHi {{ $json.body.name }},\n\nThanks for reaching out. I'll review your message and get back to you within one business day.\n\nIn the meantime, feel free to reply to this email if anything comes to mind.\n\nBest regards,\nFlorian Fackler\n</mail>\n\n- If the message contains a question, pick up the question and tell the applicant, that you will clarify this in a personal call\n- If the language is German, use the formal \"Sie\" (not \"Du\")\n- If the message is unrelated to your services (spam, job applications, etc.), respond politely that you can't help with this specific request.\n- Do not invent pricing, dates, or technical details that aren't stated here.\n- Sign off as \"Florian Fackler\" — no titles, no company name in the signature.\n\n## Output\nReturn only valid JSON with two keys:\n- \"subject\": a short, relevant email subject containing the applicant's name\n- \"body\": the full email text including the sign-off\n- **No markdown**\n- **no explanation** \n- **no code fences**\n- **Raw JSON only**"
             }
           ]
         },
@@ -131,37 +105,9 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.9,
-      "position": [
-        -336,
-        224
-      ],
-      "id": "48c33be4-7f2f-44dc-bfa9-9ad265764949",
+      "position": [-288, 320],
+      "id": "52ac688b-a1fa-4c2d-82c0-61425f2c7a93",
       "name": "Basic LLM Chain"
-    },
-    {
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "value": "claude-haiku-4-5-20251001",
-          "mode": "list",
-          "cachedResultName": "Claude Haiku 4.5"
-        },
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
-      "typeVersion": 1.3,
-      "position": [
-        -336,
-        432
-      ],
-      "id": "1a851e5b-301e-4a62-978e-fa22c1e0d352",
-      "name": "Anthropic Chat Model",
-      "credentials": {
-        "anthropicApi": {
-          "id": "hiOn4tRy7rZZDn2Y",
-          "name": "Anthropic account"
-        }
-      }
     },
     {
       "parameters": {
@@ -169,11 +115,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.3,
-      "position": [
-        -192,
-        432
-      ],
-      "id": "7958f667-dbef-4b6e-ba5e-f09a8dab0c77",
+      "position": [-152, 552],
+      "id": "2c3a815c-2bcc-473b-bd20-4751486cdc58",
       "name": "Structured Output Parser"
     },
     {
@@ -184,54 +127,36 @@
       },
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
-      "position": [
-        -800,
-        624
-      ],
-      "id": "e740e2d4-22ef-411b-914a-9a9a4553bf52",
+      "position": [-512, 432],
+      "id": "a2b0f655-5246-4165-8080-cd95654d8a8a",
       "name": "Webhook",
       "webhookId": "ba015b6d-5237-4234-86f5-55c001446b72"
+    },
+    {
+      "parameters": {
+        "model": "anthropic/claude-haiku-4.5",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [-280, 552],
+      "id": "8d3a65b0-a4b2-4c03-b694-91fc00209b2d",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "TnID1wycVaLVnMNb",
+          "name": "OpenRouter account"
+        }
+      }
     }
   ],
   "connections": {
-    "Edit Fields": {
-      "main": [
-        [
-          {
-            "node": "Create a row",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Send a text message2",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Basic LLM Chain",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Basic LLM Chain": {
       "main": [
         [
           {
             "node": "Send a message",
             "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Anthropic Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "Basic LLM Chain",
-            "type": "ai_languageModel",
             "index": 0
           }
         ]
@@ -252,8 +177,29 @@
       "main": [
         [
           {
-            "node": "Edit Fields",
+            "node": "Create a row",
             "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send a text message2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
             "index": 0
           }
         ]
@@ -262,6 +208,7 @@
   },
   "pinData": {},
   "meta": {
+    "templateCredsSetupCompleted": true,
     "instanceId": "43a65ad6a645a1590bb81e7fa2db0df8bcd01879de8b163438c3ae3e6f48e7c8"
   }
 }
