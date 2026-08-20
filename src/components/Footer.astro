@@ -11,9 +11,9 @@ const translations = {
   en: {
     name: 'Florian Fackler',
     company: 'Fackler IT-Solutions',
-    companyAddon: 'Einzelfirma, eingetragen im Handelsregister des Kantons Solothurn',
+    companyAddon: 'Sole proprietorship, registered in the Commercial Register of the Canton of Solothurn',
     address: 'Tellstr. 32',
-    zipCity: '6400 Olten',
+    zipCity: '4600 Olten',
     canton: 'Solothurn',
     country: 'Switzerland',
     uid: 'CHE-269.516.266 MWST',
@@ -27,7 +27,7 @@ const translations = {
     company: 'Fackler IT-Solutions',
     companyAddon: 'Einzelfirma, eingetragen im Handelsregister des Kantons Solothurn',
     address: 'Tellstr. 32',
-    zipCity: '6400 Olten',
+    zipCity: '4600 Olten',
     canton: 'Solothurn',
     country: 'Schweiz',
     uid: 'CHE-269.516.266 MWST',
@@ -73,7 +73,7 @@ const t = translations[lang as keyof typeof translations] || translations.en;
       </div>
 
       <div class="footer-bottom-right">
-        <a href="/trust/" class="footer-trust-link">{lang === 'de' ? 'Datenschutz' : 'Privacy'}</a>
+        <a href={lang === 'de' ? '/trust/' : '/en/trust/'} class="footer-trust-link">{lang === 'de' ? 'Datenschutz' : 'Privacy'}</a>
         <div class="lang-switch">
           <a href="/en" class:list={[{ active: lang === 'en' }]} data-umami-event="lang-switch" data-umami-event-target="en">EN</a>
           <span>|</span>
