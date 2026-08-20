@@ -1311,6 +1311,16 @@ footer {
   outline: none;
   border-color: var(--accent);
 }
+/* Honeypot: visually hidden from humans, present in DOM for bots. */
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 .contact-field textarea {
   resize: vertical;
 }

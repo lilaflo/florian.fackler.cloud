@@ -79,6 +79,11 @@ const { t, lang = "de" } = Astro.props;
             placeholder={t.form_time_placeholder}
           />
         </div>
+        <!-- Honeypot: hidden from humans, bots fill it. If filled, discard silently. -->
+        <div class="contact-honeypot" aria-hidden="true">
+          <label for="contact-website">Website</label>
+          <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
         <button type="submit" class="btn contact-submit" id="contactSubmit" data-sending={t.form_sending}>
           <span>{t.form_submit}</span>
         </button>
@@ -131,6 +136,13 @@ const { t, lang = "de" } = Astro.props;
       var email = contactForm.elements["email"].value.trim();
       var description = contactForm.elements["description"].value.trim();
       var preferredTime = contactForm.elements["preferred_time"].value.trim();
+      var website = contactForm.elements["website"] ? contactForm.elements["website"].value.trim() : "";
+
+      // Honeypot: if a bot filled the hidden field, silently drop the submission.
+      if (website) {
+        showStatus(dataStatusOk, false);
+        return;
+      }
 
       if (!name || !email) {
         showStatus(dataStatusError, true);
