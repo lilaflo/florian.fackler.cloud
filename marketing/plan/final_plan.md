@@ -211,7 +211,7 @@ Komplett leer. Kein LinkedIn-Betrieb, kein SEO, kein Content-System, kein Outbou
 ## Current state
 Der Funnel ist fast leer, aber die existierenden Einstiegsflächen haben Substanz:
 - **Homepage** mit klarer Positionierung ("Deine KI. Deine Daten."), humanisierter Copy, aber noch in Sie-Form.
-- **KI-Wissens-Check (CHF 750)** als strukturierter Einstieg — der Activation-Moment: ein bezahltes Diagnose-Gespräch, das bei Beauftragung angerechnet wird.
+- **KI-Wissens-Check (CHF 750)** als strukturierter Einstieg — der Activation-Moment: ein bezahltes Diagnose-Gespräch, einmalige Gebühr.
 - **Kontaktformular** mit der Diagnose-Frage "Was hält Sie nachts wach?" (neu, aus dem Ryan-Schuetter-Playbook).
 - **Referenzen** (Shirtinator, Ten Guitars) als Proof.
 - **Produktionsreifes agentisches System als Proof-of-Capability:** RAG-Netzwerk, Self-Hosting von AI, Agentic Systems, und ein täglich automatisiertes KI-News-System → Podcast mit zwei Sprechern + Musik via Cronjob (code-nexus.co). Das ist der stärkste Beweis, dass KI-Automatisierung real funktioniert — ein System, das 24/7 ohne Mensch läuft.
@@ -230,7 +230,7 @@ Was fehlt: ein definierter Pfad vom Erstkontakt zum bezahlten Gespräch, klare C
 |---|---|---|
 | 1. Bewusstsein | Interessent landet auf fackler-it.ch, sieht Demo-System | Bucht Erstgespräch (15-30 min, unverbindlich) |
 | 2. Erstgespräch | Diagnose-Skript: "Was hält dich nachts wach?", "Zeig mir, wie du das letzte Produkt angelegt hast" | Wenn Bedarf: Wissens-Check anbieten |
-| 3. Wissens-Check | CHF 750, strukturiertes 1-2h-Diagnose-Gespräch, bei Projektstart angerechnet | Konkretes Projektangebot |
+| 3. Wissens-Check | CHF 750, strukturiertes 1-2h-Diagnose-Gespräch, einmalige Gebühr | Konkretes Projektangebot |
 | 4. Projekt | Umsetzung, Schulung, laufender Support | Cross-Sell/Verlängerung |
 
 Jede Stufe hat ein klar definiertes "Next Step", damit niemand in der Luft hängt.
@@ -361,14 +361,14 @@ Skill: `video`, `social`, `marketing-website-design`, `ai-copywriter`.
 
 ## Current state
 - **Aktuelles Einkommen:** CHF 10k/Monat. Davon CHF 9k von Shirtinator (Beratervertrag, ~95%), Rest von Ten Guitars (klein, 2-3k CHF/Jahr Profit).
-- **Preismodell:** KI-Wissens-Check (CHF 750, einmalig, bei Projektstart angerechnet) + Stundensatz (ab CHF 150/h) + Setup-Gebühren. README-Roadmap nennt Setup CHF 8-20k, monatlichen Support CHF 16-40k — das ist Enterprise-Niveau, für den 1-5-Personen-Zielkunden oft zu hoch.
+- **Preismodell:** KI-Wissens-Check (CHF 750, einmalig) + Stundensatz (ab CHF 150/h) + Setup-Gebühren. README-Roadmap nennt Setup CHF 8-20k, monatlichen Support CHF 16-40k — das ist Enterprise-Niveau, für den 1-5-Personen-Zielkunden oft zu hoch.
 - **Ten Guitars:** Fertiges 9-Feature-Angebot (CHF 2.500-5.000 Setup je Feature) liegt vor, größtenteils unverkauft. Das ist ein ~CHF 30k Setup-Potenzial.
 - **Keine Paket-Preise** für die verschiedenen Ziel-Segmente.
 
 ## The plan
 
 **Move 1 — Preispakete für das KMU-Segment definieren.** Die Enterprise-Preise aus der README (CHF 16-40k/Mo) passen nicht zum 1-5-Personen-Zielkunden. Klare Pakete einführen:
-- **Starter (Wissens-Check):** CHF 750 einmalig, bei Projektstart angerechnet. Der Einstieg.
+- **Starter (Wissens-Check):** CHF 750 einmalig. Der Einstieg.
 - **Einzelprojekt:** CHF 3-8k einmalig, je nach Umfang (eine Automatisierung / ein System). Das deckt die Mehrheit der Online-Shop-Aufträge.
 - **Monatlicher Support/Retainer:** CHF 1-3k/Monat, laufende Betreuung + weitere Automatisierung.
 Skill: `pricing`.
@@ -377,7 +377,7 @@ Skill: `pricing`.
 
 **Move 3 — Stundensatz als Option beibehalten.** Für kleinere/adhoc-Aufträge bleibt der Stundensatz (ab CHF 150/h) sinnvoll. Aber die Pakete (Move 1) sollten der Standard sein — Pakete verkaufen Wert, Stundensatz verkauft Zeit.
 
-**Move 4 — Wissens-Check als Frontend-Offer ausbauen.** Der Wissens-Check (CHF 750) ist der ideale Einstieg: niedrige Einstiegshürde, bei Projektstart angerechnet. Natürliche Aufstiege: Wissens-Check → Einzelprojekt → Retainer. Das ist ein sauberer Ascension-Pfad (analog dem Ten-Guitars-Match-Alert-Aufstieg).
+**Move 4 — Wissens-Check als Frontend-Offer ausbauen.** Der Wissens-Check (CHF 750) ist der ideale Einstieg: niedrige Einstiegshürde, einmalige Gebühr. Natürliche Aufstiege: Wissens-Check → Einzelprojekt → Retainer. Das ist ein sauberer Ascension-Pfad (analog dem Ten-Guitars-Match-Alert-Aufstieg).
 
 **Move 5 — Unit-Economics-Baseline.** Bei CHF 10k/Monat aus 2 Kunden und Ziel 3-4 Kunden à CHF 7-10k/Mo: Der Hebel ist Kundenanzahl × durchschnittlicher Kundenwert. Kein CAC, weil organisch/empfehlungsbasiert. Wenn die Ziel-Kundenanzahl erreicht ist, ist das Ein-Kunden-Risiko gebrochen.
 

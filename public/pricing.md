@@ -11,7 +11,7 @@ Datenschutzkonforme KI-Automatisierung für Schweizer KMU. Alle Systeme laufen i
 - Preis: CHF 750 (einmalig)
 - Dauer: ein Tag im Betrieb
 - Inhalt: Abläufe live ansehen, Hand-Out mit 3-4 konkreten Vereinfachungen, Umsetzungsdauer je Punkt
-- Hinweis: wird bei Projektstart angerechnet
+- Hinweis: einmalige Gebühr, nicht anrechenbar
 
 ## Umsetzung
 - Preis: ab CHF 3'000 (einmalig, je nach Umfang)

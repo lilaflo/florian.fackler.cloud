@@ -22,7 +22,7 @@ Nicht jede Aufgabe lohnt sich. In Schweizer KMU bringen diese drei am meisten:
 
 ## Wie du ohne Risiko startest
 
-Der sicherste Einstieg ist ein kostenloses Erstgespräch. Danach folgt eine eintägige Vor-Ort-Analyse für CHF 750, die bei einem späteren Projektstart angerechnet wird. So siehst du konkret, wo sich Automatisierung lohnt, bevor du investierst.
+Der sicherste Einstieg ist ein kostenloses Erstgespräch. Danach folgt eine eintägige Vor-Ort-Analyse für CHF 750. So siehst du konkret, wo sich Automatisierung lohnt, bevor du investierst.
 
 ## Deine Daten bleiben in der Schweiz
 
