@@ -29,3 +29,7 @@ Florian Fackler IT-Solutions ist ein Schweizer Einzelunternehmen (CHE-269.516.26
 - Startseite (EN): https://fackler-it.ch/en/
 - Datenschutz: https://fackler-it.ch/trust/
 - Live-Demo (automatischer KI-Podcast): https://podcasts.code-nexus.co
+
+## Sitemap
+
+- https://fackler-it.ch/sitemap-index.xml
