@@ -1,0 +1,54 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import ContactDialog from "../../../components/ContactDialog.astro";
+import en from "../../../i18n/locales/en/index.json";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => data.lang === "en");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { title, description, pubDate, updatedDate, tags } = post.data;
+const canonical = `/en/blog/${post.slug}/`;
+const { Content } = await render(post);
+---
+
+<Layout title={title} description={description} lang="en" canonical={canonical}>
+  <Header lang="en" />
+  <main class="blog-post container">
+    <article>
+      <header>
+        <h1>{title}</h1>
+        <p class="blog-meta">
+          <time datetime={pubDate.toISOString()}>
+            {pubDate.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}
+          </time>
+          {updatedDate && (
+            <>
+              {" · "}
+              <span>Updated: </span>
+              <time datetime={updatedDate.toISOString()}>
+                {updatedDate.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}
+              </time>
+            </>
+          )}
+        </p>
+        {tags.length > 0 && (
+          <p class="blog-tags">
+            {tags.map((tag) => <span class="blog-tag">{tag}</span>)}
+          </p>
+        )}
+      </header>
+      <Content />
+    </article>
+  </main>
+  <ContactDialog t={en} lang="en" />
+  <Footer lang="en" />
+</Layout>

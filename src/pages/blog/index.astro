@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ContactDialog from "../../components/ContactDialog.astro";
+import de from "../../i18n/locales/de/index.json";
+
+const posts = (await getCollection("blog", ({ data }) => data.lang === "de"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Layout
+  title="Blog | Florian Fackler | KI-Automatisierung für Schweizer KMU"
+  description="Praxisnahe Artikel zu KI-Automatisierung für Schweizer KMU: Workflows, Datenschutz, Online-Shops. Deine Daten bleiben in der Schweiz."
+  lang="de"
+  canonical="/blog/"
+>
+  <Header lang="de" />
+  <main class="blog-list container">
+    <h1>Blog</h1>
+    <p class="blog-list-intro">
+      Praxisnahe Artikel zu KI-Automatisierung für Schweizer KMU. Deine Daten bleiben in der Schweiz.
+    </p>
+    <ul class="blog-list-items">
+      {posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}/`}>
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+            <time datetime={post.data.pubDate.toISOString()}>
+              {post.data.pubDate.toLocaleDateString("de-CH", { year: "numeric", month: "long", day: "numeric" })}
+            </time>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+  <ContactDialog t={de} lang="de" />
+  <Footer lang="de" />
+</Layout>

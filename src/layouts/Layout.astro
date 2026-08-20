@@ -5,14 +5,19 @@ interface Props {
   title: string;
   description: string;
   lang?: string;
+  canonical?: string;
 }
 
-const { title, description, lang = "de" } = Astro.props;
+const { title, description, lang = "de", canonical } = Astro.props;
 const baseUrl = "https://fackler-it.ch";
 const isDe = lang !== "en";
 const ogLocale = isDe ? "de_CH" : "en_GB";
 const ogLocaleAlternate = isDe ? "en_GB" : "de_CH";
-const canonicalUrl = isDe ? `${baseUrl}/` : `${baseUrl}/en/`;
+const canonicalUrl = canonical
+  ? `${baseUrl}${canonical}`
+  : isDe
+    ? `${baseUrl}/`
+    : `${baseUrl}/en/`;
 const ogImage = `${baseUrl}/og-image.png`;
 const logoUrl = `${baseUrl}/assets/florian-fackler-logo.png`;
 

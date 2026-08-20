@@ -1521,3 +1521,109 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* --- Blog --- */
+.blog-list {
+  padding: 4rem 1.5rem;
+  max-width: var(--max-width, 1100px);
+  margin: 0 auto;
+}
+.blog-list h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.blog-list-intro {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+}
+.blog-list-items {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+.blog-list-items li {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-alt);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+.blog-list-items li:hover {
+  border-color: var(--accent);
+}
+.blog-list-items a {
+  text-decoration: none;
+  color: inherit;
+}
+.blog-list-items h2 {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  color: var(--text-color);
+}
+.blog-list-items p {
+  margin: 0 0 0.75rem;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+.blog-list-items time {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.blog-post {
+  padding: 4rem 1.5rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.blog-post article header {
+  margin-bottom: 2rem;
+}
+.blog-post h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.blog-meta {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+}
+.blog-tags {
+  margin: 0;
+}
+.blog-tag {
+  display: inline-block;
+  background: var(--bg-alt);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  color: var(--text-color);
+}
+.blog-post article h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 0.75rem;
+}
+.blog-post article h3 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem;
+}
+.blog-post article p {
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+.blog-post article ul,
+.blog-post article ol {
+  margin: 0 0 1rem 1.25rem;
+  line-height: 1.7;
+}
+.blog-post article li {
+  margin-bottom: 0.4rem;
+}
+.blog-post article a {
+  color: var(--accent);
+}
