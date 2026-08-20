@@ -45,6 +45,24 @@ const copy = isDe
           priceMax: "750",
         },
       ],
+      faq: [
+        {
+          q: "Was kostet KI-Automatisierung für ein Schweizer KMU?",
+          a: "Der Einstieg ist ein kostenloses 30-minütiges Erstgespräch. Danach folgt eine eintägige Vor-Ort-Analyse für CHF 750, die bei Projektstart angerechnet wird. Die Umsetzung startet ab CHF 3'000, monatlicher Support ab CHF 1'000. Der Stundensatz liegt ab CHF 150.",
+        },
+        {
+          q: "Bleiben meine Daten wirklich in der Schweiz?",
+          a: "Ja. Die Systeme laufen entweder vor Ort bei dir im Betrieb oder in Schweizer Rechenzentren. Nichts geht ins Ausland, nichts verlässt die Schweiz. Das ist DSG-konform und unterscheidet uns von Anbietern, die Daten in US-Clouds verarbeiten.",
+        },
+        {
+          q: "Für welche Branchen arbeitet Fackler IT-Solutions?",
+          a: "Für Schweizer KMU mit 1 bis 50 Mitarbeitern, besonders Online-Shops, Treuhänder, Dienstleistungen und Industrie. Konkrete Referenzen gibt es bei Shirtinator AG und Ten Guitars GmbH.",
+        },
+        {
+          q: "Was ist der KI-Wissens-Check?",
+          a: "Ein strukturiertes Diagnose-Gespräch, das zeigt, wo KI in deinem Betrieb tatsächlich Zeit und Geld spart. Es ist der Einstieg in die Zusammenarbeit und wird bei einem späteren Projektstart angerechnet.",
+        },
+      ],
     }
   : {
       ogTitle: "Florian Fackler | AI Automation for Swiss SMEs",
@@ -70,6 +88,24 @@ const copy = isDe
             "One-day on-site analysis of your processes with AI optimization opportunities, a multi-page handout, and estimated implementation time per item.",
           price: "750",
           priceMax: "750",
+        },
+      ],
+      faq: [
+        {
+          q: "How much does AI automation cost for a Swiss SME?",
+          a: "It starts with a free 30-minute initial consultation. Next is a one-day on-site analysis for CHF 750, credited toward a later project. Implementation starts at CHF 3,000, monthly support from CHF 1,000. The hourly rate is from CHF 150.",
+        },
+        {
+          q: "Do my data really stay in Switzerland?",
+          a: "Yes. Systems run either on-premises at your business or in Swiss data centers. Nothing leaves the country. This is DSG-compliant and sets us apart from providers processing data in US clouds.",
+        },
+        {
+          q: "Which industries does Fackler IT-Solutions work with?",
+          a: "Swiss SMEs with 1 to 50 employees, especially online shops, fiduciaries, services, and industry. Concrete references include Shirtinator AG and Ten Guitars GmbH.",
+        },
+        {
+          q: "What is the AI knowledge check?",
+          a: "A structured diagnostic session that shows where AI can actually save your business time and money. It is the entry point to working together and is credited toward a later project start.",
         },
       ],
     };
@@ -112,6 +148,19 @@ const jsonLd = {
       description: copy.webPageDescription,
       isPartOf: { "@id": `${baseUrl}/#website` },
       about: { "@id": `${baseUrl}/#organization` },
+      inLanguage: copy.inLanguage,
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
+      mainEntity: copy.faq.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      })),
       inLanguage: copy.inLanguage,
     },
     {
