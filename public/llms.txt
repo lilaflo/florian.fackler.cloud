@@ -1,0 +1,31 @@
+# Fackler IT-Solutions
+
+Florian Fackler IT-Solutions ist ein Schweizer Einzelunternehmen (CHE-269.516.266 MWST) aus Olten. Wir bauen datenschutzkonforme KI-Automatisierung für Schweizer KMU. Die Systeme laufen in der Schweiz, vor Ort beim Kunden oder in Schweizer Rechenzentren. Daten bleiben im Land.
+
+## Was wir liefern
+
+- KI-Assistenten, die Fragen anhand der eigenen Dokumente eines Unternehmens beantworten
+- Automatisierte Workflows (Dokumentenverarbeitung, E-Mail-Bearbeitung, Produktdaten)
+- KI-gestützte Produktbeschreibungen und Inhalte
+- Online-Shop-Betreuung (Shopware, Shopify, WooCommerce)
+- Interim IT-Leitung
+
+## Preise
+
+- Erstgespräch: gratis, 30 Minuten, unverbindlich
+- Vor-Ort-Analyse: CHF 750, ein Tag im Betrieb, Hand-Out mit konkreten Vereinfachungen
+- Umsetzung: ab CHF 3'000 (Einzelprojekte), monatlicher Support ab CHF 1'000
+- Stundensatz: ab CHF 150/h
+
+## Referenzen
+
+- Shirtinator AG: n8n PIM-Automation, KI-Produkttexte, Auto-Blog-System
+- Ten Guitars GmbH: Gitarren-Ähnlichkeitssuche im E-Commerce
+- seolifehacks.com: SEO-Daily-Blog, vollautomatisiert
+
+## Wichtige Seiten
+
+- Startseite (DE): https://fackler-it.ch/
+- Startseite (EN): https://fackler-it.ch/en/
+- Datenschutz: https://fackler-it.ch/trust/
+- Live-Demo (automatischer KI-Podcast): https://podcasts.code-nexus.co

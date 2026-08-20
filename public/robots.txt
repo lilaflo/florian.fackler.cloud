@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Block training-only crawler (Common Crawl). Does not affect AI search citation.
+User-agent: CCBot
+Disallow: /
+
 Sitemap: https://fackler-it.ch/sitemap-index.xml
