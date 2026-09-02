@@ -4,7 +4,7 @@ created: 2026-08-18
 updated: 2026-08-18
 type: entity
 tags: [consulting, ki, networking, person]
-sources: [raw/transcripts/koerner-office-ryan-schuetter-2026-08-17.md]
+sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
 ---
 
 # Ryan Schuetter
@@ -33,12 +33,12 @@ sources: [raw/transcripts/koerner-office-ryan-schuetter-2026-08-17.md]
 
 ## Framework & Positionierung
 
-- Entwickler des [[DASA Framework]] — Diagnose → Articulate → Systemize → AI-Implementation. Slogan: "If you're automating chaos, you're scaling chaos."
+- Entwickler des [[DASA-Framework]] — Diagnose → Articulate → Systemize → AI-Implementation. Slogan: "If you're automating chaos, you're scaling chaos."
 - Hauptwerkzeuge: **Claude**, **GoHighLevel**, **n8n**.
 - Warnt vor zu schneller Implementierung von OpenClaw/Agenten (Zugriffs-Risiko).
 
 ## Related
 
-- [[DASA Framework]] — das von ihm verbreitete Framework
+- [[DASA-Framework]] — das von ihm verbreitete Framework
 - [[Koerner-Office-Ryan-Schuetter]] — die Podcast-Quelle
 - [[Produkt-Daten-Import-Automatisierung]] — Beratungspraxis für Schweizer KMU (ähnliches Modell)

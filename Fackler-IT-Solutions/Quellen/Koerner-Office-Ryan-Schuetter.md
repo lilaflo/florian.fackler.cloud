@@ -4,7 +4,7 @@ created: 2026-08-18
 updated: 2026-08-18
 type: source
 tags: [ki, consulting, vertrieb, networking, dasa]
-sources: [raw/transcripts/koerner-office-ryan-schuetter-2026-08-17.md]
+sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
 ---
 
 # I Found the Perfect First Business for Introverts
@@ -55,7 +55,7 @@ Diagnose → Articulate → Systemize → AI-Implementation. **Slogan: "If you'r
 
 - Bestätigt den Weg der **5-Gespräche-Validierung** im Produktdaten-Import-Wedge (Ryan = die Diagnose + Articulate-Stufen).
 - Beweist, dass ein introvertierter Consultant ohne Verkaufs-Skill AI-Automation über die eigene Sphere verkaufen kann.
-- Das DASA-Framework deckt sich mit der [[DASA Framework]]-Wiki-Seite.
+- Das DASA-Framework deckt sich mit der [[DASA-Framework]]-Wiki-Seite.
 
 ## Quellen
-- raw/transcripts/koerner-office-ryan-schuetter-2026-08-17.md
+- Quellen/koerner-office-ryan-schuetter-2026-08-17.md

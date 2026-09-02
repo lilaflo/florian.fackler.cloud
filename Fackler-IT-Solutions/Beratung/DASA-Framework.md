@@ -5,7 +5,7 @@ updated: 2026-08-18
 type: concept
 tags: [consulting, ki, it, methodik]
 confidence: medium
-sources: [raw/transcripts/koerner-office-ryan-schuetter-2026-08-17.md]
+sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
 ---
 
 # DASA Framework
@@ -27,7 +27,7 @@ sources: [raw/transcripts/koerner-office-ryan-schuetter-2026-08-17.md]
 
 **KI ist die letzte Stufe, nicht der Verkaufspitch.** Die meisten Tools springen direkt zu "KI importiert/scraped deine Daten" und brechen, weil keine Systemisierungs-Stufe (Standardisierung, Dokumentation, skalierbare Daten-Schicht) vorher existiert. DASA erzwingt erst die Diagnose-Articulate-Systemize-Fundierung, auf der KI dann tatsächlich funktioniert.
 
-**Der Slogan, der das ganze Framework bindet: "If you're automating chaos, you're scaling chaos."** (Analogie: The Office, Michael Scott Paper Company — verkauft Papier mit Verlust, mehr Verkauf = mehr Verlust.) Wenn das System schwach ist, macht KI es nur schneller schlimmer — und der Kunde sagt "KI funktioniert nicht", obwohl das System das Problem war. KI nutzt die Daten, die du gibst; gib ihr saubere Daten, sie funktioniert.^[raw/transcripts/koerner-office-ryan-schuetter-2026-08-17.md]
+**Der Slogan, der das ganze Framework bindet: "If you're automating chaos, you're scaling chaos."** (Analogie: The Office, Michael Scott Paper Company — verkauft Papier mit Verlust, mehr Verkauf = mehr Verlust.) Wenn das System schwach ist, macht KI es nur schneller schlimmer — und der Kunde sagt "KI funktioniert nicht", obwohl das System das Problem war. KI nutzt die Daten, die du gibst; gib ihr saubere Daten, sie funktioniert.^[Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
 
 ## Mapping auf den Sales-Prozess
 
@@ -55,7 +55,7 @@ Das Framework deckt sich exakt mit der Positionierung des [[Produkt-Daten-Import
 
 ## Komplementäres Playbook (aus der Koerner-Office-Quelle)
 
-Der Gast [[Ryan Schuetter]] demonstriert das DASA-Modell in der Praxis mit dem "100-Gespräche"-Ansatz für introvertierte Consultants:
+Der Gast [[Ryan-Schuetter]] demonstriert das DASA-Modell in der Praxis mit dem "100-Gespräche"-Ansatz für introvertierte Consultants:
 
 - ~100 echte Gespräche (nicht Reachouts) mit Leuten aus der eigenen Sphere, alles virtuell, je ~1h, kein Pitch, nur Wert liefern.
 - Abfrage über 3 Monate parallel zum Job → 8-9% Close-Rate, ~$25K Lifetime aus den ersten 12 Kunden.
@@ -64,8 +64,8 @@ Der Gast [[Ryan Schuetter]] demonstriert das DASA-Modell in der Praxis mit dem "
 ## Related
 
 - [[Produkt-Daten-Import-Automatisierung]] — der Wedge, auf den DASA die Positionierungs-Logik liefert
-- [[ki-gestuetzte-saas-migration]] — Verkaufsargument über Daten-Import/Mapping (gleiche Systemize-Muster)
-- [[Remote-Freelancer Schweizer KMU 2026]] — wie die Beratungspraxis im Schweizer KMU-Markt positioniert ist
+- [[KI-gestuetzte-SaaS-Migration]] — Verkaufsargument über Daten-Import/Mapping (gleiche Systemize-Muster)
+- [[Remote-Freelancer-Schweizer-KMU-2026]] — wie die Beratungspraxis im Schweizer KMU-Markt positioniert ist
 - [[Koerner-Office-Ryan-Schuetter]] — die volle Quelle des Frameworks in der Praxis
 
 *Confidence: medium — Framework aus Präsentationsslide (18.08.2026) + detaillierter Podcast-Transcript (17.08.2026, Ryan Schuetter). Die Positionierungs-Anwendung ist eigene Ableitung.*

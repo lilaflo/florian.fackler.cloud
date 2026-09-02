@@ -2,8 +2,6 @@
 title: CV Data Wizard
 created: 2026-07-02
 updated: 2026-07-02
-sources:
-  - [[jobsuchi.ch (BrainDB export)]]
 tags:
   - concept
   - jobsuchi

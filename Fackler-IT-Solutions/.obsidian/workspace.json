@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "faff9a87a24b6ea0",
+    "type": "split",
+    "children": [
+      {
+        "id": "d02f417cfc76e261",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da2d6b5bfd3bdb77",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9670b49486e87d17",
+    "type": "split",
+    "children": [
+      {
+        "id": "7f383b9dc474e1ef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d12b3cddef436e3a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6e1bd84266323bd7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3a4fddde21b9b86e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "153de46bd13c6c18",
+    "type": "split",
+    "children": [
+      {
+        "id": "f26a86e4c1fe7b90",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2229fe192be30569",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "34f6995fb06d2a52",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "28531fa26ddafb5a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0ac484b2a6c788a4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "50485400546d6cbd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "da2d6b5bfd3bdb77",
+  "lastOpenFiles": [
+    "Index.md",
+    "Immigration/Immigration-Gesuche-Selbststaendigkeit-Familiennachzug.md",
+    "wiki/raw/transcripts/koerner-office-ryan-schuetter-2026-08-17.md",
+    "Log.md",
+    "Schema.md",
+    "Quellen/koerner-office-ryan-schuetter-2026-08-17.md",
+    "Quellen/Koerner-Office-Ryan-Schuetter.md",
+    "Quellen",
+    "Personen/Ryan-Schuetter.md",
+    "Personen",
+    "Infrastruktur/N8n-Contact-Request-Workflow.md",
+    "Infrastruktur/CV-Data-Wizard.md",
+    "Infrastruktur",
+    "Immigration",
+    "Vertraege/Beratervertrag-Ten-Guitars-GmbH.md",
+    "Vertraege/Beratervertrag-Shirtinator-AG.md",
+    "Vertraege",
+    "Finanzen-Steuern/Steuern-und-Erfolgsrechnungen.md",
+    "Finanzen-Steuern/Sozialversicherung-und-Steuern-Selbststaendiger-SO.md",
+    "Finanzen-Steuern/Mehrwertsteuer-MWST-Florian-Fackler.md",
+    "Finanzen-Steuern/ESTV-Steuerrechner-Olten-2026.md",
+    "Finanzen-Steuern",
+    "Beratung/Remote-Freelancer-Schweizer-KMU-2026.md",
+    "Beratung/Produkt-Daten-Import-Automatisierung.md",
+    "Beratung/Produkt-Daten-Import-Automatisierung-Design.md",
+    "Beratung/Preismodell-Fackler-IT.md",
+    "Beratung/DASA-Framework.md",
+    "Beratung/KI-gestuetzte-SaaS-Migration.md",
+    "Beratung",
+    "wiki/concepts/DASA-Framework.md",
+    "wiki/concepts/CV Data Wizard.md",
+    "docs/designs/product-daten-import-automatisierung.md",
+    "docs/designs",
+    "docs",
+    "wiki/raw/articles/estv-steuerrechner-olten-2026.md",
+    "wiki/raw/transcripts"
+  ]
+}
