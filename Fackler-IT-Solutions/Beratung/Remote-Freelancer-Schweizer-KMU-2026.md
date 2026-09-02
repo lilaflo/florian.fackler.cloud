@@ -1,6 +1,6 @@
 ---
 tags: [freelancing, remote-work, schweiz, kmu, steuern, datenschutz]
-sources: [Newsletter Amor Dhaouadi — Remote-Freelancer 2026, 22.07.2026](https://www.freelancer-schweiz.ch/tra_ch/link.php?click=458-2-35701-51330BDF3798E53E4E1DE094593E63A501DAED810000)
+sources: ["Newsletter Amor Dhaouadi — Remote-Freelancer 2026, 22.07.2026 (https://www.freelancer-schweiz.ch/tra_ch/link.php?click=458-2-35701-51330BDF3798E53E4E1DE094593E63A501DAED810000)"]
 created: 2026-07-22
 ---
 
