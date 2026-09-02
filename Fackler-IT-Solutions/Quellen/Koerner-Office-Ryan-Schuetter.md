@@ -55,7 +55,7 @@ Diagnose → Articulate → Systemize → AI-Implementation. **Slogan: "If you'r
 
 - Bestätigt den Weg der **5-Gespräche-Validierung** im Produktdaten-Import-Wedge (Ryan = die Diagnose + Articulate-Stufen).
 - Beweist, dass ein introvertierter Consultant ohne Verkaufs-Skill AI-Automation über die eigene Sphere verkaufen kann.
-- Das DASA-Framework deckt sich mit der [[DASA-Framework]]-Wiki-Seite.
+- Das DASA-Framework deckt sich mit der [[beratung/dasa-framework]]-Wiki-Seite.
 
 ## Quellen
 - Quellen/koerner-office-ryan-schuetter-2026-08-17.md

@@ -40,7 +40,7 @@ Kommerzielles Scraping von Lieferanten-Websites wirft Copyright-, Bildrechte- un
 
 n8n muss **self-hosted** laufen (Kunden-Server oder Schweizer Host), NICHT in der n8n-Cloud — sonst routen Daten ins Ausland. Self-hosted erhöht Deployment-Komplexität pro Kunde → in Preis einkalkulieren.
 
-## Positionierung via [[DASA-Framework]]
+## Positionierung via [[beratung/dasa-framework]]
 
 DASA (Diagnose→Articulate→Systemize→AI→Results) liefert die Positionierungs-Logik für diesen Wedge: Man verkauft nicht "KI-Produktimport", sondern "Wir diagnostizieren dein Lieferanten-Chaos, artikulieren den Workflow, systematisieren ihn in einen Supplier Adapter — dann kommt die KI." KI ist das Outcome, nicht der Pitch — differenziert gegen die 6-$-Shopify-Apps, die direkt auf KI springen und brechen.
 

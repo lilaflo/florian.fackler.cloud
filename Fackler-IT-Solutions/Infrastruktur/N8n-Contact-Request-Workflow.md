@@ -38,5 +38,5 @@ Der NocoDB-"getMany/getAll"-Node gibt bei **0 Treffern ein leeres Item `{}`** au
 
 ## Verwandte Konzepte
 
-- [[Preismodell-Fackler-IT]] — Die Website-Preise, die das Formular bewerbt
-- [[Remote-Freelancer-Schweizer-KMU-2026]] — Marktkontext, in dem die Website operiert
+- [[beratung/preismodell-fackler-it]] — Die Website-Preise, die das Formular bewerbt
+- [[beratung/remote-freelancer-schweizer-kmu-2026]] — Marktkontext, in dem die Website operiert

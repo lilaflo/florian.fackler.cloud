@@ -44,7 +44,7 @@ sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
 
 ## Anwendung auf Fackler IT-Solutions
 
-Das Framework deckt sich exakt mit der Positionierung des [[Produkt-Daten-Import-Automatisierung]]-Wedge:
+Das Framework deckt sich exakt mit der Positionierung des [[beratung/produkt-daten-import-automatisierung]]-Wedge:
 
 - **Diagnose** = die 5 Validierungs-Gespräche (Q1 "zeig mir, wie du das letzte Produkt angelegt hast").
 - **Articulate** = den Schmerz in eine konkrete Lösungsbeschreibung schärfen.
@@ -55,7 +55,7 @@ Das Framework deckt sich exakt mit der Positionierung des [[Produkt-Daten-Import
 
 ## Komplementäres Playbook (aus der Koerner-Office-Quelle)
 
-Der Gast [[Ryan-Schuetter]] demonstriert das DASA-Modell in der Praxis mit dem "100-Gespräche"-Ansatz für introvertierte Consultants:
+Der Gast [[personen/ryan-schuetter]] demonstriert das DASA-Modell in der Praxis mit dem "100-Gespräche"-Ansatz für introvertierte Consultants:
 
 - ~100 echte Gespräche (nicht Reachouts) mit Leuten aus der eigenen Sphere, alles virtuell, je ~1h, kein Pitch, nur Wert liefern.
 - Abfrage über 3 Monate parallel zum Job → 8-9% Close-Rate, ~$25K Lifetime aus den ersten 12 Kunden.
@@ -63,9 +63,9 @@ Der Gast [[Ryan-Schuetter]] demonstriert das DASA-Modell in der Praxis mit dem "
 
 ## Related
 
-- [[Produkt-Daten-Import-Automatisierung]] — der Wedge, auf den DASA die Positionierungs-Logik liefert
-- [[KI-gestuetzte-SaaS-Migration]] — Verkaufsargument über Daten-Import/Mapping (gleiche Systemize-Muster)
-- [[Remote-Freelancer-Schweizer-KMU-2026]] — wie die Beratungspraxis im Schweizer KMU-Markt positioniert ist
-- [[Koerner-Office-Ryan-Schuetter]] — die volle Quelle des Frameworks in der Praxis
+- [[beratung/produkt-daten-import-automatisierung]] — der Wedge, auf den DASA die Positionierungs-Logik liefert
+- [[beratung/ki-gestuetzte-saas-migration]] — Verkaufsargument über Daten-Import/Mapping (gleiche Systemize-Muster)
+- [[beratung/remote-freelancer-schweizer-kmu-2026]] — wie die Beratungspraxis im Schweizer KMU-Markt positioniert ist
+- [[quellen/koerner-office-ryan-schuetter]] — die volle Quelle des Frameworks in der Praxis
 
 *Confidence: medium — Framework aus Präsentationsslide (18.08.2026) + detaillierter Podcast-Transcript (17.08.2026, Ryan Schuetter). Die Positionierungs-Anwendung ist eigene Ableitung.*

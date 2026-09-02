@@ -164,6 +164,6 @@ Dieser Prozentsatz wird auf alle Raumkosten angewandt:
 
 ## Siehe auch
 
-- [[Steuern-und-Erfolgsrechnungen]] — Erfolgsrechnungen Digitalna Reka / HexHex, Steuer-Strategie DE/FR
-- [[Preismodell-Fackler-IT]] — Preisstufen und Einnahme-Logik der Beratung
-- [[Remote-Freelancer-Schweizer-KMU-2026]] — Markt und Praxis für Freelancing in der Schweiz
+- [[finanzen-steuern/steuern-und-erfolgsrechnungen]] — Erfolgsrechnungen Digitalna Reka / HexHex, Steuer-Strategie DE/FR
+- [[beratung/preismodell-fackler-it]] — Preisstufen und Einnahme-Logik der Beratung
+- [[beratung/remote-freelancer-schweizer-kmu-2026]] — Markt und Praxis für Freelancing in der Schweiz

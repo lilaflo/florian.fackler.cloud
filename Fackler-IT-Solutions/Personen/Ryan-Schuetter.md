@@ -33,12 +33,12 @@ sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
 
 ## Framework & Positionierung
 
-- Entwickler des [[DASA-Framework]] — Diagnose → Articulate → Systemize → AI-Implementation. Slogan: "If you're automating chaos, you're scaling chaos."
+- Entwickler des [[beratung/dasa-framework]] — Diagnose → Articulate → Systemize → AI-Implementation. Slogan: "If you're automating chaos, you're scaling chaos."
 - Hauptwerkzeuge: **Claude**, **GoHighLevel**, **n8n**.
 - Warnt vor zu schneller Implementierung von OpenClaw/Agenten (Zugriffs-Risiko).
 
 ## Related
 
-- [[DASA-Framework]] — das von ihm verbreitete Framework
-- [[Koerner-Office-Ryan-Schuetter]] — die Podcast-Quelle
-- [[Produkt-Daten-Import-Automatisierung]] — Beratungspraxis für Schweizer KMU (ähnliches Modell)
+- [[beratung/dasa-framework]] — das von ihm verbreitete Framework
+- [[quellen/koerner-office-ryan-schuetter]] — die Podcast-Quelle
+- [[beratung/produkt-daten-import-automatisierung]] — Beratungspraxis für Schweizer KMU (ähnliches Modell)

@@ -17,7 +17,7 @@
 - Geschaetzte Gesamtbelastung selbststaendig: ~CHF 18'150-18'650 (Steuern + SV).
 - Monatlicher Puffer korrigiert: ~CHF 1'500/Monat (vorher 3'000).
 - Raw-Datei: `Finanzen-Steuern/ESTV-Steuerrechner-Olten-2026.md` (mit sha256).
-- Cross-refs hinzugefuegt: [[Steuern-und-Erfolgsrechnungen]], [[Preismodell-Fackler-IT]], [[Remote-Freelancer-Schweizer-KMU-2026]].
+- Cross-refs hinzugefuegt: [[finanzen-steuern/steuern-und-erfolgsrechnungen]], [[beratung/preismodell-fackler-it]], [[beratung/remote-freelancer-schweizer-kmu-2026]].
 
 ## [2026-08-22] update | Sozialversicherung-und-Steuern-Selbststaendiger-SO
 - Neuer Abschnitt "Homeoffice-Kosten absetzen" ergaenzt.
@@ -38,8 +38,8 @@
 
 ## [2026-08-18] create | DASA-Framework
 - Neues Concept: `Beratung/DASA-Framework.md`
-- Quelle: [[Koerner-Office-Ryan-Schuetter]] Podcast-Transkript.
-- Entity [[Ryan-Schuetter]] angelegt.
+- Quelle: [[quellen/koerner-office-ryan-schuetter]] Podcast-Transkript.
+- Entity [[personen/ryan-schuetter]] angelegt.
 
 ## [2026-08-18] create | Produkt-Daten-Import-Automatisierung
 - Neues Concept: `Beratung/Produkt-Daten-Import-Automatisierung.md`

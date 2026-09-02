@@ -50,4 +50,4 @@ Newsletter-Artikel von Amor Dhaouadi (freelancer-schweiz.ch), Juli 2026. Kompakt
 
 ## Verwandte Konzepte
 
-- [[Sozialversicherung-und-Steuern-Selbststaendiger-SO]]
+- [[finanzen-steuern/sozialversicherung-und-steuern-selbststaendiger-so]]

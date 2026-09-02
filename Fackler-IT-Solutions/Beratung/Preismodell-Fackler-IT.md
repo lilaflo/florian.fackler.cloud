@@ -28,7 +28,7 @@ Frühere Entwürfe (Marketing-Plan v1) beschrieben den Wissens-Check fälschlich
 
 ## Verwandte Konzepte
 
-- [[Mehrwertsteuer-MWST-Florian-Fackler]] — MWST-Pflicht auf Umsätze
-- [[Steuern-und-Erfolgsrechnungen]] — steuerliche Behandlung der Einnahmen
-- [[Beratervertrag-Shirtinator-AG]] — bestehender Retainer-Kunde
-- [[Beratervertrag-Ten-Guitars-GmbH]] — bestehender Kunde mit Cross-Sell-Potenzial
+- [[finanzen-steuern/mehrwertsteuer-mwst-florian-fackler]] — MWST-Pflicht auf Umsätze
+- [[finanzen-steuern/steuern-und-erfolgsrechnungen]] — steuerliche Behandlung der Einnahmen
+- [[vertraege/beratervertrag-shirtinator-ag]] — bestehender Retainer-Kunde
+- [[vertraege/beratervertrag-ten-guitars-gmbh]] — bestehender Kunde mit Cross-Sell-Potenzial
