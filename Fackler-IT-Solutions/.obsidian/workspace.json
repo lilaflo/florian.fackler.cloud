@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infrastruktur/CV-Data-Wizard.md",
+                "file": "Infomaniak.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CV-Data-Wizard"
+              "title": "Infomaniak"
             }
           }
         ]
@@ -190,14 +190,20 @@
   },
   "active": "da2d6b5bfd3bdb77",
   "lastOpenFiles": [
-    "Infrastruktur/N8n-Contact-Request-Workflow.md",
+    "Finanzen-Steuern/Steuern-und-Erfolgsrechnungen.md",
+    "Ideabrowser/2026-09-11 - Viral Ad Licensing for DTC Brands.md",
+    "Ideabrowser",
+    "Infomaniak.md",
+    "Finanzen-Steuern/Sozialversicherung-und-Steuern-Selbststaendiger-SO.md",
+    "Finanzen-Steuern/Mehrwertsteuer-MWST-Florian-Fackler.md",
+    "Finanzen-Steuern/ESTV-Steuerrechner-Olten-2026.md",
     "Infrastruktur/CV-Data-Wizard.md",
+    "Infrastruktur/N8n-Contact-Request-Workflow.md",
     "Personen/Ryan-Schuetter.md",
     "Quellen/Koerner-Office-Ryan-Schuetter.md",
     "Quellen/koerner-office-ryan-schuetter-2026-08-17.md",
     "Vertraege/Beratervertrag-Shirtinator-AG.md",
     "Beratung/DASA-Framework.md",
-    "Finanzen-Steuern/Mehrwertsteuer-MWST-Florian-Fackler.md",
     "Vertraege/Beratervertrag-Ten-Guitars-GmbH.md",
     "Log.md",
     "Index.md",
@@ -209,9 +215,6 @@
     "Infrastruktur",
     "Immigration",
     "Vertraege",
-    "Finanzen-Steuern/Steuern-und-Erfolgsrechnungen.md",
-    "Finanzen-Steuern/Sozialversicherung-und-Steuern-Selbststaendiger-SO.md",
-    "Finanzen-Steuern/ESTV-Steuerrechner-Olten-2026.md",
     "Finanzen-Steuern",
     "Beratung/Remote-Freelancer-Schweizer-KMU-2026.md",
     "Beratung/Produkt-Daten-Import-Automatisierung.md",
@@ -221,10 +224,7 @@
     "Beratung",
     "wiki/concepts/DASA-Framework.md",
     "wiki/concepts/CV Data Wizard.md",
-    "docs/designs/product-daten-import-automatisierung.md",
     "docs/designs",
-    "docs",
-    "wiki/raw/articles/estv-steuerrechner-olten-2026.md",
-    "wiki/raw/transcripts"
+    "docs"
   ]
 }
