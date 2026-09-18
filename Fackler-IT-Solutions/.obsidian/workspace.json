@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cronjobs/Cronjob (Koerner Office).md",
-                "mode": "source",
+                "file": "Allgemeines.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cronjob (Koerner Office)"
+              "title": "Allgemeines"
             }
           }
         ],
@@ -219,8 +219,11 @@
   },
   "active": "2e503efb88d927c7",
   "lastOpenFiles": [
-    "Infrastruktur/CV-Data-Wizard.md",
+    "Quellen/Koerner-Office-Ryan-Schuetter.md",
+    "Infrastruktur/N8n-Contact-Request-Workflow.md",
+    "Infrastruktur/Infomaniak.md",
     "Cronjobs/Cronjob (Koerner Office).md",
+    "Infrastruktur/CV-Data-Wizard.md",
     "Cronjobs/Cronjob (Ideabrowser).md",
     "Cronjobs",
     "Index.md",
@@ -228,7 +231,6 @@
     "Immigration/Immigration-Gesuche-Selbststaendigkeit-Familiennachzug.md",
     "Vertraege/Beratervertrag-Shirtinator-AG.md",
     "Vertraege/Beratervertrag-Ten-Guitars-GmbH.md",
-    "Infrastruktur/Infomaniak.md",
     "Personen/Ryan-Schuetter.md",
     "Ideabrowser/2026-09-11 - Viral Ad Licensing for DTC Brands.md",
     "Finanzen-Steuern/Steuern-und-Erfolgsrechnungen.md",
@@ -236,8 +238,6 @@
     "Finanzen-Steuern/Sozialversicherung-und-Steuern-Selbststaendiger-SO.md",
     "Finanzen-Steuern/Mehrwertsteuer-MWST-Florian-Fackler.md",
     "Finanzen-Steuern/ESTV-Steuerrechner-Olten-2026.md",
-    "Infrastruktur/N8n-Contact-Request-Workflow.md",
-    "Quellen/Koerner-Office-Ryan-Schuetter.md",
     "Quellen/koerner-office-ryan-schuetter-2026-08-17.md",
     "Beratung/DASA-Framework.md",
     "Log.md",

@@ -1,4 +1,3 @@
-# Infomaniak
 
 Swiss hosting provider (Genève) — LLM hosting, web hosting, email, cloud services.
 
