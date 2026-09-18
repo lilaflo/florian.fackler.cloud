@@ -27,3 +27,4 @@ Thumbs.db
 
 # Obsidian editor state (churns every session; blocks git pull --rebase)
 .obsidian/workspace.json
+.gbrain
