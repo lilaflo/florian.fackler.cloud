@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Index.md",
+                "file": "Quellen/adam-sandler-ai-second-brains-5k-blueprint.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Index"
+              "title": "adam-sandler-ai-second-brains-5k-blueprint"
             }
           }
         ],
@@ -203,21 +203,26 @@
       "bases:Create new base": false
     }
   },
-  "active": "d12b3cddef436e3a",
+  "active": "ff911e7db1064e90",
   "lastOpenFiles": [
-    "Ideen/2026-09-11-viral-ad-licensing-for-dtc-brands.md",
-    "Ideen",
-    "Vertraege/beratervertrag-ten-guitars-gmbh.md",
-    "Vertraege/beratervertrag-shirtinator-ag.md",
-    "Finanzen-Steuern/steuern-und-erfolgsrechnungen.md",
+    "Personen/ryan-schuetter.md",
+    "Infrastruktur/cronjob-ideabrowser-obsidian-note.md",
     "Finanzen-Steuern/sozialversicherung-und-steuern-selbststaendiger-so.md",
     "Finanzen-Steuern/mehrwertsteuer-mwst-florian-fackler.md",
     "Finanzen-Steuern/estv-steuerrechner-olten-2026.md",
+    "Schema.md",
+    "Log.md",
+    "Index.md",
+    "Allgemeines.md",
+    "Vertraege/beratervertrag-shirtinator-ag.md",
+    "Beratung/Service-Angebot — KI-Consulting für Schweizer KMU.md",
+    "Ideen/2026-09-11-viral-ad-licensing-for-dtc-brands.md",
+    "Ideen",
+    "Vertraege/beratervertrag-ten-guitars-gmbh.md",
+    "Finanzen-Steuern/steuern-und-erfolgsrechnungen.md",
     "Infrastruktur/cronjob-koerner-office-idea-harvest.md",
-    "Infrastruktur/cronjob-ideabrowser-obsidian-note.md",
     "Infrastruktur/n8n-contact-request-workflow.md",
     "Infrastruktur/infomaniak.md",
-    "Personen/ryan-schuetter.md",
     "Quellen/adam-sandler-ai-second-brains-5k-blueprint.md",
     "Quellen/koerner-office-ryan-schuetter.md",
     "Beratung/trust-process-datenschutz-ki-knowledge-bases.md",
@@ -227,11 +232,6 @@
     "Beratung/kritische-analyse-privacy-first-ai-workspace.md",
     "Beratung/kritische-analyse-dev-ai-infra.md",
     "Beratung/slam-dunk-analyse-saas-fit.md",
-    "Beratung/remote-freelancer-schweizer-kmu-2026.md",
-    "Beratung/produkt-daten-import-automatisierung-design.md",
-    "Beratung/produkt-daten-import-automatisierung.md",
-    "Beratung/preismodell-fackler-it.md",
-    "Beratung/ki-gestuetzte-saas-migration.md",
     "AI Consulting/KB-Playbook",
     "AI Consulting/Analyse Optimale SaaS-Fit für Florian",
     "Notes/KB-Playbook",
