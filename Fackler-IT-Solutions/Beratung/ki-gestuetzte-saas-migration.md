@@ -28,7 +28,7 @@ Genau diese manuelle Migrationsarbeit ist die Einstiegshürde. Ein KI-gestützte
 
 ## Anwendung auf eigene SaaS-Ideen
 
-Beim Pitch eigener SaaS-Projekte (z. B. [[Ideabrowser — Tactly]]) gilt das gleiche Muster: **Die Migration vom Altsystem zum eigenen Tool mit KI als eingebautes Feature verkaufen.** Je weniger manuelle Umstellarbeit beim Kunden verbleibt, desto geringer der Wechselwiderstand.
+Beim Pitch eigener SaaS-Projekte (z. B. [[ideen/tactly]]) gilt das gleiche Muster: **Die Migration vom Altsystem zum eigenen Tool mit KI als eingebautes Feature verkaufen.** Je weniger manuelle Umstellarbeit beim Kunden verbleibt, desto geringer der Wechselwiderstand.
 
 Konkrete Migrations-Hebel:
 - Daten-Import aus Altsystem / Excel / CSV automatisiert aufräumen und zuordnen
@@ -37,7 +37,7 @@ Konkrete Migrations-Hebel:
 
 ## Related
 
-- [[Ideabrowser — Tactly]] — eigenes SaaS-Beispiel ([[AR automation]])
+- [[ideen/tactly]] — eigenes SaaS-Beispiel ([[AR automation]])
 - [[SaaS]] — recurring-software business model
 - [[B2B]] — Zielmarkt
 - [[AI agent]] — LLM-basierte Workflow-Automatisierung

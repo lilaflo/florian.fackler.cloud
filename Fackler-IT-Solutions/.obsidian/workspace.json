@@ -34,23 +34,9 @@
               "icon": "lucide-file",
               "title": "Index"
             }
-          },
-          {
-            "id": "2e503efb88d927c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Beratung/Service-Angebot — KI-Consulting für Schweizer KMU.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Service-Angebot — KI-Consulting für Schweizer KMU"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -219,41 +205,41 @@
   },
   "active": "d12b3cddef436e3a",
   "lastOpenFiles": [
-    "Personen/Adam Sandler — AI Second Brains für 5K$ Blueprint.md",
-    "Infrastruktur/N8n-Contact-Request-Workflow.md",
-    "AI Consulting/KB-Playbook/Trust Process — Datenschutz für KI-Knowledge-Bases.md",
-    "AI Consulting/KB-Playbook/Service-Angebot — KI-Consulting für Schweizer KMU.md",
-    "AI Consulting/KB-Playbook/Adam Sandler — AI Second Brains für 5K$ Blueprint.md",
-    "AI Consulting/Analyse Optimale SaaS-Fit für Florian/Kritische Analyse Slam Dunk Ch.md",
-    "Beratung/Trust Process — Datenschutz für KI-Knowledge-Bases.md",
-    "Beratung/Service-Angebot — KI-Consulting für Schweizer KMU.md",
-    "Analyse Optimale SaaS-Fit für Florian/Kritische Analyse Slam Dunk Ch.md",
-    "AI Consulting/Target Group Analysis — Privac.md",
-    "AI Consulting/Kritische Analyse Slam Dunk Ch.md",
+    "Ideen/2026-09-11-viral-ad-licensing-for-dtc-brands.md",
+    "Ideen",
+    "Vertraege/beratervertrag-ten-guitars-gmbh.md",
+    "Vertraege/beratervertrag-shirtinator-ag.md",
+    "Finanzen-Steuern/steuern-und-erfolgsrechnungen.md",
+    "Finanzen-Steuern/sozialversicherung-und-steuern-selbststaendiger-so.md",
+    "Finanzen-Steuern/mehrwertsteuer-mwst-florian-fackler.md",
+    "Finanzen-Steuern/estv-steuerrechner-olten-2026.md",
+    "Infrastruktur/cronjob-koerner-office-idea-harvest.md",
+    "Infrastruktur/cronjob-ideabrowser-obsidian-note.md",
+    "Infrastruktur/n8n-contact-request-workflow.md",
+    "Infrastruktur/infomaniak.md",
+    "Personen/ryan-schuetter.md",
+    "Quellen/adam-sandler-ai-second-brains-5k-blueprint.md",
+    "Quellen/koerner-office-ryan-schuetter.md",
+    "Beratung/trust-process-datenschutz-ki-knowledge-bases.md",
+    "Beratung/service-angebot-ki-consulting-schweizer-kmu.md",
+    "Beratung/hormozi-playbook-next-steps.md",
+    "Beratung/target-group-analysis-privacy-first-ai.md",
+    "Beratung/kritische-analyse-privacy-first-ai-workspace.md",
+    "Beratung/kritische-analyse-dev-ai-infra.md",
+    "Beratung/slam-dunk-analyse-saas-fit.md",
+    "Beratung/remote-freelancer-schweizer-kmu-2026.md",
+    "Beratung/produkt-daten-import-automatisierung-design.md",
+    "Beratung/produkt-daten-import-automatisierung.md",
+    "Beratung/preismodell-fackler-it.md",
+    "Beratung/ki-gestuetzte-saas-migration.md",
     "AI Consulting/KB-Playbook",
-    "AI Consulting/Hormozi Playbook Next Steps Af.md",
     "AI Consulting/Analyse Optimale SaaS-Fit für Florian",
-    "AI Consulting/Analyse Optimale SaaS-Fit für .md",
-    "Notes/Target Group Analysis — Privac.md",
-    "Notes/Kritische Analyse Slam Dunk Ch.md",
     "Notes/KB-Playbook",
-    "Personen/Hormozi Playbook Next Steps Af.md",
-    "Beratung/Analyse Optimale SaaS-Fit für .md",
     "Analyse Optimale SaaS-Fit für Florian",
     "AI Consulting",
     "Notes",
-    "Index.md",
-    "Allgemeines.md",
-    "Quellen/Koerner-Office-Ryan-Schuetter.md",
-    "Infrastruktur/Infomaniak.md",
-    "Cronjobs/Cronjob (Koerner Office).md",
-    "Infrastruktur/CV-Data-Wizard.md",
-    "Cronjobs/Cronjob (Ideabrowser).md",
     "Cronjobs",
-    "Immigration/Immigration-Gesuche-Selbststaendigkeit-Familiennachzug.md",
-    "Vertraege/Beratervertrag-Shirtinator-AG.md",
     "Ideabrowser",
-    "Quellen",
-    "Personen"
+    "Quellen"
   ]
 }

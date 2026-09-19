@@ -4,7 +4,7 @@ created: 2026-08-18
 updated: 2026-08-18
 type: source
 tags: [ki, consulting, vertrieb, networking, dasa]
-sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
+sources: [https://www.youtube.com/watch?v=EEBlDTEYFao]
 ---
 
 # I Found the Perfect First Business for Introverts
@@ -58,4 +58,4 @@ Diagnose → Articulate → Systemize → AI-Implementation. **Slogan: "If you'r
 - Das DASA-Framework deckt sich mit der [[beratung/dasa-framework]]-Wiki-Seite.
 
 ## Quellen
-- Quellen/koerner-office-ryan-schuetter-2026-08-17.md
+- https://www.youtube.com/watch?v=EEBlDTEYFao

@@ -5,7 +5,7 @@ updated: 2026-08-18
 type: concept
 tags: [consulting, ki, it, methodik]
 confidence: medium
-sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
+sources: [https://www.youtube.com/watch?v=EEBlDTEYFao]
 ---
 
 # DASA Framework
@@ -27,7 +27,7 @@ sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
 
 **KI ist die letzte Stufe, nicht der Verkaufspitch.** Die meisten Tools springen direkt zu "KI importiert/scraped deine Daten" und brechen, weil keine Systemisierungs-Stufe (Standardisierung, Dokumentation, skalierbare Daten-Schicht) vorher existiert. DASA erzwingt erst die Diagnose-Articulate-Systemize-Fundierung, auf der KI dann tatsächlich funktioniert.
 
-**Der Slogan, der das ganze Framework bindet: "If you're automating chaos, you're scaling chaos."** (Analogie: The Office, Michael Scott Paper Company — verkauft Papier mit Verlust, mehr Verkauf = mehr Verlust.) Wenn das System schwach ist, macht KI es nur schneller schlimmer — und der Kunde sagt "KI funktioniert nicht", obwohl das System das Problem war. KI nutzt die Daten, die du gibst; gib ihr saubere Daten, sie funktioniert.^[Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
+**Der Slogan, der das ganze Framework bindet: "If you're automating chaos, you're scaling chaos."** (Analogie: The Office, Michael Scott Paper Company — verkauft Papier mit Verlust, mehr Verkauf = mehr Verlust.) Wenn das System schwach ist, macht KI es nur schneller schlimmer — und der Kunde sagt "KI funktioniert nicht", obwohl das System das Problem war. KI nutzt die Daten, die du gibst; gib ihr saubere Daten, sie funktioniert.^[https://www.youtube.com/watch?v=EEBlDTEYFao]
 
 ## Mapping auf den Sales-Prozess
 

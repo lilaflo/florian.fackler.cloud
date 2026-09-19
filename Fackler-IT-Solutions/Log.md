@@ -1,5 +1,30 @@
 # Wiki Log
 
+## [2026-09-19] restructure | Aufraeumen nach Fehl-Import
+- Import-Chaos aus Commit 4f905db beseitigt: 17 Dateien waren mit abgeschnittenen Dateinamen
+  (Limit 30 bzw. 49 Zeichen) und zusaetzlich in Parallelorbner dupliziert worden.
+- Kritischer Fall: der Name `Kritische Analyse Slam Dunk Ch.md` existierte 4x, enthielt aber
+  ZWEI verschiedene Dokumente. Jetzt getrennt in
+  `Beratung/kritische-analyse-dev-ai-infra.md` und
+  `Beratung/kritische-analyse-privacy-first-ai-workspace.md`.
+- Ordner ausserhalb des Schemas aufgeloest: `AI Consulting/`, `Notes/`,
+  `Analyse Optimale SaaS-Fit fuer Florian/`; `Cronjobs/` nach `Infrastruktur/`;
+  `Ideabrowser/` umbenannt zu `Ideen/`.
+- 7 bit-identische Duplikate geloescht. 1 Near-Dup (`Service-Angebot`) zugunsten der
+  neueren Version (3949B, Link auf aktuellen Trust-Process-Pfad) aufgeloest.
+- Alle Dateinamen auf lowercase kebab-case normalisiert (Schema-konform).
+- `Adam Sandler - AI Second Brains fuer 5K$ Blueprint.md` von Personen/ nach Quellen/
+  verschoben: hat Quellen-Frontmatter (source, channel, guest, date_captured).
+- Index.md neu geschrieben: 3 tote Links entfernt (immigration/...,
+  infrastruktur/cv-data-wizard, quellen/koerner-office-ryan-schuetter-2026-08-17),
+  27 Seiten gelistet (vorher 20 angekuendigt).
+- Schema.md: `Ideen/` und Cronjob-Doku unter Infrastruktur ergaenzt, `Immigration/` aus der
+  Ordnerstruktur entfernt (keine Seiten vorhanden), Wikilink-Konvention auf das
+  gbrain-Slug-Format praezisiert.
+- Stale `sources:`-Referenzen auf das geloeschte Podcast-Transkript (1ca3af0) durch die
+  YouTube-URL ersetzt (Quellen/, Personen/, Beratung/dasa-framework.md).
+- Ergebnis: 39 -> 31 Markdown-Dateien, 14 -> 7 Ordner.
+
 ## [2026-09-02] restructure | Wiki-Komplettumbau
 - Ordnerstruktur neu angelegt: Beratung/, Finanzen-Steuern/, Vertraege/, Immigration/, Infrastruktur/, Personen/, Quellen/
 - Alle Dateien nach kebab-case normalisiert (keine Leerzeichen, Umlaute, Em-Dashes).

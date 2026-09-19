@@ -4,7 +4,7 @@ created: 2026-08-18
 updated: 2026-08-18
 type: entity
 tags: [consulting, ki, networking, person]
-sources: [Quellen/koerner-office-ryan-schuetter-2026-08-17.md]
+sources: [https://www.youtube.com/watch?v=EEBlDTEYFao]
 ---
 
 # Ryan Schuetter
