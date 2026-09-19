@@ -1,4 +1,5 @@
 ---
+title: Viral Ad Licensing for Direct-to-Consumer Brands
 source: ideabrowser
 date: 2026-09-11
 url: https://www.ideabrowser.com/idea-of-the-day

@@ -1,5 +1,22 @@
 # Wiki Log
 
+## [2026-09-19] fix | Cron-Ziel und tote Links
+- `Infrastruktur/infomaniak.md` neu geschrieben: 9 tote `[[Partner/Infomaniak/cgu_NNN.pdf]]`-Links
+  (die PDFs lagen nie im Repo) durch Live-URLs auf die aktuellen Infomaniak-CGU-PDFs ersetzt.
+  Alte Dateinummer auf neue CGU-ID gemappt: 174->1 (ANB), 184->63 (kDrive), 208->87 (LLM-API),
+  212->94 (SwissTransfer), 223->38 (Mail), 261->56 (SwissBackup), 263->73 (kSuite).
+  Alle Links per HTTP geprueft; id=38 (Mail) liefert Infomaniak-seitig HTTP 500, daher
+  Fallback auf die AGB-Uebersicht verlinkt. Frontmatter ergaenzt, `[[Hosting Index]]` und
+  `[[Swiss Services Index]]` (existierten nie) entfernt.
+- Hermes-Cron `67d3bbdcd5f2` (Ideabrowser): Zielordner von `Ideabrowser/` auf `Ideen/`
+  umgestellt, Schreibpfad von `$WIKI_PATH/entities/Ideabrowser/` auf
+  `$OBSIDIAN_VAULT_PATH/Ideen/YYYY-MM-DD-idea-slug.md` (kebab-case). Der Job schrieb vorher
+  in den getrennten Wiki-Baum `~/Private`, nicht in diesen Vault. Diff gegen den alten
+  Prompt geprueft: genau 4 Aenderungen, sonst unveraendert.
+- `Infrastruktur/cronjob-ideabrowser-obsidian-note.md` von veralteter Prompt-Kopie zu
+  echter Doku-Seite umgebaut (Job-Metadaten, Ziel, Aenderungshistorie, aktueller Prompt).
+- `Ideen/`-Notiz um `title:` ergaenzt (Vault-Konvention).
+
 ## [2026-09-19] restructure | Aufraeumen nach Fehl-Import
 - Import-Chaos aus Commit 4f905db beseitigt: 17 Dateien waren mit abgeschnittenen Dateinamen
   (Limit 30 bzw. 49 Zeichen) und zusaetzlich in Parallelorbner dupliziert worden.

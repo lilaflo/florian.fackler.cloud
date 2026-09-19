@@ -1,7 +1,50 @@
+---
+title: Cronjob Ideabrowser Obsidian Note
+created: 2026-09-19
+updated: 2026-09-19
+type: concept
+tags: [it, automation, ki, ideen]
+confidence: high
+---
+
+# Cronjob: Ideabrowser zu Obsidian Note
+
+Hermes-Cronjob, der taeglich die "Idea of the Day" von Ideabrowser scrapet und als
+Notiz in `Ideen/` ablegt.
+
+## Job
+
+| Feld | Wert |
+|---|---|
+| ID | `67d3bbdcd5f2` |
+| Zeitplan | `15 15 * * *` (taeglich 15:15) |
+| Deliver | `bot-chat:fackler-it` |
+| Model | `omniroute:auto/best-reasoning` |
+| Toolsets | `terminal`, `file` |
+| Skill | `obsidian` |
+
+## Ziel
+
+- Zielordner: `$OBSIDIAN_VAULT_PATH/Ideen/`
+- Dateiname: `YYYY-MM-DD-idea-slug.md`, lowercase kebab-case
+- Quelle: https://www.ideabrowser.com/idea-of-the-day (JS-gerendert, daher camofox-browser)
+
+## Aenderungshistorie
+
+- **2026-09-19**: Zielordner von `Ideabrowser/` auf `Ideen/` umgestellt und auf die
+  Vault-Namenskonvention gezogen. Vorher schrieb der Job nach
+  `$WIKI_PATH/entities/Ideabrowser/` (WIKI_PATH zeigt auf einen anderen Baum) und traf
+  diesen Vault damit gar nicht. Der Ordner `Ideabrowser/` wurde zu `Ideen/` umbenannt.
+
+## Prompt
+
+Aktueller Stand des Job-Prompts:
+
+````
 You have one task: process today's "Idea of the Day" from Ideabrowser and create a detailed Obsidian note.
 
 **OBSIDIAN VAULT:** `$OBSIDIAN_VAULT_PATH`
-**TARGET DIRECTORY:** `Ideabrowser/`
+**TARGET DIRECTORY:** `Ideen/`
 
 **STEP 1 — Scrape the full idea page with camofox-browser**
 
@@ -14,12 +57,15 @@ This renders the JS and gives you the full structured content including scores, 
 
 **STEP 2 — Create the detailed note**
 Write the file at:
-`$WIKI_PATH/entities/Ideabrowser/YYYY-MM-DD - Idea Name.md`
+`$OBSIDIAN_VAULT_PATH/Ideen/YYYY-MM-DD-idea-slug.md`
+
+The filename must be lowercase kebab-case: no spaces, no umlauts (ae/oe/ue), no em-dashes. Example: `2026-09-11-viral-ad-licensing-for-dtc-brands.md`.
 
 Format the note with these sections (include only what's available from the scraped content):
 
 ```
 ---
+title: <Idea Name>
 source: ideabrowser
 date: YYYY-MM-DD
 url: <the idea URL>
@@ -129,3 +175,7 @@ tags:
 ```
 
 Fill everything you can. If a section's data isn't available from the scraped page, skip that section entirely. The note must be detailed and useful.
+````
+
+---
+**Related**: [[infrastruktur/cronjob-koerner-office-idea-harvest]], [[schema]]
